@@ -1,20 +1,19 @@
- <Ui xmlns="http://www.blizzard.com/wow/ui/"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../FrameXML/UI.xsd">
-	
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
+
 	<Script file="Libs\LibStub\LibStub.lua"/>
-	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml"/>
-	<Include file="libs\AceDB-3.0\AceDB-3.0.xml"/>
+	<Include file="Libs\AceAddon-3.0\AceAddon-3.0.xml"/>
+	<Include file="Libs\AceDB-3.0\AceDB-3.0.xml"/>
 
 	<Script file="Data.lua"/>
 	<Script file="TextureAtlasViewer.lua"/>
-	
-	<EditBox name="TAV_CopyBoxTemplate" inherits="InputBoxTemplate" virtual="true" autoFocus="false"> 
+
+	<EditBox name="TAV_CopyBoxTemplate" inherits="InputBoxTemplate" virtual="true" autoFocus="false">
 		<Size x="50" y="20"/>
 		<Layers>
 			<Layer level="OVERLAY">
 				<Texture parentKey="Checkmark" file="Interface\Scenarios\ScenarioIcon-Check" alpha="0">
-					<Size x="16" y="16" />
+					<Size x="16" y="16"/>
 					<Anchors>
 						<Anchor point="RIGHT" relativePoint="RIGHT" x="-3"/>
 					</Anchors>
@@ -22,7 +21,7 @@
 			</Layer>
 			<Layer level="ARTWORK">
 				<FontString parentKey="Label" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Unknown" hidden="true">
-					<Size y="15" />
+					<Size y="15"/>
 					<Anchors>
 						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT"/>
 						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT"/>
@@ -30,14 +29,12 @@
 				</FontString>
 			</Layer>
 		</Layers>
-
 		<Animations>
 			<AnimationGroup parentKey="CheckAnim" setToFinalAlpha="true" looping="NONE">
-				<Alpha parentKey="Checkmark" childKey="Checkmark" fromAlpha="1" toAlpha="0"  Duration="0.6" order="0" />
-				<Scale parentKey="Checkmark" childKey="Checkmark" fromScaleX="0.7" toScaleX="1.5" smoothing="NONE" fromScaleY="0.7" toScaleY="1.5" Duration="0.6" order="0"/>
+				<Alpha parentKey="Checkmark" childKey="Checkmark" fromAlpha="1" toAlpha="0" duration="0.6" order="0"/>
+				<Scale parentKey="Checkmark" childKey="Checkmark" fromScaleX="0.7" toScaleX="1.5" smoothing="NONE" fromScaleY="0.7" toScaleY="1.5" duration="0.6" order="0"/>
 			</AnimationGroup>
 		</Animations>
-		
 		<Scripts>
 			<OnLoad inherit="prepend">
 				self.Label:SetText(self.label);
@@ -65,7 +62,7 @@
 			</OnTextChanged>
 		</Scripts>
 	</EditBox>
-	
+
 	<Button name="TAV_ListButtonTemplate" mixin="TAV_ListButtonMixin" virtual="true">
 		<Size x="0" y="40"/>
 		<Anchors>
@@ -85,15 +82,13 @@
 				<Texture parentKey="SelectedOverlay" atlas="PetList-ButtonSelect" hidden="true"/>
 			</Layer>
 		</Layers>
-		
 		<NormalTexture atlas="PetList-ButtonBackground"/>
 		<HighlightTexture atlas="PetList-ButtonHighlight"/>
-		
 		<Scripts>
 			<OnClick method="OnClick"/>
 		</Scripts>
 	</Button>
-	
+
 	<Button name="TAV_AtlasFrameTemplate" mixin="TAV_AtlasFrameMixin" virtual="true" enableMouse="true">
 		<Layers>
 			<Layer level="OVERLAY">
@@ -145,10 +140,9 @@
 			<OnDragStop method="OnDragStop"/>
 		</Scripts>
 	</Button>
-	
+
 	<Frame name="TAV_CoreFrame" inherits="BasicFrameTemplate" movable="true" parent="UIParent" clampedToScreen="true" hidden="true" toplevel="true">
-		<Size x="1000" y="600" />
-		
+		<Size x="1000" y="600"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
 		</Anchors>
@@ -170,7 +164,6 @@
 						</Texture>
 					</Layer>
 				</Layers>
-				
 				<Frames>
 					<CheckButton parentKey="PatternCheckBox" inherits="UICheckButtonTemplate">
 						<Size x="25" y="25"/>
@@ -184,18 +177,17 @@
 							<OnClick>
 								TAV_DisplayContainer:PatternCheckBoxOnClicK(self:GetChecked());
 							</OnClick>
-							<OnEnter> 
+							<OnEnter>
 								GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 								GameTooltip:SetText("Pattern Match", 1, 1, 1, nil, true);
 								GameTooltip:AddLine("Enabling this allows for pattern matching. Otherwise the search string is taken as literal.", nil, nil, nil, true);
 								GameTooltip:Show();
 							</OnEnter>
-							<OnLeave> 
+							<OnLeave>
 								GameTooltip:Hide();
 							</OnLeave>
 						</Scripts>
 					</CheckButton>
-
 					<Button parentKey="InfoButton">
 						<Size x="20" y="20"/>
 						<Anchors>
@@ -238,7 +230,6 @@
 							</OnClick>
 						</Scripts>
 					</Button>
-					
 					<EditBox parentKey="SearchBox" inherits="SearchBoxTemplate">
 						<Size y="20"/>
 						<Anchors>
@@ -252,13 +243,13 @@
 							</OnTextChanged>
 						</Scripts>
 					</EditBox>
-				
+
 					<ScrollFrame name="TAV_ScrollFrame" parentKey="ScrollFrame" mixin="TAV_ScrollFrameMixin" inherits="HybridScrollFrameTemplate">
 						<Anchors>
 							<Anchor point="TOPLEFT" x="4" y="-32"/>
-							<Anchor point="BOTTOMRIGHT" x="-4" y="4" />
+							<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
 						</Anchors>
-						
+
 						<Frames>
 							<Slider parentKey="ScrollBar" inherits="HybridScrollBarTrimTemplate">
 								<Anchors>
@@ -272,7 +263,6 @@
 						</Scripts>
 					</ScrollFrame>
 				</Frames>
-				
 			</Frame>
 			<Frame parentKey="RightInset" useParentLevel="false" inherits="InsetFrameTemplate4">
 				<Anchors>
@@ -302,7 +292,6 @@
 									<Anchor point="TOPLEFT" x="-1" y="1"/>
 									<Anchor point="BOTTOMRIGHT" x="1" y="-1"/>
 								</Anchors>
-								
 								<Frames>
 									<EditBox parentKey="Link" inherits="TAV_CopyBoxTemplate">
 										<Size x="375" y="20"/>
@@ -311,7 +300,6 @@
 										</Anchors>
 									</EditBox>
 								</Frames>
-								
 								<Layers>
 									<Layer level="BACKGROUND">
 										<Texture parentKey="Background" file="Interface\FrameGeneral\UI-Background-Marble" horizTile="true" vertTile="true" setAllPoints="true">
@@ -338,21 +326,18 @@
 									</Layer>
 								</Layers>
 							</Frame>
-						
 							<Frame parentKey="Child" movable="true" hidden="true">
 								<Anchors>
 									<Anchor point="CENTER"/>
 								</Anchors>
 								<Layers>
-									<Layer level="Background">
+									<Layer level="BACKGROUND">
 										<Texture parentKey="Background">
 											<Color r="0" g="0" b="0" a="0.75"/>
 										</Texture>
 									</Layer>
 									<Layer level="ARTWORK">
-										<Texture parentKey="Texture" file="Interface\Animations\PowerSwirlAnimation">
-										</Texture>
-										
+										<Texture parentKey="Texture" file="Interface\Animations\PowerSwirlAnimation"/>
 										<FontString parentKey="coordTopleft" inherits="GameFontDisableSmallLeft" justifyH="RIGHT" text="0,0" alpha="0.65">
 											<Anchors>
 												<Anchor point="BOTTOMRIGHT" relativePoint="TOPLEFT" x="-2" y="2"/>
@@ -376,7 +361,6 @@
 									</Layer>
 								</Layers>
 							</Frame>
-							
 							<Frame name="TAV_ControlsPanel" parentKey="ControlsPanel" frameLevel="10">
 								<Size x="312" y="50"/>
 								<Anchors>
@@ -421,7 +405,6 @@
 											<Anchor point="BOTTOMLEFT" x="6" y="2"/>
 										</Anchors>
 									</EditBox>
-									
 									<Button parentKey="BGColorButton" movable="true">
 										<Size x="23" y="22"/>
 										<Anchors>
@@ -447,11 +430,9 @@
 												</Texture>
 											</Layer>
 										</Layers>
-										
 										<NormalTexture atlas="chatframe-button-up"/>
 										<PushedTexture atlas="chatframe-button-down"/>
 										<HighlightTexture atlas="chatframe-button-highlight" alphaMode="ADD"/>
-										
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():BackgroundButtonOnClick();
@@ -475,7 +456,6 @@
 											</OnLeave>
 										</Scripts>
 									</Button>
-									
 									<Button parentKey="ToggleBordersButton" movable="true">
 										<Size x="23" y="22"/>
 										<Anchors>
@@ -492,33 +472,30 @@
 												</Texture>
 											</Layer>
 										</Layers>
-										
 										<NormalTexture atlas="chatframe-button-up"/>
 										<PushedTexture atlas="chatframe-button-down"/>
 										<HighlightTexture atlas="chatframe-button-highlight" alphaMode="ADD"/>
-										
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():ToggleBorders();
 												PlaySound(857);
-											</OnClick>
+												</OnClick>
 											<OnMouseDown>
 												self.Icon:SetPoint("CENTER", -1, -1);
-											</OnMouseDown>
+												</OnMouseDown>
 											<OnMouseUp>
 												self.Icon:SetPoint("CENTER", 0, 0);
-											</OnMouseUp>
+												</OnMouseUp>
 											<OnEnter>
 												GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 												GameTooltip:SetText("Toggle Passive Borders", 1, 1, 1, nil, true);
 												GameTooltip:Show();
-											</OnEnter>
+												</OnEnter>
 											<OnLeave>
 												GameTooltip:Hide();
-											</OnLeave>
+												</OnLeave>
 										</Scripts>
 									</Button>
-									
 									<Button parentKey="ResetPositionButton" movable="true">
 										<Size x="23" y="22"/>
 										<Anchors>
@@ -534,11 +511,9 @@
 												</Texture>
 											</Layer>
 										</Layers>
-										
 										<NormalTexture atlas="chatframe-button-up"/>
 										<PushedTexture atlas="chatframe-button-down"/>
 										<HighlightTexture atlas="chatframe-button-highlight" alphaMode="ADD"/>
-										
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():Reset();
@@ -560,13 +535,11 @@
 											</OnLeave>
 										</Scripts>
 									</Button>
-												
 									<Slider parentKey="ScaleSlider" inherits="HorizontalSliderTemplate">
-										<Size x="100" y="15" />
+										<Size x="100" y="15"/>
 										<Anchors>
 											<Anchor point="LEFT" relativeKey="$parent.ResetPositionButton" relativePoint="RIGHT" x="1"/>
 										</Anchors>
-										
 										<Layers>
 											<Layer level="ARTWORK">
 												<FontString parentKey="Text" inherits="GameFontNormalSmall" text="100%">
@@ -576,26 +549,23 @@
 												</FontString>
 											</Layer>
 										</Layers>
-										
 										<Scripts>
 											<OnValueChanged>
 												self:GetParent():GetParent():SetSDisplayScale(value, userInput);
 											</OnValueChanged>
 										</Scripts>
 									</Slider>
-									
-									<Frame parentKey="Coordinates" >
+									<Frame parentKey="Coordinates">
 										<Size y="21" x="62"/>
 										<Anchors>
 											<Anchor point="TOPRIGHT" x="-5" y="-5"/>
 										</Anchors>
-										
 										<Layers>
 											<Layer level="ARTWORK">
 												<FontString parentKey="LabelX" inherits="GameFontHighlightSmallLeft" justifyH="LEFT" justifyV="TOP" text="X:">
 													<Size x="15"/>
 													<Anchors>
-														<Anchor point="TOPLEFT" />
+														<Anchor point="TOPLEFT"/>
 														<Anchor point="BOTTOMLEFT" relativePoint="LEFT"/>
 													</Anchors>
 													<Color r="0.75" g="0.75" b="0.75"/>
@@ -630,11 +600,9 @@
 												</FontString>
 											</Layer>
 										</Layers>
-									
 									</Frame>
 								</Frames>
 							</Frame>
-							
 							<Button parentKey="AlertIndicator" frameLevel="10" hidden="true">
 								<Size x="40" y="36"/>
 								<Anchors>
@@ -650,7 +618,7 @@
 										</Texture>
 									</Layer>
 									<Layer level="HIGHLIGHT">
-										<Texture parentKey="Highlight" atlas="services-icon-warning" alphaMode="ADD" alpha="0.5" >
+										<Texture parentKey="Highlight" atlas="services-icon-warning" alphaMode="ADD" alpha="0.5">
 											<Size x="40" y="36"/>
 											<Anchors>
 												<Anchor point="CENTER"/>
@@ -679,30 +647,20 @@
 									</OnMouseUp>
 								</Scripts>
 							</Button>
-							
-							<Frame name="TAV_InfoPanel" parentKey="InfoPanel" frameLevel="10" hidden="true" mixin="BackdropTemplateMixin">
+							<Frame name="TAV_InfoPanel" parentKey="InfoPanel" mixin="TAV_InfoPanelMixin" frameLevel="10" hidden="true">
 								<Size x="210" y="215"/>
-								<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
-									<EdgeSize>
-										<AbsValue val="16"/>
-									</EdgeSize>
-									<TileSize>
-										<AbsValue val="16"/>
-									</TileSize>
-									<BackgroundInsets>
-										<AbsInset left="3" right="3" top="3" bottom="3"/>
-									</BackgroundInsets>
-								</Backdrop>
-								
+								<KeyValues>
+									<KeyValue key="layoutType" value="TooltipDefaultLayout" type="string"/>
+								</KeyValues>
 								<Anchors>
 									<Anchor point="BOTTOMRIGHT" x="2" y="-2"/>
 								</Anchors>
-
 								<Frames>
+									<Frame parentKey="NineSlice" inherits="NineSlicePanelTemplate" useParentLevel="true"/>
 									<Button name="$parentCloseButton" parentKey="CloseButton">
-										<Size x="15" y="15" />
+										<Size x="15" y="15"/>
 										<Anchors>
-											<Anchor point="TOPRIGHT"  x="-4" y="-4"/>
+											<Anchor point="TOPRIGHT" x="-4" y="-4"/>
 										</Anchors>
 										<NormalTexture file="Interface\FriendsFrame\UI-Toast-CloseButton-Up">
 											<TexCoords left="0.25" right="1" top="0" bottom="0.75"/>
@@ -713,7 +671,6 @@
 										<HighlightTexture file="Interface\FriendsFrame\UI-Toast-CloseButton-Highlight" alphaMode="ADD">
 											<TexCoords left="0.25" right="1" top="0" bottom="0.75"/>
 										</HighlightTexture>
-										
 										<Scripts>
 											<OnClick>
 												TAV_DisplayContainer:HideAtlasInfo();
@@ -721,7 +678,6 @@
 											</OnClick>
 										</Scripts>
 									</Button>
-								
 									<EditBox parentKey="Name" inherits="TAV_CopyBoxTemplate">
 										<KeyValues>
 											<KeyValue key="label" value="Atlas Name" type="string"/>
@@ -785,7 +741,6 @@
 											<Anchor point="LEFT" relativeKey="$parent.Right"/>
 										</Anchors>
 									</EditBox>
-									
 									<Frame parentKey="AlertIndicator" hidden="true">
 										<Size x="14" y="14"/>
 										<Anchors>
@@ -793,8 +748,7 @@
 										</Anchors>
 										<Layers>
 											<Layer level="BACKGROUND">
-												<Texture parentKey="Icon" atlas="services-icon-warning">
-												</Texture>
+												<Texture parentKey="Icon" atlas="services-icon-warning"/>
 											</Layer>
 										</Layers>
 										<Scripts>
@@ -809,11 +763,10 @@
 										</Scripts>
 									</Frame>
 								</Frames>
-								
 								<Layers>
 									<Layer level="ARTWORK">
 										<FontString parentKey="Tiling" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Tiling:">
-											<Size y="15" />
+											<Size y="15"/>
 											<Anchors>
 												<Anchor point="TOPLEFT" relativeKey="$parent.Top" relativePoint="BOTTOMLEFT" y="-5"/>
 											</Anchors>
@@ -825,7 +778,7 @@
 											</Anchors>
 										</Texture>
 										<FontString parentKey="Horizontal" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Horizontal">
-											<Size y="15" />
+											<Size y="15"/>
 											<Anchors>
 												<Anchor point="LEFT" relativeKey="$parent.IconHorizontalTile" relativePoint="RIGHT" x="5"/>
 											</Anchors>
@@ -838,31 +791,17 @@
 											</Anchors>
 										</Texture>
 										<FontString parentKey="Vertical" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Vertical">
-											<Size y="15" />
+											<Size y="15"/>
 											<Anchors>
 												<Anchor point="LEFT" relativeKey="$parent.IconVerticalTile" relativePoint="RIGHT" x="5"/>
 											</Anchors>
 										</FontString>
-										
 									</Layer>
 								</Layers>
-								
 								<Scripts>
-									<OnLoad>
-										self.backdropInfo = {
-												bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-												edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-												edgeSize = 16,
-												tileEdge = true,
-												insets = { left = 3, right = 3, top = 3, bottom = 3 },
-											};
-										self:OnBackdropLoaded();
-										<!-- I can keyvalue the color, but I'd rather not create a global variable -->
-										self:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
-									</OnLoad>
+									<OnLoad method="OnLoad"/>
 								</Scripts>
 							</Frame>
-							
 						</Frames>
 						<Scripts>
 							<OnLoad method="OnLoad"/>
@@ -900,5 +839,4 @@
 			</OnHide>
 		</Scripts>
 	</Frame>
-
- </Ui>
+</Ui>

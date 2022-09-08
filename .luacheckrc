@@ -66,6 +66,7 @@ stds.wow = {
 		"Saturate",
 		"SOUNDKIT",
 		"tinsert",
+		"TOOLTIP_DEFAULT_BACKGROUND_COLOR",
 		"UIParent",
 		"wipe",
 		"WOW_PROJECT_BURNING_CRUSADE_CLASSIC",

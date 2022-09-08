@@ -805,6 +805,16 @@ function TAV_AtlasFrameMixin:Init(name, info)
 end
 
 -------------------------------------------------
+-- TAV_InfoPanelMixin
+-------------------------------------------------
+
+TAV_InfoPanelMixin = {};
+
+function TAV_InfoPanelMixin:OnLoad()
+	self.NineSlice:SetCenterColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR:GetRGB());
+end
+
+-------------------------------------------------
 -- Slash Command
 -------------------------------------------------
 
