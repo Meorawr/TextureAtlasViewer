@@ -1,24 +1,24 @@
-max_line_length = false;
+max_line_length = false
 
 exclude_files = {
 	"Data.lua",
-};
+}
 
 ignore = {
-	"11./^TAV_",  -- Ignore all global reads/writes on TAV_ prefixed globals.
-	"212/self",  -- Ignore unused 'self' warnings
-};
+	"11./^TAV_", -- Ignore all global reads/writes on TAV_ prefixed globals.
+	"212/self", -- Ignore unused 'self' warnings
+}
 
 globals = {
 	"SLASH_TAVSLASH1",
 	"SLASH_TAVSLASH2",
-};
+}
 
 read_globals = {
 	"LibStub",
-};
+}
 
-std = "lua51+wow";
+std = "lua51+wow"
 
 stds.wow = {
 	globals = {
@@ -75,4 +75,4 @@ stds.wow = {
 		"WOW_PROJECT_WRATH_CLASSIC",
 		"YELLOW_FONT_COLOR",
 	},
-};
+}
