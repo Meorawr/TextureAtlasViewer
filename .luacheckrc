@@ -30,7 +30,12 @@ stds.wow = {
 	},
 
 	read_globals = {
-		"C_Texture.GetAtlasInfo",
+		C_Texture = {
+			fields = {
+				"GetAtlasInfo",
+			},
+		},
+
 		"ColorPickerFrame",
 		"CreateColor",
 		"CreateFramePool",

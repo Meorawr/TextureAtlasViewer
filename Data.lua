@@ -1,9 +1,9 @@
-﻿local _addonName, _addon = ...;
+﻿local _, _addon = ...;
 
 ---------------------------------------------
 -- Remove everything in between these comment blocks (between the /\/\/\ lines)
 -- Go to https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua
--- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part 
+-- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
 local buildNr = 37864;

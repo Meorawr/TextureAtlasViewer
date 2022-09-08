@@ -1,4 +1,4 @@
-local _addonName, _addon = ...;
+local _, _addon = ...;
 
 local TAV = LibStub("AceAddon-3.0"):NewAddon("AtlastTextureViewer");
 local TAV_Defaults = {
@@ -14,7 +14,6 @@ local TAV_Defaults = {
 
 local MAX_NUM_ISSUES = 30;
 local FORMAT_ISSUE_OVERFLOW = "+%s more issues.";
-local FORMAT_INVALID_ATLAS = "Atlas %s not found through API";
 local FORMAT_INVALID_TEXTURE = "No valid atlas info for %s\nNo texture size could be calculated.";
 local DATA_URL = "https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua";
 local SAVE_VARIABLE_COPY_INFO = "Copy paste the list from " .. DATA_URL .. " here instead of this message. Make sure to include the opening and closing brackets.";
@@ -35,13 +34,10 @@ function TAV:OnInitialize()
 	self.backupInfo = {};
 
 	for file, list in pairs(self.atlasInfo) do
-		local isvalid = false;
 		for atlas, info in pairs(list) do
 			if (not TAV:GetAtlasInfo(atlas)) then
 				local reformat =  {["missing"] = true, ["fileName"] = file, ["width"] = info[1], ["height"] = info[2], ["leftTexCoord"] = info[3], ["rightTexCoord"] = info[4], ["topTexCoord"] = info[5], ["bottomTexCoord"] = info[6], ["tilesHorizontally"] = info[7], ["tilesVertically"] = info[8]};
 				self.backupInfo[atlas] = reformat;
-			else
-			 isvalid = true;
 			end
 		end
 	end
@@ -79,7 +75,7 @@ function TAV:OnEnable()
 				tinsert(toReplace, key);
 			end
 		end
-		for k, key in ipairs(toReplace) do
+		for _, key in ipairs(toReplace) do
 			atlasInfo[key] = nil;
 			tinsert(atlasInfo, key);
 		end
@@ -136,7 +132,7 @@ function  TAV:GetSearchPriority(info, searchString, usePatterns)
 		return RESULT_PRIORITY.fileName;
 	end
 	-- Atlas name
-	for key, name in ipairs(self.atlasInfo[info.texture]) do
+	for _, name in ipairs(self.atlasInfo[info.texture]) do
 		if (name:lower():find(searchString, nil, not usePatterns)) then
 			return RESULT_PRIORITY.atlasName;
 		end
@@ -153,7 +149,7 @@ end
 
 function TAV:UpdateDisplayList(searchString, usePatterns)
 	wipe(self.bufferList);
-	for k, info in ipairs(self.displayList) do
+	for _, info in ipairs(self.displayList) do
 		info.priority = self:GetSearchPriority(info, searchString, usePatterns);
 		if (info.priority  > RESULT_PRIORITY.none) then
 			tinsert(self.bufferList, info);
@@ -162,7 +158,7 @@ function TAV:UpdateDisplayList(searchString, usePatterns)
 
 	wipe(self.filteredList);
 
-	for k, info in ipairs(self.bufferList) do
+	for _, info in ipairs(self.bufferList) do
 		tinsert(self.filteredList, info);
 	end
 
@@ -179,7 +175,7 @@ function TAV:UpdateDisplayList(searchString, usePatterns)
 	wipe(self.bufferList);
 end
 
-function  TAV:GetAtlasInfo(atlasName)
+function TAV:GetAtlasInfo(atlasName)
 	-- Check if we know it's missing and made backup data;
 	if (self.backupInfo[atlasName]) then
 		return self.backupInfo[atlasName];
@@ -325,7 +321,7 @@ If you wish to manually update your data to a different version, follow these st
   9. /reload your ui in game
   ]]
 
-  local patchNr, buildNr = GetBuildInfo();
+  local buildNr = select(2, GetBuildInfo());
   local colorCode = (tonumber(_addon.dataBuild) < tonumber(buildNr)) and "ffff5555" or "ff55ff55";
 
 	after = after .. "\n\nClient build nr: |cffffffff" .. buildNr .. "|r\nData build nr: |c"..colorCode .. _addon.dataBuild .."|r";
@@ -436,7 +432,7 @@ function TAV_DisplayContainerMixin:CreateOverlays()
 	local atlasNames = TAV.atlasInfo[self.texture];
 	if (not atlasNames) then return; end
 
-	for k, name in ipairs(atlasNames) do
+	for _, name in ipairs(atlasNames) do
 		if (type(name) == "string") then
 			local info = TAV:GetAtlasInfo(name);
 			if (info and (not info.missing or TAV.settings.showIssues)) then
@@ -460,7 +456,6 @@ function TAV_DisplayContainerMixin:TrySetTextureSize()
 	end
 
 	local validAtlas;
-	local id = 0;
 	-- Loop over all atlases and check for any issues
 	for i = 1, #atlasNames do
 		local info = TAV:GetAtlasInfo(atlasNames[i]);
@@ -476,11 +471,9 @@ function TAV_DisplayContainerMixin:TrySetTextureSize()
 			-- If user wants to include issue altases, count it as the first valid
 			if (info and TAV.settings.showIssues) then
 				validAtlas = info;
-				id = i;
 			end
 		else
 			validAtlas = info;
-			id = i;
 		end
 	end
 
@@ -602,7 +595,7 @@ function TAV_DisplayContainerMixin:SetImportOverlayShown(show, hideButtons)
 	TAV_CoreFrame.LeftInset.InfoButton:SetShown(not hideButtons);
 end
 
-function TAV_DisplayContainerMixin:OnUpdate(elapsed)
+function TAV_DisplayContainerMixin:OnUpdate()
 	if (self:IsMouseOver()) then
 		local x, y = GetCursorPosition();
 		local effectiveScale = UIParent:GetEffectiveScale();
@@ -633,7 +626,7 @@ function TAV_DisplayContainerMixin:AlertIndicatorOnEnter()
 	GameTooltip:Hide();
 	GameTooltip:SetOwner(self.AlertIndicator, "ANCHOR_RIGHT");
 	GameTooltip:SetText("No API info for following atlases", 1, 1, 1, nil, true);
-	for k, issue in ipairs(self.dataIssues) do
+	for _, issue in ipairs(self.dataIssues) do
 		GameTooltip:AddLine(issue);
 	end
 	GameTooltip:AddLine("Your data might be outdated or incorrect.", 1, 0.3, 0.3);
@@ -756,7 +749,6 @@ end
 
 function TAV_AtlasFrameMixin:UpdateColor()
 	local color = HIGHLIGHT_FONT_COLOR;
-	local colorOverlay = HIGHLIGHT_FONT_COLOR;
 	-- issue gets red border
 	if (self.info.missing) then
 		color = RED_FONT_COLOR;
