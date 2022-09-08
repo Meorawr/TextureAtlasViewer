@@ -530,8 +530,11 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 											</OnLeave>
 										</Scripts>
 									</Button>
-									<Slider parentKey="ScaleSlider" inherits="HorizontalSliderTemplate">
+									<Slider parentKey="ScaleSlider" orientation="HORIZONTAL" enableMouse="true" inherits="BackdropTemplate">
 										<Size x="100" y="15"/>
+										<KeyValues>
+											<KeyValue key="backdropInfo" value="BACKDROP_SLIDER_8_8" type="global"/>
+										</KeyValues>
 										<Anchors>
 											<Anchor point="LEFT" relativeKey="$parent.ResetPositionButton" relativePoint="RIGHT" x="1"/>
 										</Anchors>
@@ -544,6 +547,12 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 												</FontString>
 											</Layer>
 										</Layers>
+										<HitRectInsets>
+											<AbsInset left="0" right="0" top="-10" bottom="-10"/>
+										</HitRectInsets>
+										<ThumbTexture parentKey="Thumb" name="$parentThumb" file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+											<Size x="32" y="32"/>
+										</ThumbTexture>
 										<Scripts>
 											<OnValueChanged>
 												self:GetParent():GetParent():SetSDisplayScale(value, userInput);
