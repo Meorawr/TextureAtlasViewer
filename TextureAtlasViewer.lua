@@ -181,15 +181,7 @@ function TAV:GetAtlasInfo(atlasName)
 		return self.backupInfo[atlasName];
 	end
 
-	-- Try Classic API
-	if (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) then
-		local fileName, width, height, leftTexCoord, rightTexCoord, topTexCoord, bottomTexCoord, tilesHorizontally, tilesVertically = GetAtlasInfo(atlasName);
-		if (not fileName) then return; end
-		return { ["fileName"] = fileName, ["width"] = width, ["height"] = height, ["leftTexCoord"] = leftTexCoord, ["rightTexCoord"] = rightTexCoord, ["bottomTexCoord"] = bottomTexCoord, ["topTexCoord"] = topTexCoord, ["tilesHorizontally"] = tilesHorizontally, ["tilesVertically"] = tilesVertically };
-	end
-
-	-- Retail API
-	return C_Texture.GetAtlasInfo(atlasName);
+	return C_Texture.GetAtlasInfo(atlasName)
 end
 
 -------------------------------------------------

@@ -42,7 +42,6 @@ stds.wow = {
 		"floor",
 		"GameTooltip_SetTitle",
 		"GameTooltip",
-		"GetAtlasInfo",
 		"GetBuildInfo",
 		"GetCursorPosition",
 		"GRAY_FONT_COLOR",
