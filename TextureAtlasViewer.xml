@@ -74,11 +74,11 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 				</FontString>
 			</Layer>
 			<Layer level="OVERLAY">
-				<Texture parentKey="SelectedOverlay" atlas="PetList-ButtonSelect" hidden="true"/>
+				<Texture parentKey="SelectedOverlay" atlas="GarrMission_FollowerListButton-Select" hidden="true"/>
 			</Layer>
 		</Layers>
-		<NormalTexture atlas="PetList-ButtonBackground"/>
-		<HighlightTexture atlas="PetList-ButtonHighlight"/>
+		<NormalTexture atlas="GarrMission_FollowerListButton"/>
+		<HighlightTexture atlas="GarrMission_FollowerListButton-Highlight"/>
 		<Scripts>
 			<OnClick method="OnClick"/>
 		</Scripts>
