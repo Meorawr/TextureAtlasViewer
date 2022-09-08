@@ -5,6 +5,8 @@
 ## Version: @package-version@
 ## OptionalDeps: Ace3
 ## SavedVariables: ATVDB
+## X-Curse-Project-ID: 348853
+## X-WoWI-ID: 25415
 
 Libs\LibStub\LibStub.lua
 Libs\AceAddon-3.0\AceAddon-3.0.xml
