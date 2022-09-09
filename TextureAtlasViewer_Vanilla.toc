@@ -2,7 +2,7 @@
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
-## Version: @package-version@
+## Version: @project-version@
 ## OptionalDeps: Ace3
 ## SavedVariables: ATVDB
 ## X-Curse-Project-ID: 348853
