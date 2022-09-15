@@ -4,6 +4,7 @@ enable-nolib-creation: no
 ignore:
  - Libs/*/*.toc
  - Libs/*/tests
+ - Scripts/*
  - .gitkeep
  - Makefile
 

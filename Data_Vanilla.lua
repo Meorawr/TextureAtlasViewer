@@ -1,6 +1,9 @@
 local _, _addon = ...
-_addon.dataBuild = 44834
-_addon.data = {
+local buildNr = 44834
+
+-- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+local AtlasInfo = {
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 0, 0, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
 		["AdventureMap-combatally-empty"] = { 0, 0, 0.28125, 0.326171875, 0.9013671875, 0.9462890625, false, false },
@@ -4807,3 +4810,12 @@ _addon.data = {
 		["worldstate-capturebar-yellow"] = { 0, 0, 0.3046875, 0.484375, 0.4453125, 0.515625, false, false },
 	},
 }
+
+-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+-- Replace content in this area
+-- Make sure the 'return AtlasInfo' at the end is not included
+--------------------------------------------
+
+-- Don't remove this!
+_addon.data = AtlasInfo
+_addon.dataBuild = buildNr
