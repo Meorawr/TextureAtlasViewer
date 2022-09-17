@@ -138,7 +138,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 		</Scripts>
 	</Button>
 
-	<Frame name="TAV_CoreFrame" inherits="BasicFrameTemplate" movable="true" parent="UIParent" clampedToScreen="true" hidden="true" toplevel="true">
+	<Frame name="TAV_CoreFrame" inherits="PortraitFrameTemplate" mixin="TAV_CoreFrameMixin" movable="true" parent="UIParent" clampedToScreen="true" hidden="true" toplevel="true">
 		<Size x="1000" y="600"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -821,28 +821,12 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 			</Frame>
 		</Frames>
 		<Scripts>
-			<OnLoad>
-				self:RegisterForDrag("LeftButton");
-				self.TitleText:SetText("Texture Atlas Viewer");
-				self:RegisterEvent("PLAYER_REGEN_DISABLED");
-			</OnLoad>
-			<OnEvent>
-				if (event == "PLAYER_REGEN_DISABLED") then
-					self:Hide();
-				end
-			</OnEvent>
-			<OnDragStart>
-				self:StartMoving();
-			</OnDragStart>
-			<OnDragStop>
-				self:StopMovingOrSizing();
-			</OnDragStop>
-			<OnShow>
-				PlaySound(839);
-			</OnShow>
-			<OnHide>
-				PlaySound(840);
-			</OnHide>
+			<OnLoad method="OnLoad"/>
+			<OnEvent method="OnEvent"/>
+			<OnDragStart method="OnDragStart"/>
+			<OnDragStop method="OnDragStop"/>
+			<OnShow method="OnShow"/>
+			<OnHide method="OnHide"/>
 		</Scripts>
 	</Frame>
 </Ui>

@@ -902,6 +902,52 @@ function TAV_InfoPanelMixin:OnLoad()
 end
 
 -------------------------------------------------
+-- TAV_CoreFrameMixin
+-------------------------------------------------
+
+TAV_CoreFrameMixin = {}
+
+function TAV_CoreFrameMixin:OnLoad()
+	self:RegisterEvent("PLAYER_REGEN_DISABLED")
+	self:RegisterForDrag("LeftButton")
+
+	ButtonFrameTemplate_HidePortrait(self)
+
+	-- Setting the title text consistently is tricky due to Classic not actually
+	-- having PortraitFrameMixin; use the SetTitle method inherited through our
+	-- template when possible otherwise assume we're on Classic and set it
+	-- manually.
+
+	if self.SetTitle then
+		self.SetTitle(self, "Texture Atlas Viewer")
+	else
+		self.TitleText:SetText("Texture Atlas Viewer")
+	end
+end
+
+function TAV_CoreFrameMixin:OnEvent(event)
+	if event == "PLAYER_REGEN_DISABLED" then
+		self:Hide()
+	end
+end
+
+function TAV_CoreFrameMixin:OnDragStart()
+	self:StartMoving()
+end
+
+function TAV_CoreFrameMixin:OnDragStop()
+	self:StopMovingOrSizing()
+end
+
+function TAV_CoreFrameMixin:OnShow()
+	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN)
+end
+
+function TAV_CoreFrameMixin:OnHide()
+	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE)
+end
+
+-------------------------------------------------
 -- Slash Command
 -------------------------------------------------
 

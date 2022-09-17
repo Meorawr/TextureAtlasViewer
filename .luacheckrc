@@ -49,6 +49,7 @@ stds.wow = {
 			},
 		},
 
+		"ButtonFrameTemplate_HidePortrait",
 		"ColorPickerFrame",
 		"CreateColor",
 		"CreateFramePool",
