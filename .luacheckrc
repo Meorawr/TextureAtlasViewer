@@ -39,6 +39,16 @@ stds.wow = {
 			},
 		},
 
+		SOUNDKIT = {
+			fields = {
+				"IG_ABILITY_PAGE_TURN",
+				"IG_CHARACTER_INFO_CLOSE",
+				"IG_CHARACTER_INFO_OPEN",
+				"IG_MAINMENU_OPTION_CHECKBOX_OFF",
+				"IG_MAINMENU_OPTION_CHECKBOX_ON",
+			},
+		},
+
 		"ColorPickerFrame",
 		"CreateColor",
 		"CreateFramePool",
@@ -67,7 +77,6 @@ stds.wow = {
 		"RED_FONT_COLOR",
 		"Round",
 		"Saturate",
-		"SOUNDKIT",
 		"tinsert",
 		"TOOLTIP_DEFAULT_BACKGROUND_COLOR",
 		"UIParent",

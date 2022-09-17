@@ -433,7 +433,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():BackgroundButtonOnClick();
-												PlaySound(857);
+												PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 											</OnClick>
 											<OnMouseDown>
 												self.BG:SetPoint("CENTER", -1, -1);
@@ -475,7 +475,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():ToggleBorders();
-												PlaySound(857);
+												PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 												</OnClick>
 											<OnMouseDown>
 												self.Icon:SetPoint("CENTER", -1, -1);
@@ -514,7 +514,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 										<Scripts>
 											<OnClick>
 												self:GetParent():GetParent():Reset();
-												PlaySound(857);
+												PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 											</OnClick>
 											<OnMouseDown>
 												self.Icon:SetPoint("CENTER", -1, -1);
@@ -640,7 +640,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 										GameTooltip:Hide();
 									</OnLeave>
 									<OnClick>
-										PlaySound(857);
+										PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 										self:GetParent():ToggleIssueDisplay();
 									</OnClick>
 									<OnMouseDown>
@@ -680,7 +680,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 										<Scripts>
 											<OnClick>
 												TAV_DisplayContainer:HideAtlasInfo();
-												PlaySound(857);
+												PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
 											</OnClick>
 										</Scripts>
 									</Button>

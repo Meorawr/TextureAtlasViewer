@@ -554,7 +554,7 @@ function TAV_DisplayContainerMixin:DisplayTexture(texture)
 	self.Child.Texture:SetTexture(texture)
 	self.Child:Show()
 	TAV_ControlsPanel.FilePathBox:SetText(texture)
-	PlaySound(836)
+	PlaySound(SOUNDKIT.IG_ABILITY_PAGE_TURN)
 
 	self:SetImportOverlayShown(false)
 end
@@ -789,7 +789,7 @@ function TAV_AtlasFrameMixin:OnClick()
 	TAV_DisplayContainer.selectedAtlas = self.name
 	TAV_DisplayContainer:ShowAtlasInfo(self.name, self.info)
 	TAV_DisplayContainer:UpdateOverlays()
-	PlaySound(857)
+	PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
 end
 
 function TAV_AtlasFrameMixin:OnEnter()
