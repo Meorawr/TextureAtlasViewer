@@ -47,6 +47,7 @@ stds.wow = {
 		"GameTooltip",
 		"GetBuildInfo",
 		"GetCursorPosition",
+		"GetMouseFocus",
 		"GRAY_FONT_COLOR",
 		"GREEN_FONT_COLOR",
 		"HIGHLIGHT_FONT_COLOR",

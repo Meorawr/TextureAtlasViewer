@@ -719,12 +719,39 @@ function TAV_ListButtonMixin:Update(info)
 	self.Text:SetVertexColor(color:GetRGB())
 
 	self.SelectedOverlay:SetShown(self.texture == self:GetParent().selected)
+	self:UpdateTooltip()
 end
 
 function TAV_ListButtonMixin:OnClick()
 	TAV_DisplayContainer:DisplayTexture(self.texture)
 	self:GetParent().selected = self.texture
 	self:GetParent():GetParent():RefreshButtons()
+end
+
+function TAV_ListButtonMixin:OnEnter()
+	self:UpdateTooltip()
+end
+
+function TAV_ListButtonMixin:OnLeave()
+	self:UpdateTooltip()
+end
+
+function TAV_ListButtonMixin:UpdateTooltip()
+	local tooltip = GameTooltip
+
+	if tooltip:IsOwned(self) then
+		tooltip:Hide()
+	end
+
+	if self.Text:IsTruncated() and GetMouseFocus() == self then
+		local text = self.Text:GetText()
+		local r, g, b, a = HIGHLIGHT_FONT_COLOR:GetRGBA()
+		local wrap = false
+
+		tooltip:SetOwner(self, "ANCHOR_RIGHT")
+		tooltip:SetText(text, r, g, b, a, wrap)
+		tooltip:Show()
+	end
 end
 
 -------------------------------------------------
