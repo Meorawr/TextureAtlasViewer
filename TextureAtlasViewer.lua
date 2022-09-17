@@ -887,6 +887,6 @@ local function slashcmd(msg)
 	if msg ~= "" then
 		TAV_CoreFrame.LeftInset.SearchBox:SetText(msg)
 	end
-	TAV_CoreFrame:Show()
+	TAV_CoreFrame:SetShown(not TAV_CoreFrame:IsShown())
 end
 SlashCmdList["TAVSLASH"] = slashcmd
