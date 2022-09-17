@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 		</Scripts>
 	</EditBox>
 
-	<Button name="TAV_ListButtonTemplate" mixin="TAV_ListButtonMixin" virtual="true">
+	<Button name="TAV_ListButtonTemplate" mixin="TAV_ListButtonMixin" inherits="TruncatedTooltipScriptTemplate" virtual="true">
 		<Size x="0" y="40"/>
 		<Anchors>
 			<Anchor point="LEFT"/>
