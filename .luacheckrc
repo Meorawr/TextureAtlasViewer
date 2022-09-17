@@ -70,6 +70,7 @@ stds.wow = {
 		"tinsert",
 		"TOOLTIP_DEFAULT_BACKGROUND_COLOR",
 		"UIParent",
+		"UISpecialFrames",
 		"wipe",
 		"YELLOW_FONT_COLOR",
 	},

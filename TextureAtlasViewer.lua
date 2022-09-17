@@ -890,3 +890,5 @@ local function slashcmd(msg)
 	TAV_CoreFrame:SetShown(not TAV_CoreFrame:IsShown())
 end
 SlashCmdList["TAVSLASH"] = slashcmd
+
+table.insert(UISpecialFrames, "TAV_CoreFrame")
