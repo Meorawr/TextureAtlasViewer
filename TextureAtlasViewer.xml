@@ -524,7 +524,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 											</OnMouseUp>
 											<OnEnter>
 												GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-												GameTooltip:SetText("Reset Positon And Scale", 1, 1, 1, nil, true);
+												GameTooltip:SetText("Reset Position And Scale", 1, 1, 1, nil, true);
 												GameTooltip:Show();
 											</OnEnter>
 											<OnLeave>
