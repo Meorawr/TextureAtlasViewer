@@ -82,8 +82,8 @@ function Get-Atlases([string] $Version) {
             Right = $_.CommittedRight / $Atlas.AtlasWidth
             Top = $_.CommittedTop / $Atlas.AtlasHeight
             Bottom = $_.CommittedBottom / $Atlas.AtlasHeight
-            Width = ($_.OverrideWidth ? $_.OverrideWidth : $_.CommittedRight - $_.CommittedLeft)
-            Height = ($_.OverrideHeight ? $_.OverrideHeight : $_.CommittedBottom - $_.CommittedTop)
+            Width = ($_.OverrideWidth -ne 0 ? $_.OverrideWidth : $_.CommittedRight - $_.CommittedLeft)
+            Height = ($_.OverrideHeight -ne 0 ? $_.OverrideHeight : $_.CommittedBottom - $_.CommittedTop)
             TileHorizontally = [bool] ($_.CommittedFlags -band 0x4)
             TileVertically = [bool] ($_.CommittedFlags -band 0x2)
             AtlasID = $Atlas.ID
