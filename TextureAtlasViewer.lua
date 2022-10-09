@@ -488,6 +488,13 @@ function TAV_DisplayContainerMixin:CreateOverlays()
 	end
 end
 
+local function HasValidSize(atlasInfo)
+	return atlasInfo.width > 0
+		and atlasInfo.height > 0
+		and (atlasInfo.rightTexCoord - atlasInfo.leftTexCoord) > 0
+		and (atlasInfo.bottomTexCoord - atlasInfo.topTexCoord) > 0
+end
+
 function TAV_DisplayContainerMixin:TrySetTextureSize()
 	wipe(self.dataIssues)
 	local issueOverflow = 0
@@ -506,7 +513,7 @@ function TAV_DisplayContainerMixin:TrySetTextureSize()
 	-- Loop over all atlases and check for any issues
 	for i = 1, #atlasNames do
 		local info = TAV:GetAtlasInfo(atlasNames[i])
-		if not info or info.missing then
+		if not info or info.missing or not HasValidSize(info) then
 			-- Mark it as an issue
 			issuesFound = true
 			if #self.dataIssues < MAX_NUM_ISSUES then

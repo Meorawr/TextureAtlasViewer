@@ -6,3 +6,4 @@
 - Fixed a typo in the tooltip of the Reset Position and Scale button.
 - Fixed an issue with version metadata in the TOC.
 - Fixed an issue where the Close button wasn't visible in recent Dragonflight beta builds (45569 onwards).
+- Fixed an issue where viewing some atlases in test clients may result in a division by zero error.
