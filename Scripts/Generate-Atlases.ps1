@@ -66,30 +66,33 @@ function Get-WowToolsListfile {
 
 function Get-Atlases([string] $Version) {
 	$Version = Get-ProductVersion -Product $Product
+    $Elements = Get-WowToolsDatabase -Name "uitextureatlaselement" -Version $Version
     $Atlases = Get-WowToolsDatabase -Name "uitextureatlas" -Version $Version | New-LookupTable -Property ID
-    $Elements = Get-WowToolsDatabase -Name "uitextureatlaselement" -Version $Version | New-LookupTable -Property ID
-    $Members = Get-WowToolsDatabase -Name "uitextureatlasmember" -Version $Version
+    $Members = Get-WowToolsDatabase -Name "uitextureatlasmember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
     $Files = Get-WowToolsListfile | New-LookupTable -Property ID
 
-    $Members | ForEach-Object {
-        $Atlas = $Atlases[$_.UiTextureAtlasID]
-        $Element = $Elements[$_.UiTextureAtlasElementID]
-        $File = $Files[$Atlas.FileDataID]
+    $Elements | ForEach-Object {
+		$Member = $Members[$_.ID]
 
-        @{
-            Name = $Element.Name
-            Left = $_.CommittedLeft / $Atlas.AtlasWidth
-            Right = $_.CommittedRight / $Atlas.AtlasWidth
-            Top = $_.CommittedTop / $Atlas.AtlasHeight
-            Bottom = $_.CommittedBottom / $Atlas.AtlasHeight
-            Width = ($_.OverrideWidth -ne 0 ? $_.OverrideWidth : $_.CommittedRight - $_.CommittedLeft)
-            Height = ($_.OverrideHeight -ne 0 ? $_.OverrideHeight : $_.CommittedBottom - $_.CommittedTop)
-            TileHorizontally = [bool] ($_.CommittedFlags -band 0x4)
-            TileVertically = [bool] ($_.CommittedFlags -band 0x2)
-            AtlasID = $Atlas.ID
-            FileDataID = $Atlas.FileDataID
-            FileName = ($File ? $File.Name.Substring(0, $File.Name.LastIndexOf(".")) : $Atlas.FileDataID)
-        }
+		if ($Member) {
+			$Atlas = $Atlases[$Member.UiTextureAtlasID]
+			$File = $Files[$Atlas.FileDataID]
+
+			@{
+				Name = $_.Name
+				Left = $Member.CommittedLeft / $Atlas.AtlasWidth
+				Right = $Member.CommittedRight / $Atlas.AtlasWidth
+				Top = $Member.CommittedTop / $Atlas.AtlasHeight
+				Bottom = $Member.CommittedBottom / $Atlas.AtlasHeight
+				Width = ($Member.OverrideWidth -ne 0 ? $Member.OverrideWidth : $Member.CommittedRight - $Member.CommittedLeft)
+				Height = ($Member.OverrideHeight -ne 0 ? $Member.OverrideHeight : $Member.CommittedBottom - $Member.CommittedTop)
+				TileHorizontally = [bool] ($Member.CommittedFlags -band 0x4)
+				TileVertically = [bool] ($Member.CommittedFlags -band 0x2)
+				AtlasID = $Atlas.ID
+				FileDataID = $Atlas.FileDataID
+				FileName = ($File ? $File.Name.Substring(0, $File.Name.LastIndexOf(".")) : $Atlas.FileDataID)
+			}
+		}
     }
 }
 
