@@ -1,5 +1,5 @@
 local _, _addon = ...
-local buildNr = 44834
+local buildNr = 45437
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -3201,22 +3201,6 @@ local AtlasInfo = {
 	["interface/guildframe/guildlevelring"] = {
 		["guild-levelring"] = { 33, 30, 0.015625, 0.53125, 0.03125, 0.96875, false, false },
 	},
-	["interface/helpframe/newplayerexperienceparts"] = {
-		["NPE_ArrowDown"] = { 64, 64, 0.8935546875, 0.9560546875, 0.001953125, 0.126953125, false, false },
-		["NPE_ArrowDownGlow"] = { 64, 64, 0.8935546875, 0.9560546875, 0.130859375, 0.255859375, false, false },
-		["NPE_ArrowLeft"] = { 64, 64, 0.8935546875, 0.9560546875, 0.259765625, 0.384765625, false, false },
-		["NPE_ArrowLeftGlow"] = { 64, 64, 0.8935546875, 0.9560546875, 0.388671875, 0.513671875, false, false },
-		["NPE_ArrowRight"] = { 64, 64, 0.8935546875, 0.9560546875, 0.517578125, 0.642578125, false, false },
-		["NPE_ArrowRightGlow"] = { 64, 64, 0.0009765625, 0.0634765625, 0.697265625, 0.822265625, false, false },
-		["NPE_ArrowUp"] = { 64, 64, 0.0009765625, 0.0634765625, 0.826171875, 0.951171875, false, false },
-		["NPE_ArrowUpGlow"] = { 64, 64, 0.0654296875, 0.1279296875, 0.697265625, 0.822265625, false, false },
-		["NPE_ExclamationPoint"] = { 32, 32, 0.9580078125, 0.9892578125, 0.001953125, 0.064453125, false, false },
-		["NPE_Icon"] = { 64, 64, 0.0654296875, 0.1279296875, 0.826171875, 0.951171875, false, false },
-		["NPE_keyboard"] = { 912, 354, 0.0009765625, 0.8916015625, 0.001953125, 0.693359375, false, false },
-		["NPE_LeftClick"] = { 32, 32, 0.9580078125, 0.9892578125, 0.130859375, 0.193359375, false, false },
-		["NPE_RightClick"] = { 32, 32, 0.9580078125, 0.9892578125, 0.259765625, 0.322265625, false, false },
-		["NPE_TurnIn"] = { 20, 20, 0.9580078125, 0.9775390625, 0.068359375, 0.107421875, false, false },
-	},
 	["interface/itemtextframe/book"] = {
 		["book-bg"] = { 486, 494, 0.001953125, 0.951171875, 0.001953125, 0.966796875, false, false },
 		["book-line"] = { 411, 8, 0.001953125, 0.8046875, 0.970703125, 0.986328125, false, false },
@@ -4446,34 +4430,6 @@ local AtlasInfo = {
 		["services-yellowarrow"] = { 18, 32, 0.1552734375, 0.1728515625, 0.9619140625, 0.9931640625, false, false },
 	},
 	["interface/store/shop"] = {
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
 		["category-icon-ring"] = { 74, 74, 0.291015625, 0.435546875, 0.48046875, 0.76953125, false, false },
 		["shop-card-darkcover"] = { 146, 209, 0.001953125, 0.287109375, 0.00390625, 0.8203125, false, false },
 		["vas-receipt-brownarrow"] = { 30, 15, 0.072265625, 0.130859375, 0.828125, 0.88671875, false, false },

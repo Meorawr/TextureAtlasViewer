@@ -112,16 +112,6 @@ function Write-GroupedAtlases {
     )
 
     begin {
-		# Temporary hack for 10.x datasets coexisting with retail.
-		if ($Product -eq "wow_beta") {
-			@"
-if select(4, GetBuildInfo()) < 100000 then
-	return;
-end
-
-"@
-		}
-
 		if ($Product -eq "wow") {
 			# Mainline data sets should include replacement instructions.
 @"

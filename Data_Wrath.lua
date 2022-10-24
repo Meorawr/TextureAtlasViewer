@@ -1,5 +1,5 @@
 local _, _addon = ...
-local buildNr = 45942
+local buildNr = 46248
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -4435,34 +4435,6 @@ local AtlasInfo = {
 		["services-yellowarrow"] = { 18, 32, 0.1552734375, 0.1728515625, 0.9619140625, 0.9931640625, false, false },
 	},
 	["interface/store/shop"] = {
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
-		[""] = { 0, 0, 0, 0, 0, 0, false, false },
 		["category-icon-ring"] = { 74, 74, 0.291015625, 0.435546875, 0.48046875, 0.76953125, false, false },
 		["shop-card-darkcover"] = { 146, 209, 0.001953125, 0.287109375, 0.00390625, 0.8203125, false, false },
 		["vas-receipt-brownarrow"] = { 30, 15, 0.072265625, 0.130859375, 0.828125, 0.88671875, false, false },

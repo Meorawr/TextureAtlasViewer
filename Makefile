@@ -20,10 +20,7 @@ libs:
 	@mkdir -p Libs/
 	@cp -a .release/TextureAtlasViewer/Libs/* Libs/
 
-data: Data_Dragonflight.lua Data_Vanilla.lua Data_Wrath.lua Data.lua
-
-Data_Dragonflight.lua: .FORCE
-	pwsh Scripts/Generate-Atlases.ps1 -Product wow_beta > $@
+data: Data_Vanilla.lua Data_Wrath.lua Data.lua
 
 Data_Vanilla.lua: .FORCE
 	pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic_era > $@
