@@ -29,9 +29,7 @@ function New-LookupTable {
 
 	process {
 		foreach ($Object in $InputObject) {
-			if (-not $Table[$Object.$Property]) {
-				$Table[$Object.$Property] = $Object
-			}
+			$Table[$Object.$Property] = $Object
 		}
 	}
 
