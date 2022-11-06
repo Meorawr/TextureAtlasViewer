@@ -2,42 +2,42 @@
 
 <#
 .SYNOPSIS
-    Generates an output document of atlases pulled from WoW client databases
-    suitable for use with the Texture Atlas Viewer addon.
+	Generates an output document of atlases pulled from WoW client databases
+	suitable for use with the Texture Atlas Viewer addon.
 #>
 [CmdletBinding()]
 param (
 	# Product name to generate atlases for, using the latest CDN version.
-    [Parameter(Mandatory=$true)]
+	[Parameter(Mandatory=$true)]
 	[ValidateNotNull()]
-    [string] $Product
+	[string] $Product
 )
 
 function New-LookupTable {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-        [Object[]] $InputObject,
+	[CmdletBinding()]
+	param (
+		[Parameter(Mandatory=$true, ValueFromPipeline=$true)]
+		[Object[]] $InputObject,
 
-        [Parameter(Mandatory=$true)]
-        [string] $Property
-    )
+		[Parameter(Mandatory=$true)]
+		[string] $Property
+	)
 
-    begin {
-        $Table = @{}
-    }
+	begin {
+		$Table = @{}
+	}
 
-    process {
-        foreach ($Object in $InputObject) {
-            if (-not $Table[$Object.$Property]) {
-                $Table[$Object.$Property] = $Object
-            }
-        }
-    }
+	process {
+		foreach ($Object in $InputObject) {
+			if (-not $Table[$Object.$Property]) {
+				$Table[$Object.$Property] = $Object
+			}
+		}
+	}
 
-    end {
-        $Table
-    }
+	end {
+		$Table
+	}
 }
 
 function Get-ProductVersion([string] $Product) {
@@ -57,23 +57,23 @@ function Get-ProductVersion([string] $Product) {
 }
 
 function Get-WowToolsDatabase([string] $Name, [string] $Version) {
-    Invoke-WebRequest "https://wow.tools/dbc/api/export/?name=${Name}&build=${Version}&useHotfixes=true" `
-        | ConvertFrom-Csv
+	Invoke-WebRequest "https://wow.tools/dbc/api/export/?name=${Name}&build=${Version}&useHotfixes=true" `
+		| ConvertFrom-Csv
 }
 
 function Get-WowToolsListfile {
-    Invoke-WebRequest "https://wow.tools/casc/listfile/download/csv/unverified" `
-        | ConvertFrom-Csv -Delimiter ";" -Header "ID", "Name"
+	Invoke-WebRequest "https://wow.tools/casc/listfile/download/csv/unverified" `
+		| ConvertFrom-Csv -Delimiter ";" -Header "ID", "Name"
 }
 
 function Get-Atlases([string] $Version) {
 	$Version = Get-ProductVersion -Product $Product
-    $Elements = Get-WowToolsDatabase -Name "uitextureatlaselement" -Version $Version
-    $Atlases = Get-WowToolsDatabase -Name "uitextureatlas" -Version $Version | New-LookupTable -Property ID
-    $Members = Get-WowToolsDatabase -Name "uitextureatlasmember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
-    $Files = Get-WowToolsListfile | New-LookupTable -Property ID
+	$Elements = Get-WowToolsDatabase -Name "uitextureatlaselement" -Version $Version
+	$Atlases = Get-WowToolsDatabase -Name "uitextureatlas" -Version $Version | New-LookupTable -Property ID
+	$Members = Get-WowToolsDatabase -Name "uitextureatlasmember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
+	$Files = Get-WowToolsListfile | New-LookupTable -Property ID
 
-    $Elements | ForEach-Object {
+	$Elements | ForEach-Object {
 		$Member = $Members[$_.ID]
 
 		if ($Member) {
@@ -95,14 +95,14 @@ function Get-Atlases([string] $Version) {
 				FileName = ($File ? $File.Name.Substring(0, $File.Name.LastIndexOf(".")) : $Atlas.FileDataID)
 			}
 		}
-    }
+	}
 }
 
 function Write-GroupedAtlases {
-    [CmdletBinding()]
-    param(
-        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
-        [Object[]] $InputObject,
+	[CmdletBinding()]
+	param(
+		[Parameter(Mandatory=$true, ValueFromPipeline=$true)]
+		[Object[]] $InputObject,
 
 		[Parameter(Mandatory=$true)]
 		[ValidateNotNull()]
@@ -111,9 +111,9 @@ function Write-GroupedAtlases {
 		[Parameter(Mandatory=$true)]
 		[ValidateNotNull()]
 		[string] $Version
-    )
+	)
 
-    begin {
+	begin {
 		if ($Product -eq "wow") {
 			# Mainline data sets should include replacement instructions.
 @"
@@ -143,19 +143,19 @@ local AtlasInfo = {
 "@
 		}
 
-    }
+	}
 
-    process {
-        foreach ($GroupInfo in $InputObject) {
-            "`t[`"$($GroupInfo.Name)`"] = {"
-            foreach ($_ in $GroupInfo.Group) {
-                "`t`t[`"$($_.Name)`"] = { $($_.Width), $($_.Height), $($_.Left), $($_.Right), $($_.Top), $($_.Bottom), $($_.TileHorizontally ? "true" : "false"), $($_.TileVertically ? "true" : "false") },"
-            }
-            "`t},"
-        }
-    }
+	process {
+		foreach ($GroupInfo in $InputObject) {
+			"`t[`"$($GroupInfo.Name)`"] = {"
+			foreach ($_ in $GroupInfo.Group) {
+				"`t`t[`"$($_.Name)`"] = { $($_.Width), $($_.Height), $($_.Left), $($_.Right), $($_.Top), $($_.Bottom), $($_.TileHorizontally ? "true" : "false"), $($_.TileVertically ? "true" : "false") },"
+			}
+			"`t},"
+		}
+	}
 
-    end {
+	end {
 		@"
 }
 
@@ -168,13 +168,13 @@ local AtlasInfo = {
 _addon.data = AtlasInfo
 _addon.dataBuild = buildNr
 "@
-    }
+	}
 }
 
 $Version = Get-ProductVersion -Product $Product
 
 Get-Atlases -Version $Version `
-    | Sort-Object -Property Name `
-    | Group-Object -Property FileName `
-    | Sort-Object -Property Name `  # Sorts by the grouped-by filename.
-    | Write-GroupedAtlases -Product $Product -Version $Version
+	| Sort-Object -Property Name `
+	| Group-Object -Property FileName `
+	| Sort-Object -Property Name `  # Sorts by the grouped-by filename.
+	| Write-GroupedAtlases -Product $Product -Version $Version
