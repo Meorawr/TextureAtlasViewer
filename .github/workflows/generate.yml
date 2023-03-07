@@ -20,9 +20,10 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
+          branch: actions/generate-atlases
           commit-message:  Regenerate atlas databases
-          branch: actions/generate-atlates
           delete-branch: true
-          title: Regenerate atlas databases
-          body: Automated generation of atlas data.
+          title: Automated regeneration of atlas databases
+          body: Automated regeneration of atlas databases.
+          author: GitHub <noreply@github.com>
           reviewers: Meorawr
