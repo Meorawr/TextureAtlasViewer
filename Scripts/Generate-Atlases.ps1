@@ -38,7 +38,7 @@ function New-LookupTable {
 	}
 }
 
-function Get-ProductVersion([string] $Product) {
+function Get-ProductVersion([string] $Product, [string] $Region = "us") {
 	$Socket = New-Object System.Net.Sockets.TcpClient("us.version.battle.net", 1119)
 	$Stream = $Socket.GetStream()
 	$Reader = New-Object System.IO.StreamReader($Stream)
@@ -48,28 +48,28 @@ function Get-ProductVersion([string] $Product) {
 	$Writer.WriteLine("v2/products/$Product/versions")
 	$Header = $Reader.ReadLine() -Replace "![^|]+", "" -Split "\|"
 	$Reader.ReadLine() >$null
-	$Result = $Reader.ReadToEnd() | ConvertFrom-Csv -Delimiter "|" -Header $Header | Where-Object -Property Region -eq "us"
+	$Result = $Reader.ReadToEnd() | ConvertFrom-Csv -Delimiter "|" -Header $Header | Where-Object -Property Region -eq $Region
 	$Socket.Close()
 
 	$Result.VersionsName
 }
 
-function Get-WowToolsDatabase([string] $Name, [string] $Version) {
-	Invoke-WebRequest "https://wow.tools/dbc/api/export/?name=${Name}&build=${Version}&useHotfixes=true" `
+function Get-ClientDatabase([string] $Name, [string] $Version) {
+	Invoke-WebRequest "https://wago.tools/db2/${Name}/csv?build=${Version}" `
 		| ConvertFrom-Csv
 }
 
-function Get-WowToolsListfile {
-	Invoke-WebRequest "https://wow.tools/casc/listfile/download/csv/unverified" `
+function Get-Listfile {
+	Invoke-WebRequest "https://raw.githubusercontent.com/wowdev/wow-listfile/master/community-listfile.csv" `
 		| ConvertFrom-Csv -Delimiter ";" -Header "ID", "Name"
 }
 
 function Get-Atlases([string] $Version) {
 	$Version = Get-ProductVersion -Product $Product
-	$Elements = Get-WowToolsDatabase -Name "uitextureatlaselement" -Version $Version
-	$Atlases = Get-WowToolsDatabase -Name "uitextureatlas" -Version $Version | New-LookupTable -Property ID
-	$Members = Get-WowToolsDatabase -Name "uitextureatlasmember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
-	$Files = Get-WowToolsListfile | New-LookupTable -Property ID
+	$Elements = Get-ClientDatabase -Name "UiTextureAtlasElement" -Version $Version
+	$Atlases = Get-ClientDatabase -Name "UiTextureAtlas" -Version $Version | New-LookupTable -Property ID
+	$Members = Get-ClientDatabase -Name "UiTextureAtlasMember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
+	$Files = Get-Listfile | New-LookupTable -Property ID
 
 	$Elements | ForEach-Object {
 		$Member = $Members[$_.ID]
