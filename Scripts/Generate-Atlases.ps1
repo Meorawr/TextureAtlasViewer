@@ -38,20 +38,10 @@ function New-LookupTable {
 	}
 }
 
-function Get-ProductVersion([string] $Product, [string] $Region = "us") {
-	$Socket = New-Object System.Net.Sockets.TcpClient("us.version.battle.net", 1119)
-	$Stream = $Socket.GetStream()
-	$Reader = New-Object System.IO.StreamReader($Stream)
-	$Writer = New-Object System.IO.StreamWriter($Stream)
-	$Writer.AutoFlush = $true
-
-	$Writer.WriteLine("v2/products/$Product/versions")
-	$Header = $Reader.ReadLine() -Replace "![^|]+", "" -Split "\|"
-	$Reader.ReadLine() >$null
-	$Result = $Reader.ReadToEnd() | ConvertFrom-Csv -Delimiter "|" -Header $Header | Where-Object -Property Region -eq $Region
-	$Socket.Close()
-
-	$Result.VersionsName
+function Get-ProductVersion([string] $Product) {
+	Invoke-WebRequest "https://wago.tools/api/builds/${Product}/latest" `
+		| ConvertFrom-Json `
+		| Select-Object -ExpandProperty version
 }
 
 function Get-ClientDatabase([string] $Name, [string] $Version) {
