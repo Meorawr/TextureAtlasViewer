@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 48317
+local buildNr = 48397
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -32,6 +32,9 @@ local AtlasInfo = {
 		["shop-card-full-p74"] = { 568, 463, 0.2822265625, 0.8369140625, 0.0009765625, 0.453125, false, false },
 		["shop-card-half-p27a"] = { 286, 471, 0.0009765625, 0.2802734375, 0.462890625, 0.9228515625, false, false },
 		["shop-card-half-p74"] = { 286, 471, 0.0009765625, 0.2802734375, 0.0009765625, 0.4609375, false, false },
+	},
+	["5048257"] = {
+		["shop-card-full-b06"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 96, 96, 0.19677734375, 0.24365234375, 0.7255859375, 0.8193359375, false, false },
