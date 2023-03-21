@@ -1,4 +1,4 @@
-﻿## Interface: 11403
+## Interface: 11403
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
