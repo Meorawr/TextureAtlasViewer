@@ -1,8 +1,9 @@
-## Interface: 100007
+## Interface: 100100
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
 ## Version: @project-version@
+## IconAtlas: communities-icon-searchmagnifyingglass
 ## OptionalDeps: Ace3
 ## SavedVariables: ATVDB
 ## X-Curse-Project-ID: 348853
