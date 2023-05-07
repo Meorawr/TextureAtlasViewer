@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 49365
+local buildNr = 49444
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -35,12 +35,6 @@ local AtlasInfo = {
 	},
 	["5048257"] = {
 		["shop-card-full-b06"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["5154329"] = {
-		["shop-card-full-y46"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["5154332"] = {
-		["shop-card-full-y47"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 96, 96, 0.19677734375, 0.24365234375, 0.8896484375, 0.9833984375, false, false },
@@ -9190,7 +9184,7 @@ local AtlasInfo = {
 		["Professions-Specializations-Preview-Art-Alchemy"] = { 1140, 520, 0.00048828125, 0.55712890625, 0.0009765625, 0.5087890625, false, false },
 	},
 	["interface/professions/professionspecializationpreviewartblacksmithing"] = {
-		["ProfessionSpecializationPreviewArtBlacksmithing"] = { 1142, 522, 0.00048828125, 0.55810546875, 0.0009765625, 0.5107421875, false, false },
+		["Professions-Specializations-Preview-Art-Blacksmithing"] = { 1142, 522, 0.00048828125, 0.55810546875, 0.0009765625, 0.5107421875, false, false },
 	},
 	["interface/professions/professionspecializationpreviewartenchanting"] = {
 		["Professions-Specializations-Preview-Art-Enchanting"] = { 1140, 520, 0.00048828125, 0.55712890625, 0.0009765625, 0.5087890625, false, false },
@@ -11027,6 +11021,12 @@ local AtlasInfo = {
 	["interface/store/shopbundles_murlocbackpack_4238249"] = {
 		["shop-image-bundle-mbp1"] = { 286, 434, 0.5576171875, 0.8369140625, 0.001953125, 0.849609375, false, false },
 		["shop-image-bundle-mbp2"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1007y46"] = {
+		["shop-card-full-y46"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1007y47"] = {
+		["shop-card-full-y47"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
