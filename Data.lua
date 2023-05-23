@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 49570
+local buildNr = 49679
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
