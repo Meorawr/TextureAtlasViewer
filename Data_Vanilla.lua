@@ -1,5 +1,5 @@
 local _, _addon = ...
-local buildNr = 49229
+local buildNr = 49821
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -670,6 +670,30 @@ local AtlasInfo = {
 		["chatframe-button-up"] = { 27, 26, 0.4921875, 0.703125, 0.515625, 0.71875, false, false },
 		["chatframe-scrollbar-knob"] = { 21, 19, 0.4921875, 0.65625, 0.734375, 0.8828125, false, false },
 	},
+	["interface/chatframe/uichaticon"] = {
+		["UI-ChatIcon-ANBS"] = { 32, 32, 0.40234375, 0.52734375, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-App"] = { 32, 32, 0.00390625, 0.12890625, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-D3"] = { 32, 32, 0.26953125, 0.39453125, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-DST2"] = { 32, 32, 0.53515625, 0.66015625, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-FEN"] = { 32, 32, 0.13671875, 0.26171875, 0.53515625, 0.66015625, false, false },
+		["UI-ChatIcon-FORE"] = { 32, 32, 0.66796875, 0.79296875, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-GRY"] = { 32, 32, 0.80078125, 0.92578125, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-Hero"] = { 32, 32, 0.00390625, 0.12890625, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-LAZR"] = { 32, 32, 0.00390625, 0.12890625, 0.26953125, 0.39453125, false, false },
+		["UI-ChatIcon-ODIN"] = { 32, 32, 0.13671875, 0.26171875, 0.00390625, 0.12890625, false, false },
+		["UI-ChatIcon-OSI"] = { 32, 32, 0.00390625, 0.12890625, 0.40234375, 0.52734375, false, false },
+		["UI-ChatIcon-Overwatch-zhCN"] = { 32, 32, 0.00390625, 0.12890625, 0.66796875, 0.79296875, false, false },
+		["UI-ChatIcon-Pro"] = { 32, 32, 0.00390625, 0.12890625, 0.53515625, 0.66015625, false, false },
+		["UI-ChatIcon-RTRO"] = { 32, 32, 0.00390625, 0.12890625, 0.80078125, 0.92578125, false, false },
+		["UI-ChatIcon-S1"] = { 32, 32, 0.13671875, 0.26171875, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-S2"] = { 32, 32, 0.26953125, 0.39453125, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-VIPR"] = { 32, 32, 0.40234375, 0.52734375, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-W3"] = { 32, 32, 0.53515625, 0.66015625, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-WLBY"] = { 32, 32, 0.66796875, 0.79296875, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-WoW"] = { 32, 32, 0.80078125, 0.92578125, 0.13671875, 0.26171875, false, false },
+		["UI-ChatIcon-WTCG"] = { 32, 32, 0.13671875, 0.26171875, 0.26953125, 0.39453125, false, false },
+		["UI-ChatIcon-ZEUS"] = { 32, 32, 0.13671875, 0.26171875, 0.40234375, 0.52734375, false, false },
+	},
 	["interface/collections/collections"] = {
 		["_collections-background-line"] = { 512, 4, 0, 1, 0.001953125, 0.009765625, true, false },
 		["collections-background-corner"] = { 90, 67, 0.001953125, 0.177734375, 0.013671875, 0.14453125, false, false },
@@ -886,6 +910,30 @@ local AtlasInfo = {
 	["interface/framegeneral/uiframediamondmetalvertical"] = {
 		["!UI-Frame-DiamondMetal-EdgeLeft"] = { 32, 32, 0.0078125, 0.2578125, 0, 1, false, true },
 		["!UI-Frame-DiamondMetal-EdgeRight"] = { 32, 32, 0.2734375, 0.5234375, 0, 1, false, true },
+	},
+	["interface/friendsframe/battlenetclienticon"] = {
+		["Battlenet-ClientIcon-ANBS"] = { 32, 32, 0.13671875, 0.26171875, 0.26953125, 0.39453125, false, false },
+		["Battlenet-ClientIcon-App"] = { 32, 32, 0.26953125, 0.39453125, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-D3"] = { 32, 32, 0.40234375, 0.52734375, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-DST2"] = { 32, 32, 0.53515625, 0.66015625, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-FEN"] = { 32, 32, 0.13671875, 0.26171875, 0.53515625, 0.66015625, false, false },
+		["Battlenet-ClientIcon-FORE"] = { 32, 32, 0.13671875, 0.26171875, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-GRY"] = { 32, 32, 0.66796875, 0.79296875, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-Hero"] = { 32, 32, 0.80078125, 0.92578125, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-LAZR"] = { 32, 32, 0.00390625, 0.12890625, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-ODIN"] = { 32, 32, 0.00390625, 0.12890625, 0.00390625, 0.12890625, false, false },
+		["Battlenet-ClientIcon-OSI"] = { 32, 32, 0.00390625, 0.12890625, 0.26953125, 0.39453125, false, false },
+		["Battlenet-ClientIcon-Pro"] = { 32, 32, 0.00390625, 0.12890625, 0.40234375, 0.52734375, false, false },
+		["battlenet-clienticon-pro-zhCN"] = { 32, 32, 0.00390625, 0.12890625, 0.53515625, 0.66015625, false, false },
+		["Battlenet-ClientIcon-RTRO"] = { 32, 32, 0.00390625, 0.12890625, 0.66796875, 0.79296875, false, false },
+		["Battlenet-ClientIcon-S1"] = { 32, 32, 0.00390625, 0.12890625, 0.80078125, 0.92578125, false, false },
+		["Battlenet-ClientIcon-S2"] = { 32, 32, 0.13671875, 0.26171875, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-VIPR"] = { 32, 32, 0.26953125, 0.39453125, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-W3"] = { 32, 32, 0.13671875, 0.26171875, 0.40234375, 0.52734375, false, false },
+		["Battlenet-ClientIcon-WLBY"] = { 32, 32, 0.40234375, 0.52734375, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-WoW"] = { 32, 32, 0.53515625, 0.66015625, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-WTCG"] = { 32, 32, 0.66796875, 0.79296875, 0.13671875, 0.26171875, false, false },
+		["Battlenet-ClientIcon-ZEUS"] = { 32, 32, 0.80078125, 0.92578125, 0.13671875, 0.26171875, false, false },
 	},
 	["interface/friendsframe/friendslist"] = {
 		["friendslist-categorybutton"] = { 293, 26, 0.001953125, 0.57421875, 0.03125, 0.84375, false, false },
