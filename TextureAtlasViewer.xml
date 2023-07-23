@@ -835,4 +835,10 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 			<OnHide method="OnHide"/>
 		</Scripts>
 	</Frame>
+
+	<Button name="TAV_BindingListenerButton" mixin="TAV_BindingListenerMixin">
+		<Scripts>
+			<OnClick method="OnClick"/>
+		</Scripts>
+	</Button>
 </Ui>

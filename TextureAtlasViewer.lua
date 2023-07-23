@@ -3,10 +3,19 @@ local _, _addon = ...
 local TAV = LibStub("AceAddon-3.0"):NewAddon("AtlastTextureViewer")
 local TAV_Defaults = {
 	["global"] = {
+		["bindings"] = {
+			["UP"] = "TAV_SelectPreviousTexture",
+			["DOWN"] = "TAV_SelectNextTexture",
+			["CTRL-="] = "TAV_ZoomIn",
+			["CTRL--"] = "TAV_ZoomOut",
+			["CTRL-0"] = "TAV_ResetPositionAndScale",
+			["CTRL-L"] = "TAV_FocusSearch",
+		},
 		["settings"] = {
 			["passiveBorders"] = true,
 			["backgroundColor"] = { ["r"] = 0.25, ["g"] = 0.25, ["b"] = 0.25, ["a"] = 1 },
 			["showIssues"] = false,
+			["enableBindings"] = true,
 		},
 		["AtlasInfo"] = nil,
 	},
@@ -259,6 +268,37 @@ end
 function TAV_ScrollFrameMixin:OnSizeChanged()
 	HybridScrollFrame_CreateButtons(self, "TAV_ListButtonTemplate", 0, 0)
 	self:RefreshButtons()
+end
+
+local function FindEntryByTexture(textureName, entryInfo)
+	return entryInfo.texture == textureName
+end
+
+function TAV_ScrollFrameMixin:GetSelectedButtonIndex()
+	local selectedTexture = self:GetScrollChild().selected
+	local selectedIndex = FindInTableIf(TAV.filteredList, GenerateClosure(FindEntryByTexture, selectedTexture))
+
+	return selectedIndex
+end
+
+local function GetScrollFrameButtonHeight()
+	return 40
+end
+
+function TAV_ScrollFrameMixin:SetSelectedButtonIndex(index)
+	local selectedIndex = self:GetSelectedButtonIndex()
+	local desiredIndex = Clamp(index, 1, #TAV.filteredList)
+
+	if selectedIndex == index then
+		return
+	end
+
+	local desiredTexture = TAV.filteredList[desiredIndex].texture
+
+	self:GetScrollChild().selected = desiredTexture
+	HybridScrollFrame_ScrollToIndex(self, desiredIndex, GetScrollFrameButtonHeight)
+	self:RefreshButtons()
+	TAV_DisplayContainer:DisplayTexture(desiredTexture)
 end
 
 -------------------------------------------------
@@ -954,10 +994,67 @@ end
 
 function TAV_CoreFrameMixin:OnShow()
 	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN)
+
+	if TAV.settings.enableBindings then
+		for key in pairs(TAV.db.global.bindings) do
+			local isPriority = false
+			SetOverrideBindingClick(self, isPriority, key, "TAV_BindingListenerButton", key)
+		end
+	end
 end
 
 function TAV_CoreFrameMixin:OnHide()
 	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE)
+	ClearOverrideBindings(self)
+end
+
+-------------------------------------------------
+-- Binding Actions
+-------------------------------------------------
+
+function TAV_SelectPreviousTexture()
+	local index = TAV_ScrollFrame:GetSelectedButtonIndex()
+	local offset = IsControlKeyDown() and 10 or 1
+
+	TAV_ScrollFrame:SetSelectedButtonIndex(index - offset)
+end
+
+function TAV_SelectNextTexture()
+	local index = TAV_ScrollFrame:GetSelectedButtonIndex()
+	local offset = IsControlKeyDown() and 10 or 1
+
+	TAV_ScrollFrame:SetSelectedButtonIndex(index + offset)
+end
+
+function TAV_ZoomIn()
+	ExecuteFrameScript(TAV_DisplayContainer, "OnMouseWheel", 1)
+end
+
+function TAV_ZoomOut()
+	ExecuteFrameScript(TAV_DisplayContainer, "OnMouseWheel", -1)
+end
+
+function TAV_ResetPositionAndScale()
+	TAV_DisplayContainer:Reset()
+end
+
+function TAV_FocusSearch()
+	TAV_CoreFrame.LeftInset.SearchBox:SetFocus()
+	TAV_CoreFrame.LeftInset.SearchBox:HighlightText()
+end
+
+-------------------------------------------------
+-- Binding Listener
+-------------------------------------------------
+
+TAV_BindingListenerMixin = {}
+
+function TAV_BindingListenerMixin:OnClick(key)
+	local action = TAV.db.global.bindings[key]
+
+	if _G[action] then
+		_G[action](key)
+	end
 end
 
 -------------------------------------------------
