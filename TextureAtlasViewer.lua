@@ -9,7 +9,7 @@ local TAV_Defaults = {
 			["CTRL-="] = "TAV_ZoomIn",
 			["CTRL--"] = "TAV_ZoomOut",
 			["CTRL-0"] = "TAV_ResetPositionAndScale",
-			["CTRL-L"] = "TAV_FocusSearch",
+			["CTRL-K"] = "TAV_FocusSearch",
 		},
 		["settings"] = {
 			["passiveBorders"] = true,
