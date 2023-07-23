@@ -289,7 +289,7 @@ function TAV_ScrollFrameMixin:SetSelectedButtonIndex(index)
 	local selectedIndex = self:GetSelectedButtonIndex()
 	local desiredIndex = Clamp(index, 1, #TAV.filteredList)
 
-	if selectedIndex == index then
+	if selectedIndex == index or not TAV.filteredList[desiredIndex] then
 		return
 	end
 
@@ -1013,14 +1013,14 @@ end
 -------------------------------------------------
 
 function TAV_SelectPreviousTexture()
-	local index = TAV_ScrollFrame:GetSelectedButtonIndex()
+	local index = TAV_ScrollFrame:GetSelectedButtonIndex() or 0
 	local offset = IsControlKeyDown() and 10 or 1
 
 	TAV_ScrollFrame:SetSelectedButtonIndex(index - offset)
 end
 
 function TAV_SelectNextTexture()
-	local index = TAV_ScrollFrame:GetSelectedButtonIndex()
+	local index = TAV_ScrollFrame:GetSelectedButtonIndex() or 0
 	local offset = IsControlKeyDown() and 10 or 1
 
 	TAV_ScrollFrame:SetSelectedButtonIndex(index + offset)
