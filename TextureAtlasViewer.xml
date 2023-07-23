@@ -138,7 +138,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 		</Scripts>
 	</Button>
 
-	<Frame name="TAV_CoreFrame" inherits="PortraitFrameTemplate" mixin="TAV_CoreFrameMixin" movable="true" parent="UIParent" clampedToScreen="true" hidden="true" toplevel="true">
+	<Frame name="TAV_CoreFrame" inherits="PortraitFrameTemplate" mixin="TAV_CoreFrameMixin" movable="true" resizable="true" parent="UIParent" clampedToScreen="true" hidden="true" toplevel="true">
 		<Size x="1000" y="600"/>
 		<Anchors>
 			<Anchor point="CENTER"/>
@@ -257,6 +257,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 						</Frames>
 						<Scripts>
 							<OnShow method="OnShow"/>
+							<OnSizeChanged method="OnSizeChanged"/>
 						</Scripts>
 					</ScrollFrame>
 				</Frames>
@@ -659,7 +660,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 									<KeyValue key="layoutType" value="TooltipDefaultLayout" type="string"/>
 								</KeyValues>
 								<Anchors>
-									<Anchor point="BOTTOMRIGHT" x="2" y="-2"/>
+									<Anchor point="BOTTOMRIGHT" x="2" y="18"/>
 								</Anchors>
 								<Frames>
 									<Frame parentKey="NineSlice" inherits="NineSlicePanelTemplate" useParentLevel="true"/>
@@ -819,6 +820,11 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 					</Frame>
 				</Frames>
 			</Frame>
+			<Button parentKey="ResizeButton" frameLevel="30" inherits="PanelResizeButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+				</Anchors>
+			</Button>
 		</Frames>
 		<Scripts>
 			<OnLoad method="OnLoad"/>

@@ -256,6 +256,11 @@ function TAV_ScrollFrameMixin:OnShow()
 	self:RefreshButtons()
 end
 
+function TAV_ScrollFrameMixin:OnSizeChanged()
+	HybridScrollFrame_CreateButtons(self, "TAV_ListButtonTemplate", 0, 0)
+	self:RefreshButtons()
+end
+
 -------------------------------------------------
 -- TAV_DisplayContainerMixin
 -------------------------------------------------
@@ -917,6 +922,7 @@ TAV_CoreFrameMixin = {}
 function TAV_CoreFrameMixin:OnLoad()
 	self:RegisterEvent("PLAYER_REGEN_DISABLED")
 	self:RegisterForDrag("LeftButton")
+	self.ResizeButton:Init(self, 800, 400)
 
 	ButtonFrameTemplate_HidePortrait(self)
 
