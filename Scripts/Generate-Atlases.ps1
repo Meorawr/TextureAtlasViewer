@@ -50,7 +50,7 @@ function Get-ClientDatabase([string] $Name, [string] $Version) {
 }
 
 function Get-Listfile {
-	Invoke-WebRequest "https://raw.githubusercontent.com/wowdev/wow-listfile/master/community-listfile.csv" `
+	Invoke-WebRequest "https://github.com/wowdev/wow-listfile/releases/latest/download/community-listfile.csv" `
 		| ConvertFrom-Csv -Delimiter ";" -Header "ID", "Name"
 }
 
