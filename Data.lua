@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 51187
+local buildNr = 51237
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -10417,6 +10417,7 @@ local AtlasInfo = {
 		["Ping_GroundMarker_BG_NonThreat"] = { 58, 58, 0.9189453125, 0.9755859375, 0.2294921875, 0.2861328125, false, false },
 		["Ping_GroundMarker_Pin_NonThreat"] = { 4, 114, 0.3671875, 0.37109375, 0.7529296875, 0.8642578125, false, false },
 		["Ping_Map_ThreatGlw"] = { 23, 23, 0.4033203125, 0.42578125, 0.7529296875, 0.775390625, false, false },
+		["Ping_Map_Whole_NonThreat_Deprecated"] = { 32, 32, 0.3251953125, 0.3564453125, 0.861328125, 0.892578125, false, false },
 		["Ping_Marker_FlipBook_NonThreat"] = { 390, 300, 0.0009765625, 0.3818359375, 0.0009765625, 0.2939453125, false, false },
 		["Ping_Marker_FlipBook_Threat"] = { 390, 300, 0.3837890625, 0.7646484375, 0.0009765625, 0.2939453125, false, false },
 		["Ping_Wheel_Icon_Assist_Glow"] = { 76, 76, 0.9189453125, 0.9931640625, 0.0009765625, 0.0751953125, false, false },
@@ -10453,6 +10454,11 @@ local AtlasInfo = {
 		["Ping_Map_Threat"] = { 46, 46, 0.32373046875, 0.34619140625, 0.87548828125, 0.89794921875, false, false },
 		["Ping_Map_Warning"] = { 46, 46, 0.32373046875, 0.34619140625, 0.92236328125, 0.94482421875, false, false },
 		["Ping_Map_WarningGlw"] = { 30, 30, 0.83251953125, 0.84716796875, 0.36865234375, 0.38330078125, false, false },
+		["Ping_Map_Whole_Assist_Deprecated"] = { 64, 64, 0.27685546875, 0.30810546875, 0.88525390625, 0.91650390625, false, false },
+		["Ping_Map_Whole_Attack_Deprecated"] = { 64, 64, 0.24169921875, 0.27294921875, 0.92041015625, 0.95166015625, false, false },
+		["Ping_Map_Whole_OnMyWay_Deprecated"] = { 64, 64, 0.27392578125, 0.30517578125, 0.92041015625, 0.95166015625, false, false },
+		["Ping_Map_Whole_Threat_Deprecated"] = { 64, 64, 0.27392578125, 0.30517578125, 0.95263671875, 0.98388671875, false, false },
+		["Ping_Map_Whole_Warning_Deprecated"] = { 64, 64, 0.32373046875, 0.35498046875, 0.74951171875, 0.78076171875, false, false },
 		["Ping_MapOV_Assist"] = { 72, 72, 0.66455078125, 0.69970703125, 0.44287109375, 0.47802734375, false, false },
 		["Ping_MapOV_Attack"] = { 72, 72, 0.73876953125, 0.77392578125, 0.44287109375, 0.47802734375, false, false },
 		["Ping_MapOV_NonThreat"] = { 72, 72, 0.96435546875, 0.99951171875, 0.29443359375, 0.32958984375, false, false },
