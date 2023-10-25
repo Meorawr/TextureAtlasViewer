@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 51237
+local buildNr = 51886
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -36,8 +36,11 @@ local AtlasInfo = {
 	["5279615"] = {
 		["shop-card-full-ku72"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5279669"] = {
-		["shop-card-full-cf67"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	["5368795"] = {
+		["shop-card-full-lb74"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["5368798"] = {
+		["shop-card-full-ro64"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -11605,6 +11608,9 @@ local AtlasInfo = {
 	},
 	["interface/store/shopbundles1007y47"] = {
 		["shop-card-full-y47"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1015cf67"] = {
+		["shop-card-full-cf67"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
