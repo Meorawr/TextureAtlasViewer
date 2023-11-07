@@ -1,4 +1,4 @@
-## Interface: 100107
+## Interface: 100200
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
