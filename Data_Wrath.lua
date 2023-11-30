@@ -1,5 +1,5 @@
 local _, _addon = ...
-local buildNr = 51943
+local buildNr = 52237
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -9,6 +9,17 @@ local AtlasInfo = {
 		["shop-card-full-classicwotlk-goodies2"] = { 564, 459, 0.0009765625, 0.5517578125, 0.0009765625, 0.44921875, false, false },
 		["shop-card-half-classicwotlk-goodiesepic2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.0009765625, 0.44921875, false, false },
 		["shop-card-half-classicwotlk-goodieshero2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.451171875, 0.8994140625, false, false },
+	},
+	["5501347"] = {
+		["shop-card-full-tf1h"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-tf2e"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["5503797"] = {
+		["shop-card-half-tf3e"] = { 286, 471, 0.0009765625, 0.2802734375, 0.001953125, 0.921875, false, false },
+		["shop-card-half-tf4h"] = { 286, 471, 0.2822265625, 0.5615234375, 0.001953125, 0.921875, false, false },
+	},
+	["5509095"] = {
+		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
