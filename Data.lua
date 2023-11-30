@@ -6,7 +6,7 @@ local _, _addon = ...
 -- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
 -- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
 -- This is the number on the top left of the web page
-local buildNr = 52129
+local buildNr = 52301
 -- Save the file and reload your UI
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -73,6 +73,9 @@ local AtlasInfo = {
 	["5368857"] = {
 		["shop-card-full-hto12"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-hto365"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["5485983"] = {
+		["shop-card-full-ba1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -8729,7 +8732,7 @@ local AtlasInfo = {
 		["QuestArtifact"] = { 32, 32, 0.5419921875, 0.5732421875, 0.3310546875, 0.3623046875, false, false },
 		["QuestArtifactTurnin"] = { 32, 32, 0.5751953125, 0.6064453125, 0.3310546875, 0.3623046875, false, false },
 		["QuestBlob"] = { 32, 32, 0.6083984375, 0.6396484375, 0.3310546875, 0.3623046875, false, false },
-		["QuestBonusObjective"] = { 32, 32, 0.6416015625, 0.6728515625, 0.3310546875, 0.3623046875, false, false },
+		["QuestBonusObjective"] = { 24, 24, 0.6416015625, 0.6728515625, 0.3310546875, 0.3623046875, false, false },
 		["QuestDaily"] = { 32, 32, 0.6748046875, 0.7060546875, 0.3310546875, 0.3623046875, false, false },
 		["QuestDaily-MainMap"] = { 32, 32, 0.7080078125, 0.7392578125, 0.3310546875, 0.3623046875, false, false },
 		["QuestLegendary"] = { 32, 32, 0.7412109375, 0.7724609375, 0.3310546875, 0.3623046875, false, false },
