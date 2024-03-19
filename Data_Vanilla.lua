@@ -1,5 +1,5 @@
 local _, _addon = ...
-local buildNr = 52610
+local buildNr = 53623
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
