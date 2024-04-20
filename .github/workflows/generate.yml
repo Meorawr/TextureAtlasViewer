@@ -4,9 +4,41 @@ on:
   push:
     branches:
       - main
+
   schedule:
     - cron: '0 18 * * *'
-  workflow_dispatch: {}
+
+  workflow_dispatch:
+    inputs:
+      mainline_product:
+        description: 'Mainline product branch'
+        required: true
+        default: 'wow'
+        type: choice
+        options:
+          - wow
+          - wowt
+          - wowxptr
+          - wow_beta
+
+      classic_product:
+        description: 'Classic product branch'
+        required: true
+        default: 'wow_classic'
+        type: choice
+        options:
+          - wow_classic
+          - wow_classic_ptr
+          - wow_classic_beta
+
+      classic_era_product:
+        description: 'Classic Era product branch'
+        required: true
+        default: 'wow_classic_era'
+        type: choice
+        options:
+          - wow_classic_era
+          - wow_classic_era_ptr
 
 jobs:
   build:
@@ -15,7 +47,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Generate Atlases
-        run: make data
+        run: make ${MAINLINE_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_ERA_PRODUCT}
+        env:
+          MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
+          CLASSIC_PRODUCT: ${{ inputs.classic_product }}
+          CLASSIC_ERA_PRODUCT: ${{ inputs.classic_era_product }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
