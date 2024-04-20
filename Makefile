@@ -6,7 +6,7 @@ SCHEMA_URL := https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xs
 .PHONY: check data dist libs
 .FORCE:
 
-all: check data
+all: wow wow_classic wow_classic_era
 
 check:
 	@luacheck -q $(shell git ls-files '*.lua')
@@ -19,8 +19,6 @@ libs:
 	@curl -s $(PACKAGER_URL) | bash -s -- -c -d -z
 	@mkdir -p Libs/
 	@cp -a .release/TextureAtlasViewer/Libs/* Libs/
-
-data: wow wow_classic wow_classic_era
 
 wow_classic: deps
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
