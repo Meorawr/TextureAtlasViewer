@@ -1,5 +1,8 @@
 local _, _addon = ...
-local buildNr = 54262
+
+if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_CLASSIC then
+    return;
+end
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -5199,4 +5202,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = buildNr
+_addon.dataBuild = 54262
+_addon.dataExpansion = LE_EXPANSION_CLASSIC

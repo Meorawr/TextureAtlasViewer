@@ -1,5 +1,8 @@
 local _, _addon = ...
-local buildNr = 54339
+
+if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_CATACLYSM then
+    return;
+end
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
@@ -5419,4 +5422,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = buildNr
+_addon.dataBuild = 54339
+_addon.dataExpansion = LE_EXPANSION_CATACLYSM

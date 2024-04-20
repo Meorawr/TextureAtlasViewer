@@ -396,7 +396,10 @@ If you wish to manually update your data to a different version, follow these st
 		.. "|r\nData build nr: |c"
 		.. colorCode
 		.. _addon.dataBuild
+		.. "|r|nData expansion level: |cffffffff"
+		.. (_G["EXPANSION_NAME" .. (_addon.dataExpansion or "")] or UNKNOWN)
 		.. "|r"
+
 	self.Overlay.InfoAfter:SetText(after)
 end
 

@@ -21,28 +21,28 @@ libs:
 	@cp -a .release/TextureAtlasViewer/Libs/* Libs/
 
 wow_classic:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
 
 wow_classic_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
 
 wow_classic_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
 
 wow_classic_era:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CLASSIC >Data_Vanilla.lua
 
 wow_classic_era_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CLASSIC >Data_Vanilla.lua
 
 wow:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
 
 wow_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
 
 wowt:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
 
 wowxptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua

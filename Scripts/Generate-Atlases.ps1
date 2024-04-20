@@ -10,7 +10,12 @@ param (
 	# Product name to generate atlases for, using the latest CDN version.
 	[Parameter(Mandatory=$true)]
 	[ValidateNotNull()]
-	[string] $Product
+	[string] $Product,
+
+	# Expansion level constant to check when loading the data.
+	[Parameter(Mandatory=$true)]
+	[ValidateNotNull()]
+	[string] $ExpansionLevel
 )
 
 function New-LookupTable {
@@ -98,39 +103,25 @@ function Write-GroupedAtlases {
 
 		[Parameter(Mandatory=$true)]
 		[ValidateNotNull()]
-		[string] $Version
+		[string] $Version,
+
+		[Parameter(Mandatory=$true)]
+		[ValidateNotNull()]
+		[string] $ExpansionLevel
 	)
 
 	begin {
-		if ($Product -eq "wow") {
-			# Mainline data sets should include replacement instructions.
-@"
+		@"
 local _, _addon = ...
 
----------------------------------------------
--- Remove everything in between these comment blocks (between the /\/\/\ lines)
--- Go to https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua
--- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
--- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
--- This is the number on the top left of the web page
-local buildNr = $($Version.Split(".")[3])
--- Save the file and reload your UI
--- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-
-local AtlasInfo = {
-"@
-		} else {
-			# Classic and any other data sets won't have instructions.
-			@"
-local _, _addon = ...
-local buildNr = $($Version.Split(".")[3])
+if LE_EXPANSION_LEVEL_CURRENT ~= $($ExpansionLevel) then
+    return;
+end
 
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
 "@
-		}
-
 	}
 
 	process {
@@ -154,7 +145,8 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = buildNr
+_addon.dataBuild = $($Version.Split(".")[3])
+_addon.dataExpansion = $($ExpansionLevel)
 "@
 	}
 }
@@ -165,4 +157,4 @@ Get-Atlases -Version $Version `
 	| Sort-Object -Property Name `
 	| Group-Object -Property FileName `
 	| Sort-Object -Property Name `  # Sorts by the grouped-by filename.
-	| Write-GroupedAtlases -Product $Product -Version $Version
+	| Write-GroupedAtlases -Product $Product -Version $Version -ExpansionLevel $ExpansionLevel
