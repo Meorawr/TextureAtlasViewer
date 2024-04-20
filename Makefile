@@ -20,29 +20,29 @@ libs:
 	@mkdir -p Libs/
 	@cp -a .release/TextureAtlasViewer/Libs/* Libs/
 
-wow_classic: deps
+wow_classic:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
 
-wow_classic_beta: deps
+wow_classic_beta:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
 
-wow_classic_ptr: deps
+wow_classic_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Cata.lua
 
-wow_classic_era: deps
+wow_classic_era:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
 
-wow_classic_era_ptr: deps
+wow_classic_era_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
 
-wow: deps
+wow:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
 
-wow_beta: deps
+wow_beta:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
 
-wowt: deps
+wowt:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
 
-wowxptr: deps
+wowxptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
