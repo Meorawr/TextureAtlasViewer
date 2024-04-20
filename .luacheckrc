@@ -3,6 +3,7 @@ max_line_length = false
 exclude_files = {
 	"Data_Mainline.lua",
 	"Data_TBC.lua",
+	"Data_TWW.lua",
 	"Data_Vanilla.lua",
 	"Data_Wrath.lua",
 }

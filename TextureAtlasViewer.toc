@@ -17,6 +17,7 @@ Libs\AceDB-3.0\AceDB-3.0.xml
 
 Data_Cata.lua
 Data_Mainline.lua
+Data_TWW.lua
 Data_Vanilla.lua
 Data_Wrath.lua
 TextureAtlasViewer.xml

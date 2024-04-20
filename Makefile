@@ -6,7 +6,7 @@ SCHEMA_URL := https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xs
 .PHONY: check data dist libs
 .FORCE:
 
-all: wow wow_classic_beta wow_classic_era
+all: wow wow_beta wow_classic_beta wow_classic_era
 
 check:
 	@luacheck -q $(shell git ls-files '*.lua')
@@ -39,7 +39,7 @@ wow:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
 
 wow_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel 10 >Data_TWW.lua
 
 wowt:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_DRAGONFLIGHT >Data_Mainline.lua
