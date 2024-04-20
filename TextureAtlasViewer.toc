@@ -13,5 +13,5 @@ Libs\LibStub\LibStub.lua
 Libs\AceAddon-3.0\AceAddon-3.0.xml
 Libs\AceDB-3.0\AceDB-3.0.xml
 
-Data.lua
+Data_Mainline.lua
 TextureAtlasViewer.xml

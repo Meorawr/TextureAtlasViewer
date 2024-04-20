@@ -36,13 +36,13 @@ wow_classic_era_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
 
 wow:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
 
 wow_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
 
 wowt:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
 
 wowxptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua

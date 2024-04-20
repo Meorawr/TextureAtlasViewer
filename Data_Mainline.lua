@@ -1,13 +1,9 @@
 local _, _addon = ...
 
----------------------------------------------
--- Remove everything in between these comment blocks (between the /\/\/\ lines)
--- Go to https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua
--- Copy paste everything from the first 'local' to the last '}'. Do not copy the 'return AtlasInfo' part
--- Update the build number. Not required, but it can help you point out if your data is up to date with the current build or not
--- This is the number on the top left of the web page
-local buildNr = 54205
--- Save the file and reload your UI
+if LE_EXPANSION_LEVEL_CURRENT ~= LE_EXPANSION_DRAGONFLIGHT then
+    return;
+end
+
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
@@ -13540,4 +13536,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = buildNr
+_addon.dataBuild = 54205
+_addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT

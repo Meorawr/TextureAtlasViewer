@@ -375,7 +375,7 @@ As of version 9.0.01, a default set of data is provided with the add-on.
 If you wish to manually update your data to a different version, follow these steps:
   1. Go into your add-on folder.
        (WoW/_retail_/Interface/AddOns/TextureAtlasViewer)
-  2. Open the file Data.lua in a text editor.
+  2. Open the file Data_Mainline.lua in a text editor.
   3. Some commented text will provide addition information
   4. Visit the following URL:]]
 	self.Overlay.InfoBefore:SetText(before)
