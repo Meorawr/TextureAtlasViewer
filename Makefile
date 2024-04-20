@@ -6,7 +6,7 @@ SCHEMA_URL := https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xs
 .PHONY: check data dist libs
 .FORCE:
 
-all: wow wow_classic wow_classic_era
+all: wow wow_classic_beta wow_classic_era
 
 check:
 	@luacheck -q $(shell git ls-files '*.lua')
