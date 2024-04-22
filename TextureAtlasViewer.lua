@@ -798,7 +798,7 @@ function TAV_ListButtonMixin:UpdateTooltip()
 		tooltip:Hide()
 	end
 
-	if self.Text:IsTruncated() and GetMouseFocus() == self then
+	if self.Text:IsTruncated() and self:IsMouseMotionFocus() then
 		local text = self.Text:GetText()
 		local r, g, b, a = HIGHLIGHT_FONT_COLOR:GetRGBA()
 		local wrap = false
