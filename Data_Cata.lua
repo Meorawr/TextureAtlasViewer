@@ -3850,6 +3850,21 @@ local AtlasInfo = {
 		["LootBanner-ItemBg"] = { 269, 41, 0.244140625, 0.76953125, 0.724609375, 0.8046875, false, false },
 		["LootBanner-LootBagCircle"] = { 44, 44, 0.865234375, 0.951171875, 0.224609375, 0.310546875, false, false },
 	},
+	["interface/levelup/levelupui"] = {
+		["levelup-bar-gold"] = { 418, 7, 0.5009765625, 0.9091796875, 0.20703125, 0.220703125, false, false },
+		["levelup-bar-green"] = { 418, 7, 0.5009765625, 0.9091796875, 0.224609375, 0.23828125, false, false },
+		["levelup-bar-white"] = { 418, 7, 0.5009765625, 0.9091796875, 0.2421875, 0.255859375, false, false },
+		["levelup-dot-gold"] = { 21, 22, 0.2529296875, 0.2734375, 0.662109375, 0.705078125, false, false },
+		["levelup-dot-green"] = { 21, 22, 0.2529296875, 0.2734375, 0.734375, 0.77734375, false, false },
+		["levelup-glow-gold"] = { 224, 115, 0.0009765625, 0.2197265625, 0.583984375, 0.80859375, false, false },
+		["levelup-glow-green"] = { 224, 115, 0.2802734375, 0.4990234375, 0.20703125, 0.431640625, false, false },
+		["levelup-icon-arrow"] = { 30, 34, 0.2216796875, 0.2509765625, 0.734375, 0.80078125, false, false },
+		["levelup-icon-bag"] = { 29, 34, 0.0009765625, 0.029296875, 0.8125, 0.87890625, false, false },
+		["levelup-icon-book"] = { 40, 38, 0.2216796875, 0.2607421875, 0.583984375, 0.658203125, false, false },
+		["levelup-icon-lock"] = { 30, 35, 0.2216796875, 0.2509765625, 0.662109375, 0.73046875, false, false },
+		["levelup-shadow-lower"] = { 284, 296, 0.0009765625, 0.2783203125, 0.001953125, 0.580078125, false, false },
+		["levelup-shadow-upper"] = { 326, 103, 0.2802734375, 0.5986328125, 0.001953125, 0.203125, false, false },
+	},
 	["interface/levelup/minortalents"] = {
 		["_minortalents-iconspinner"] = { 512, 45, 0, 1, 0.001953125, 0.08984375, true, false },
 		["minortalents-backplate"] = { 418, 169, 0.001953125, 0.818359375, 0.46484375, 0.794921875, false, false },
@@ -5422,5 +5437,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 54339
+_addon.dataBuild = 54377
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM
