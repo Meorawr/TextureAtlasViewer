@@ -354,15 +354,17 @@ function TAV_DisplayContainerMixin:OnLoad()
 	local info = {}
 	info.swatchFunc = function()
 		local r, g, b = ColorPickerFrame:GetColorRGB()
-		self:SetBackgroundColor(r, g, b, 1 - OpacitySliderFrame:GetValue())
+		local a = ColorPickerFrame:GetColorAlpha()
+		self:SetBackgroundColor(r, g, b, a)
 	end
 	info.hasOpacity = true
 	info.opacityFunc = function()
 		local r, g, b = ColorPickerFrame:GetColorRGB()
-		self:SetBackgroundColor(r, g, b, 1 - OpacitySliderFrame:GetValue())
+		local a = ColorPickerFrame:GetColorAlpha()
+		self:SetBackgroundColor(r, g, b, a)
 	end
 	info.cancelFunc = function(previousColor)
-		self:SetBackgroundColor(previousColor.r, previousColor.g, previousColor.b, 1 - previousColor.opacity)
+		self:SetBackgroundColor(previousColor.r, previousColor.g, previousColor.b, previousColor.a)
 	end
 	TAV_ControlsPanel.BGColorButton.info = info
 
@@ -461,8 +463,8 @@ function TAV_DisplayContainerMixin:BackgroundButtonOnClick()
 	local info = TAV_ControlsPanel.BGColorButton.info
 	if info then
 		info.r, info.g, info.b = self.backgroundColor.r, self.backgroundColor.g, self.backgroundColor.b
-		info.opacity = 1 - self.backgroundColor.a
-		OpenColorPicker(info)
+		info.opacity = self.backgroundColor.a
+		ColorPickerFrame:SetupColorPickerAndShow(info)
 	end
 end
 

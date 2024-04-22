@@ -86,8 +86,6 @@ stds.wow = {
 		"max",
 		"min",
 		"NORMAL_FONT_COLOR",
-		"OpacitySliderFrame",
-		"OpenColorPicker",
 		"PERCENTAGE_STRING",
 		"PlaySound",
 		"RED_FONT_COLOR",
