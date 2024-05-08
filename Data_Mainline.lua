@@ -12359,6 +12359,9 @@ local AtlasInfo = {
 	["interface/store/shopbundles1025dr1"] = {
 		["shop-card-full-dr1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1026gr45"] = {
+		["shop-card-full-gr45"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -13749,5 +13752,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 54577
+_addon.dataBuild = 54604
 _addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT
