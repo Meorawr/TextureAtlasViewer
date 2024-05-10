@@ -13752,5 +13752,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 54604
+_addon.dataBuild = 54630
 _addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT
