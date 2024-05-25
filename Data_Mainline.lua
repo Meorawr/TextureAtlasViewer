@@ -89,6 +89,12 @@ local AtlasInfo = {
 	["5633788"] = {
 		["shop-card-full-mu1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["5900924"] = {
+		["shop-card-full-murloc-romper-green"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["5901455"] = {
+		["shop-card-full-mrlgrl-pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -13752,5 +13758,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 54630
+_addon.dataBuild = 54847
 _addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT
