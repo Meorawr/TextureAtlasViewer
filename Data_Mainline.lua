@@ -89,6 +89,9 @@ local AtlasInfo = {
 	["5633788"] = {
 		["shop-card-full-mu1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["5868378"] = {
+		["shop-card-full-cm40"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["5900924"] = {
 		["shop-card-full-murloc-romper-green"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -13758,5 +13761,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 54904
+_addon.dataBuild = 54988
 _addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT
