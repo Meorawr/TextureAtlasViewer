@@ -810,6 +810,45 @@ local AtlasInfo = {
 		["common-gray-button-entrybox-left"] = { 13, 48, 0.916015625, 0.9541015625, 0.142578125, 0.2822265625, false, false },
 		["common-gray-button-entrybox-right"] = { 314, 48, 0.0009765625, 0.9140625, 0.142578125, 0.2822265625, false, false },
 	},
+	["interface/common/commondropdownclassic"] = {
+		["common-dropdown-classic-b-bg"] = { 48, 48, 0.240234375, 0.333984375, 0.17578125, 0.36328125, false, false },
+	},
+	["interface/common/commondropdownclassic2x"] = {
+		["common-dropdown-classic-a-buttonDown"] = { 60, 60, 0.001953125, 0.119140625, 0.001953125, 0.119140625, false, false },
+		["common-dropdown-classic-a-buttonDown-disabled"] = { 60, 60, 0.111328125, 0.228515625, 0.244140625, 0.361328125, false, false },
+		["common-dropdown-classic-a-buttonDown-disabled-small"] = { 54, 54, 0.568359375, 0.673828125, 0.001953125, 0.107421875, false, false },
+		["common-dropdown-classic-a-buttonDown-hover"] = { 60, 60, 0.447265625, 0.564453125, 0.001953125, 0.119140625, false, false },
+		["common-dropdown-classic-a-buttonDown-hover-small"] = { 54, 54, 0.798828125, 0.904296875, 0.001953125, 0.107421875, false, false },
+		["common-dropdown-classic-a-buttonDown-pressed"] = { 60, 60, 0.677734375, 0.794921875, 0.001953125, 0.119140625, false, false },
+		["common-dropdown-classic-a-buttonDown-pressed-small"] = { 54, 54, 0.001953125, 0.107421875, 0.232421875, 0.337890625, false, false },
+		["common-dropdown-classic-a-buttonDown-pressedhover"] = { 60, 60, 0.111328125, 0.228515625, 0.365234375, 0.482421875, false, false },
+		["common-dropdown-classic-a-buttonDown-pressedhover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.341796875, 0.447265625, false, false },
+		["common-dropdown-classic-a-buttonDown-small"] = { 54, 54, 0.001953125, 0.107421875, 0.123046875, 0.228515625, false, false },
+		["common-dropdown-classic-a-buttonUp"] = { 60, 60, 0.111328125, 0.228515625, 0.123046875, 0.240234375, false, false },
+		["common-dropdown-classic-a-buttonUp-disabled"] = { 60, 60, 0.111328125, 0.228515625, 0.607421875, 0.724609375, false, false },
+		["common-dropdown-classic-a-buttonUp-disabled-small"] = { 54, 54, 0.001953125, 0.107421875, 0.451171875, 0.556640625, false, false },
+		["common-dropdown-classic-a-buttonUp-hover"] = { 60, 60, 0.111328125, 0.228515625, 0.728515625, 0.845703125, false, false },
+		["common-dropdown-classic-a-buttonUp-hover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.560546875, 0.666015625, false, false },
+		["common-dropdown-classic-a-buttonUp-pressed"] = { 60, 60, 0.111328125, 0.228515625, 0.486328125, 0.603515625, false, false },
+		["common-dropdown-classic-a-buttonUp-pressed-small"] = { 54, 54, 0.001953125, 0.107421875, 0.888671875, 0.994140625, false, false },
+		["common-dropdown-classic-a-buttonUp-pressedhover"] = { 60, 60, 0.111328125, 0.228515625, 0.849609375, 0.966796875, false, false },
+		["common-dropdown-classic-a-buttonUp-pressedhover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.669921875, 0.775390625, false, false },
+		["common-dropdown-classic-a-buttonUp-small"] = { 54, 54, 0.001953125, 0.107421875, 0.779296875, 0.884765625, false, false },
+		["common-dropdown-classic-b-button"] = { 164, 56, 0.123046875, 0.443359375, 0.001953125, 0.111328125, false, false },
+		["common-dropdown-classic-b-button-disabled"] = { 164, 56, 0.556640625, 0.876953125, 0.123046875, 0.232421875, false, false },
+		["common-dropdown-classic-b-button-hover"] = { 164, 56, 0.232421875, 0.552734375, 0.236328125, 0.345703125, false, false },
+		["common-dropdown-classic-b-button-pressed"] = { 164, 56, 0.232421875, 0.552734375, 0.123046875, 0.232421875, false, false },
+		["common-dropdown-classic-b-button-pressedhover"] = { 164, 56, 0.646484375, 0.966796875, 0.236328125, 0.345703125, false, false },
+		["common-dropdown-classic-bg"] = { 240, 240, 0.232421875, 0.701171875, 0.517578125, 0.986328125, false, false },
+		["common-dropdown-classic-bg-b"] = { 96, 96, 0.705078125, 0.892578125, 0.783203125, 0.970703125, false, false },
+		["common-dropdown-classic-darkBG"] = { 60, 60, 0.705078125, 0.822265625, 0.662109375, 0.779296875, false, false },
+		["common-dropdown-classic-textholder"] = { 318, 84, 0.232421875, 0.853515625, 0.349609375, 0.513671875, false, false },
+		["common-dropdown-classic-textholder-small"] = { 120, 72, 0.705078125, 0.939453125, 0.517578125, 0.658203125, false, false },
+		["common-dropdown-icon-checkmark-yellow-classic"] = { 52, 44, 0.880859375, 0.982421875, 0.123046875, 0.208984375, false, false },
+		["common-dropdown-icon-radialtick-yellow-classic"] = { 44, 44, 0.908203125, 0.994140625, 0.001953125, 0.087890625, false, false },
+		["common-dropdown-tickradial-classic"] = { 44, 44, 0.556640625, 0.642578125, 0.236328125, 0.322265625, false, false },
+		["common-dropdown-ticksquare-classic"] = { 40, 40, 0.857421875, 0.935546875, 0.349609375, 0.427734375, false, false },
+	},
 	["interface/common/commonicons"] = {
 		["common-icon-backarrow"] = { 45, 45, 0.50439453125, 0.62939453125, 0.0009765625, 0.2509765625, false, false },
 		["common-icon-backarrow-disable"] = { 45, 45, 0.37841796875, 0.50341796875, 0.5048828125, 0.7548828125, false, false },
@@ -3511,6 +3550,14 @@ local AtlasInfo = {
 		["communities-ring-gold"] = { 95, 96, 0.6015625, 0.6943359375, 0.001953125, 0.189453125, false, false },
 		["communities-widebackground"] = { 613, 336, 0.0009765625, 0.599609375, 0.001953125, 0.658203125, false, false },
 	},
+	["interface/guildframe/communitiesfinder"] = {
+		["communitiesfinder_card_highlight"] = { 578, 79, 0.1767578125, 0.7412109375, 0.001953125, 0.15625, false, false },
+		["communitiesfinder-card"] = { 570, 71, 0.4189453125, 0.9755859375, 0.4921875, 0.630859375, false, false },
+		["guildfinder-card"] = { 178, 264, 0.0009765625, 0.1748046875, 0.001953125, 0.517578125, false, false },
+		["guildfinder-card-guildbanner-background"] = { 246, 168, 0.1767578125, 0.4169921875, 0.16015625, 0.48828125, false, false },
+		["guildfinder-card-guildbanner-border"] = { 246, 168, 0.1767578125, 0.4169921875, 0.4921875, 0.8203125, false, false },
+		["guildfinder-card-guildbanner-shadow"] = { 246, 168, 0.4189453125, 0.6591796875, 0.16015625, 0.48828125, false, false },
+	},
 	["interface/guildframe/guildlevelring"] = {
 		["guild-levelring"] = { 33, 30, 0.015625, 0.53125, 0.03125, 0.96875, false, false },
 	},
@@ -3531,8 +3578,9 @@ local AtlasInfo = {
 		["groupfinder-eye-single"] = { 44, 44, 0.69287109375, 0.71435546875, 0.2607421875, 0.3037109375, false, false },
 	},
 	["interface/hud/uipendingspinnera"] = {
-		["Spinner_Ring"] = { 142, 142, 0.001953125, 0.279296875, 0.00390625, 0.55859375, false, false },
-		["Spinner_Sparks"] = { 142, 142, 0.283203125, 0.560546875, 0.00390625, 0.55859375, false, false },
+		["Spinner_Ring"] = { 142, 142, 0.3984375, 0.67578125, 0.00390625, 0.55859375, false, false },
+		["Spinner_Shadow"] = { 201, 201, 0.001953125, 0.39453125, 0.00390625, 0.7890625, false, false },
+		["Spinner_Sparks"] = { 142, 142, 0.6796875, 0.95703125, 0.00390625, 0.55859375, false, false },
 	},
 	["interface/interface/framegeneral/uiframe"] = {
 		["UI-Frame-BotCornerLeft"] = { 14, 14, 0.4453125, 0.5546875, 0.6328125, 0.7421875, false, false },
@@ -3863,6 +3911,9 @@ local AtlasInfo = {
 	},
 	["interface/masks/circlemaskscalable"] = {
 		["CircleMaskScalable"] = { 64, 64, 0, 1, 0, 1, false, false },
+	},
+	["interface/masks/squaremask"] = {
+		["SquareMask"] = { 64, 64, 0, 1, 0, 1, false, false },
 	},
 	["interface/minimap/minimapclock"] = {
 		["UI-Minimap-Clock"] = { 55, 28, 0.015625, 0.875, 0.03125, 0.90625, false, false },
@@ -4874,6 +4925,9 @@ local AtlasInfo = {
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.3984375, 0.791015625, false, false },
 		["shop-card-bundle-starseekers"] = { 292, 143, 0.5673828125, 0.8525390625, 0.2890625, 0.568359375, false, false },
 	},
+	["interface/store/shopbundles1153welcometoazeroth90day"] = {
+		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopgames"] = {
 		["shop-games-legion"] = { 138, 86, 0.291015625, 0.560546875, 0.5, 0.8359375, false, false },
 		["shop-games-legiondeluxe"] = { 138, 125, 0.291015625, 0.560546875, 0.00390625, 0.4921875, false, false },
@@ -5202,5 +5256,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 55140
+_addon.dataBuild = 55563
 _addon.dataExpansion = LE_EXPANSION_CLASSIC
