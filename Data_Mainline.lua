@@ -92,11 +92,25 @@ local AtlasInfo = {
 	["5868378"] = {
 		["shop-card-full-cm40"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["5873945"] = {
+		["shop-card-full-fp27"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["5873976"] = {
+		["shop-card-full-ap27"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["5900924"] = {
 		["shop-card-full-murloc-romper-green"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["5901455"] = {
 		["shop-card-full-mrlgrl-pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6008880"] = {
+		["shop-card-full-july2024-180day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-july2024-6month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["6008883"] = {
+		["shop-card-full-july2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-july2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -13761,5 +13775,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 55461
+_addon.dataBuild = 55664
 _addon.dataExpansion = LE_EXPANSION_DRAGONFLIGHT
