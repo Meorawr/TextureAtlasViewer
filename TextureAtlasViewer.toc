@@ -1,6 +1,4 @@
-## Interface: 100207
-## Interface-Cata: 40400
-## Interface-Vanilla: 11502
+## Interface: 110000, 40400, 11503
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
@@ -17,7 +15,5 @@ Libs\AceDB-3.0\AceDB-3.0.xml
 
 Data_Cata.lua
 Data_Mainline.lua
-Data_TWW.lua
 Data_Vanilla.lua
-Data_Wrath.lua
 TextureAtlasViewer.xml
