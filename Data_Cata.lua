@@ -24,20 +24,6 @@ local AtlasInfo = {
 	["5509095"] = {
 		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5871498"] = {
-		["shop-card-full-aa44"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["5901508"] = {
-		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6009242"] = {
-		["shop-card-full-july2024-180day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-july2024-6month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["6009247"] = {
-		["shop-card-full-july2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-july2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
 		["AdventureMap-combatally-empty"] = { 46, 46, 0.28125, 0.326171875, 0.9013671875, 0.9462890625, false, false },
@@ -848,45 +834,6 @@ local AtlasInfo = {
 		["common-gray-button-entrybox-center"] = { 16, 48, 0, 0.046875, 0.0009765625, 0.140625, true, false },
 		["common-gray-button-entrybox-left"] = { 13, 48, 0.916015625, 0.9541015625, 0.142578125, 0.2822265625, false, false },
 		["common-gray-button-entrybox-right"] = { 314, 48, 0.0009765625, 0.9140625, 0.142578125, 0.2822265625, false, false },
-	},
-	["interface/common/commondropdownclassic"] = {
-		["common-dropdown-classic-a-buttonDown"] = { 28, 28, 0.19921875, 0.30859375, 0.83203125, 0.94140625, false, false },
-		["common-dropdown-classic-a-buttonDown-disabled"] = { 28, 28, 0.80859375, 0.91796875, 0.15234375, 0.26171875, false, false },
-		["common-dropdown-classic-a-buttonDown-hover"] = { 28, 28, 0.80859375, 0.91796875, 0.26953125, 0.37890625, false, false },
-		["common-dropdown-classic-a-buttonDown-pressed"] = { 28, 28, 0.19921875, 0.30859375, 0.59765625, 0.70703125, false, false },
-		["common-dropdown-classic-a-buttonDown-pressedhover"] = { 28, 28, 0.19921875, 0.30859375, 0.71484375, 0.82421875, false, false },
-		["common-dropdown-classic-b-bg"] = { 48, 48, 0.00390625, 0.19140625, 0.59765625, 0.78515625, false, false },
-		["common-dropdown-classic-b-button"] = { 82, 28, 0.66015625, 0.98046875, 0.48046875, 0.58984375, false, false },
-		["common-dropdown-classic-b-button-disabled"] = { 82, 28, 0.48046875, 0.80078125, 0.15234375, 0.26171875, false, false },
-		["common-dropdown-classic-b-button-hover"] = { 82, 28, 0.48046875, 0.80078125, 0.26953125, 0.37890625, false, false },
-		["common-dropdown-classic-b-button-pressed"] = { 82, 28, 0.00390625, 0.32421875, 0.48046875, 0.58984375, false, false },
-		["common-dropdown-classic-b-button-pressedhover"] = { 82, 28, 0.33203125, 0.65234375, 0.48046875, 0.58984375, false, false },
-		["common-dropdown-classic-bg"] = { 120, 120, 0.00390625, 0.47265625, 0.00390625, 0.47265625, false, false },
-		["common-dropdown-classic-darkBG"] = { 30, 30, 0.00390625, 0.12109375, 0.79296875, 0.91015625, false, false },
-		["common-dropdown-classic-textholder"] = { 124, 36, 0.48046875, 0.96484375, 0.00390625, 0.14453125, false, false },
-		["common-dropdown-icon-checkmark-yellow-classic"] = { 20, 17, 0.48046875, 0.55859375, 0.38671875, 0.453125, false, false },
-		["common-dropdown-icon-radialtick-yellow-classic"] = { 14, 14, 0.92578125, 0.98046875, 0.26953125, 0.32421875, false, false },
-		["common-dropdown-tickradial-classic"] = { 14, 14, 0.56640625, 0.62109375, 0.38671875, 0.44140625, false, false },
-		["common-dropdown-ticksquare-classic"] = { 17, 17, 0.92578125, 0.9921875, 0.15234375, 0.21875, false, false },
-	},
-	["interface/common/commondropdownclassic2x"] = {
-		["common-dropdown-classic-a-buttonDown-disabled-small"] = { 54, 54, 0.568359375, 0.673828125, 0.001953125, 0.107421875, false, false },
-		["common-dropdown-classic-a-buttonDown-hover-small"] = { 54, 54, 0.798828125, 0.904296875, 0.001953125, 0.107421875, false, false },
-		["common-dropdown-classic-a-buttonDown-pressed-small"] = { 54, 54, 0.001953125, 0.107421875, 0.232421875, 0.337890625, false, false },
-		["common-dropdown-classic-a-buttonDown-pressedhover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.341796875, 0.447265625, false, false },
-		["common-dropdown-classic-a-buttonDown-small"] = { 54, 54, 0.001953125, 0.107421875, 0.123046875, 0.228515625, false, false },
-		["common-dropdown-classic-a-buttonUp"] = { 60, 60, 0.111328125, 0.228515625, 0.123046875, 0.240234375, false, false },
-		["common-dropdown-classic-a-buttonUp-disabled"] = { 60, 60, 0.111328125, 0.228515625, 0.607421875, 0.724609375, false, false },
-		["common-dropdown-classic-a-buttonUp-disabled-small"] = { 54, 54, 0.001953125, 0.107421875, 0.451171875, 0.556640625, false, false },
-		["common-dropdown-classic-a-buttonUp-hover"] = { 60, 60, 0.111328125, 0.228515625, 0.728515625, 0.845703125, false, false },
-		["common-dropdown-classic-a-buttonUp-hover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.560546875, 0.666015625, false, false },
-		["common-dropdown-classic-a-buttonUp-pressed"] = { 60, 60, 0.111328125, 0.228515625, 0.486328125, 0.603515625, false, false },
-		["common-dropdown-classic-a-buttonUp-pressed-small"] = { 54, 54, 0.001953125, 0.107421875, 0.888671875, 0.994140625, false, false },
-		["common-dropdown-classic-a-buttonUp-pressedhover"] = { 60, 60, 0.111328125, 0.228515625, 0.849609375, 0.966796875, false, false },
-		["common-dropdown-classic-a-buttonUp-pressedhover-small"] = { 54, 54, 0.001953125, 0.107421875, 0.669921875, 0.775390625, false, false },
-		["common-dropdown-classic-a-buttonUp-small"] = { 54, 54, 0.001953125, 0.107421875, 0.779296875, 0.884765625, false, false },
-		["common-dropdown-classic-bg-b"] = { 96, 96, 0.705078125, 0.892578125, 0.783203125, 0.970703125, false, false },
-		["common-dropdown-classic-textholder-small"] = { 120, 72, 0.705078125, 0.939453125, 0.517578125, 0.658203125, false, false },
 	},
 	["interface/common/commonicons"] = {
 		["common-icon-backarrow"] = { 45, 45, 0.00048828125, 0.12548828125, 0.2529296875, 0.5029296875, false, false },
@@ -3742,14 +3689,6 @@ local AtlasInfo = {
 		["communities-ring-gold"] = { 95, 96, 0.6015625, 0.6943359375, 0.001953125, 0.189453125, false, false },
 		["communities-widebackground"] = { 613, 336, 0.0009765625, 0.599609375, 0.001953125, 0.658203125, false, false },
 	},
-	["interface/guildframe/communitiesfinder"] = {
-		["communitiesfinder_card_highlight"] = { 578, 79, 0.1767578125, 0.7412109375, 0.001953125, 0.15625, false, false },
-		["communitiesfinder-card"] = { 570, 71, 0.4189453125, 0.9755859375, 0.4921875, 0.630859375, false, false },
-		["guildfinder-card"] = { 178, 264, 0.0009765625, 0.1748046875, 0.001953125, 0.517578125, false, false },
-		["guildfinder-card-guildbanner-background"] = { 246, 168, 0.1767578125, 0.4169921875, 0.16015625, 0.48828125, false, false },
-		["guildfinder-card-guildbanner-border"] = { 246, 168, 0.1767578125, 0.4169921875, 0.4921875, 0.8203125, false, false },
-		["guildfinder-card-guildbanner-shadow"] = { 246, 168, 0.4189453125, 0.6591796875, 0.16015625, 0.48828125, false, false },
-	},
 	["interface/guildframe/guildlevelring"] = {
 		["guild-levelring"] = { 33, 30, 0.015625, 0.53125, 0.03125, 0.96875, false, false },
 	},
@@ -3863,21 +3802,6 @@ local AtlasInfo = {
 		["LootBanner-IconGlow"] = { 40, 40, 0.865234375, 0.943359375, 0.447265625, 0.525390625, false, false },
 		["LootBanner-ItemBg"] = { 269, 41, 0.244140625, 0.76953125, 0.724609375, 0.8046875, false, false },
 		["LootBanner-LootBagCircle"] = { 44, 44, 0.865234375, 0.951171875, 0.224609375, 0.310546875, false, false },
-	},
-	["interface/levelup/levelupui"] = {
-		["levelup-bar-gold"] = { 418, 7, 0.5009765625, 0.9091796875, 0.20703125, 0.220703125, false, false },
-		["levelup-bar-green"] = { 418, 7, 0.5009765625, 0.9091796875, 0.224609375, 0.23828125, false, false },
-		["levelup-bar-white"] = { 418, 7, 0.5009765625, 0.9091796875, 0.2421875, 0.255859375, false, false },
-		["levelup-dot-gold"] = { 21, 22, 0.2529296875, 0.2734375, 0.662109375, 0.705078125, false, false },
-		["levelup-dot-green"] = { 21, 22, 0.2529296875, 0.2734375, 0.734375, 0.77734375, false, false },
-		["levelup-glow-gold"] = { 224, 115, 0.0009765625, 0.2197265625, 0.583984375, 0.80859375, false, false },
-		["levelup-glow-green"] = { 224, 115, 0.2802734375, 0.4990234375, 0.20703125, 0.431640625, false, false },
-		["levelup-icon-arrow"] = { 30, 34, 0.2216796875, 0.2509765625, 0.734375, 0.80078125, false, false },
-		["levelup-icon-bag"] = { 29, 34, 0.0009765625, 0.029296875, 0.8125, 0.87890625, false, false },
-		["levelup-icon-book"] = { 40, 38, 0.2216796875, 0.2607421875, 0.583984375, 0.658203125, false, false },
-		["levelup-icon-lock"] = { 30, 35, 0.2216796875, 0.2509765625, 0.662109375, 0.73046875, false, false },
-		["levelup-shadow-lower"] = { 284, 296, 0.0009765625, 0.2783203125, 0.001953125, 0.580078125, false, false },
-		["levelup-shadow-upper"] = { 326, 103, 0.2802734375, 0.5986328125, 0.001953125, 0.203125, false, false },
 	},
 	["interface/levelup/minortalents"] = {
 		["_minortalents-iconspinner"] = { 512, 45, 0, 1, 0.001953125, 0.08984375, true, false },
@@ -4135,9 +4059,6 @@ local AtlasInfo = {
 	},
 	["interface/masks/circlemaskscalable"] = {
 		["CircleMaskScalable"] = { 64, 64, 0, 1, 0, 1, false, false },
-	},
-	["interface/masks/squaremask"] = {
-		["SquareMask"] = { 64, 64, 0, 1, 0, 1, false, false },
 	},
 	["interface/minimap/minimapclock"] = {
 		["UI-Minimap-Clock"] = { 55, 28, 0.015625, 0.875, 0.03125, 0.90625, false, false },
@@ -5454,5 +5375,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 55639
+_addon.dataBuild = 55758
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM
