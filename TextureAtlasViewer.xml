@@ -15,8 +15,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 				</Texture>
 			</Layer>
 			<Layer level="ARTWORK">
-				<FontString parentKey="Label" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Unknown" hidden="true">
-					<Size y="15"/>
+				<FontString parentKey="Label" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Unknown" hidden="true" wordwrap="false">
 					<Anchors>
 						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT"/>
 						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT"/>
@@ -654,18 +653,27 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 									</OnMouseUp>
 								</Scripts>
 							</Button>
-							<Frame name="TAV_InfoPanel" parentKey="InfoPanel" mixin="TAV_InfoPanelMixin" frameLevel="10" hidden="true">
-								<Size x="210" y="215"/>
+							<Frame name="TAV_InfoPanel" parentKey="InfoPanel" mixin="TAV_InfoPanelMixin" inherits="ResizeLayoutFrame" frameLevel="10" hidden="true">
 								<KeyValues>
-									<KeyValue key="layoutType" value="TooltipDefaultLayout" type="string"/>
+									<KeyValue key="fixedWidth" value="210" type="number"/>
+									<KeyValue key="heightPadding" value="35" type="number"/>
 								</KeyValues>
 								<Anchors>
 									<Anchor point="BOTTOMRIGHT" x="2" y="18"/>
 								</Anchors>
 								<Frames>
-									<Frame parentKey="NineSlice" inherits="NineSlicePanelTemplate" useParentLevel="true"/>
-									<Button name="$parentCloseButton" parentKey="CloseButton">
+									<Frame parentKey="NineSlice" inherits="NineSlicePanelTemplate" useParentLevel="true">
 										<Size x="15" y="15"/>
+										<KeyValues>
+											<KeyValue key="ignoreInLayout" value="true" type="boolean"/>
+											<KeyValue key="layoutType" value="TooltipDefaultLayout" type="string"/>
+										</KeyValues>
+									</Frame>
+									<Button parentKey="CloseButton">
+										<Size x="15" y="15"/>
+										<KeyValues>
+											<KeyValue key="ignoreInLayout" value="true" type="boolean"/>
+										</KeyValues>
 										<Anchors>
 											<Anchor point="TOPRIGHT" x="-4" y="-4"/>
 										</Anchors>
@@ -690,7 +698,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 											<KeyValue key="label" value="Atlas Name" type="string"/>
 										</KeyValues>
 										<Anchors>
-											<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" x="15" y="190"/>
+											<Anchor point="TOPLEFT" x="15" y="-25"/>
 											<Anchor point="RIGHT" x="-10"/>
 										</Anchors>
 									</EditBox>
@@ -772,39 +780,112 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 								</Frames>
 								<Layers>
 									<Layer level="ARTWORK">
-										<FontString parentKey="Tiling" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Tiling:">
+										<FontString parentKey="Tiling" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Tiling:" parentArray="TilingRegions">
 											<Size y="15"/>
 											<Anchors>
 												<Anchor point="TOPLEFT" relativeKey="$parent.Top" relativePoint="BOTTOMLEFT" y="-5"/>
 											</Anchors>
 										</FontString>
-										<Texture parentKey="IconHorizontalTile" atlas="communities-icon-redx">
+										<Texture parentKey="IconHorizontalTile" mixin="TAV_CheckableIconMixin" parentArray="TilingRegions">
 											<Size x="13" y="13"/>
 											<Anchors>
 												<Anchor point="TOPLEFT" relativeKey="$parent.Tiling" relativePoint="BOTTOMLEFT" y="-5"/>
 											</Anchors>
 										</Texture>
-										<FontString parentKey="Horizontal" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Horizontal">
+										<FontString parentKey="Horizontal" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Horizontal" parentArray="TilingRegions">
 											<Size y="15"/>
 											<Anchors>
 												<Anchor point="LEFT" relativeKey="$parent.IconHorizontalTile" relativePoint="RIGHT" x="5"/>
 											</Anchors>
 										</FontString>
-										<Texture parentKey="IconVerticalTile" atlas="communities-icon-redx">
+										<Texture parentKey="IconVerticalTile" mixin="TAV_CheckableIconMixin" parentArray="TilingRegions">
 											<Size x="13" y="13"/>
 											<Anchors>
 												<Anchor point="LEFT" relativeKey="$parent.Bottom"/>
 												<Anchor point="TOP" relativeKey="$parent.IconHorizontalTile"/>
 											</Anchors>
 										</Texture>
-										<FontString parentKey="Vertical" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Vertical">
+										<FontString parentKey="Vertical" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Vertical" parentArray="TilingRegions">
 											<Size y="15"/>
 											<Anchors>
 												<Anchor point="LEFT" relativeKey="$parent.IconVerticalTile" relativePoint="RIGHT" x="5"/>
 											</Anchors>
 										</FontString>
+										<FontString parentKey="Slice" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Texture Slicing:" parentArray="SlicingRegions">
+											<Size y="15"/>
+											<Anchors>
+												<Anchor point="TOPLEFT" relativeKey="$parent.Top" relativePoint="BOTTOMLEFT" y="-5"/>
+											</Anchors>
+										</FontString>
+										<Texture parentKey="SliceModeStretchedIcon" mixin="TAV_CheckableIconMixin" parentArray="SlicingRegions">
+											<Size x="13" y="13"/>
+											<Anchors>
+												<Anchor point="TOPLEFT" relativeKey="$parent.Slice" relativePoint="BOTTOMLEFT" y="-5"/>
+											</Anchors>
+										</Texture>
+										<FontString parentKey="SliceModeStretched" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Stretched" parentArray="SlicingRegions">
+											<Size y="15"/>
+											<Anchors>
+												<Anchor point="LEFT" relativeKey="$parent.SliceModeStretchedIcon" relativePoint="RIGHT" x="5"/>
+											</Anchors>
+										</FontString>
+										<Texture parentKey="SliceModeTiledIcon" mixin="TAV_CheckableIconMixin" parentArray="SlicingRegions">
+											<Size x="13" y="13"/>
+											<Anchors>
+												<Anchor point="LEFT" relativeKey="$parent.Bottom"/>
+												<Anchor point="TOP" relativeKey="$parent.SliceModeStretched"/>
+											</Anchors>
+										</Texture>
+										<FontString parentKey="SliceModeTiled" inherits="GameFontWhiteSmall" justifyH="LEFT" text="Tiled" parentArray="SlicingRegions">
+											<Size y="15"/>
+											<Anchors>
+												<Anchor point="LEFT" relativeKey="$parent.SliceModeTiledIcon" relativePoint="RIGHT" x="5"/>
+											</Anchors>
+										</FontString>
 									</Layer>
 								</Layers>
+								<Frames>
+									<EditBox parentKey="SliceMarginLeft" inherits="TAV_CopyBoxTemplate" parentArray="SlicingRegions">
+										<KeyValues>
+											<KeyValue key="label" value="Left" type="string"/>
+										</KeyValues>
+										<Anchors>
+											<Anchor point="TOP" relativeKey="$parent.SliceModeStretchedIcon" relativePoint="BOTTOM" y="-15"/>
+											<Anchor point="LEFT" relativeKey="$parent.Name"/>
+											<Anchor point="RIGHT" relativeKey="$parent.Name" relativePoint="BOTTOM" x="-5"/>
+										</Anchors>
+									</EditBox>
+									<EditBox parentKey="SliceMarginRight" inherits="TAV_CopyBoxTemplate" parentArray="SlicingRegions">
+										<KeyValues>
+											<KeyValue key="label" value="Right" type="string"/>
+										</KeyValues>
+										<Anchors>
+											<Anchor point="TOP" relativeKey="$parent.SliceModeTiled" relativePoint="BOTTOM" y="-15"/>
+											<Anchor point="LEFT" relativeKey="$parent.Name" relativePoint="BOTTOM" x="5"/>
+											<Anchor point="RIGHT" relativeKey="$parent.Name"/>
+										</Anchors>
+									</EditBox>
+									<EditBox parentKey="SliceMarginTop" inherits="TAV_CopyBoxTemplate" parentArray="SlicingRegions">
+										<KeyValues>
+											<KeyValue key="label" value="Top" type="string"/>
+										</KeyValues>
+										<Anchors>
+											<Anchor point="TOP" relativeKey="$parent.SliceMarginLeft" relativePoint="BOTTOM" y="-20"/>
+											<Anchor point="LEFT" relativeKey="$parent.Name"/>
+											<Anchor point="RIGHT" relativeKey="$parent.Name" relativePoint="BOTTOM" x="-5"/>
+										</Anchors>
+									</EditBox>
+									<EditBox parentKey="SliceMarginBottom" inherits="TAV_CopyBoxTemplate" parentArray="SlicingRegions">
+										<KeyValues>
+											<KeyValue key="label" value="Bottom" type="string"/>
+										</KeyValues>
+										<Anchors>
+											<Anchor point="TOP" relativeKey="$parent.SliceMarginRight" relativePoint="BOTTOM" y="-20"/>
+											<Anchor point="LEFT" relativeKey="$parent.Name" relativePoint="BOTTOM" x="5"/>
+											<Anchor point="RIGHT" relativeKey="$parent.Name"/>
+										</Anchors>
+									</EditBox>
+								</Frames>
 								<Scripts>
 									<OnLoad method="OnLoad"/>
 								</Scripts>

@@ -694,14 +694,31 @@ function TAV_DisplayContainerMixin:ShowAtlasInfo(name, atlasInfo)
 	TAV_InfoPanel.Right:SetText(atlasInfo.rightTexCoord)
 	TAV_InfoPanel.Top:SetText(atlasInfo.topTexCoord)
 	TAV_InfoPanel.Bottom:SetText(atlasInfo.bottomTexCoord)
-	TAV_InfoPanel.IconHorizontalTile:SetAtlas(
-		atlasInfo.tilesHorizontally and "ParagonReputation_Checkmark" or "communities-icon-redx"
-	)
-	TAV_InfoPanel.IconVerticalTile:SetAtlas(
-		atlasInfo.tilesVertically and "ParagonReputation_Checkmark" or "communities-icon-redx"
-	)
+
+	if atlasInfo.sliceData then
+		local sliceData = atlasInfo.sliceData
+		TAV_InfoPanel.SliceModeStretchedIcon:SetChecked(sliceData.sliceMode == Enum.UITextureSliceMode.Stretched)
+		TAV_InfoPanel.SliceModeTiledIcon:SetChecked(sliceData.sliceMode == Enum.UITextureSliceMode.Tiled)
+		TAV_InfoPanel.SliceMarginLeft:SetText(sliceData.marginLeft)
+		TAV_InfoPanel.SliceMarginRight:SetText(sliceData.marginRight)
+		TAV_InfoPanel.SliceMarginTop:SetText(sliceData.marginTop)
+		TAV_InfoPanel.SliceMarginBottom:SetText(sliceData.marginBottom)
+	else
+		TAV_InfoPanel.IconHorizontalTile:SetChecked(atlasInfo.tilesHorizontally)
+		TAV_InfoPanel.IconVerticalTile:SetChecked(atlasInfo.tilesVertically)
+	end
+
+	for _, region in ipairs(TAV_InfoPanel.SlicingRegions) do
+		region:SetShown(atlasInfo.sliceData ~= nil)
+	end
+
+	for _, region in ipairs(TAV_InfoPanel.TilingRegions) do
+		region:SetShown(atlasInfo.sliceData == nil)
+	end
+
 	TAV_InfoPanel.AlertIndicator:SetShown(atlasInfo.missing)
 	TAV_InfoPanel:Show()
+	TAV_InfoPanel:Layout()
 end
 
 function TAV_DisplayContainerMixin:SetImportOverlayShown(show, hideButtons)
@@ -951,6 +968,12 @@ end
 -------------------------------------------------
 -- TAV_InfoPanelMixin
 -------------------------------------------------
+
+TAV_CheckableIconMixin = {}
+
+function TAV_CheckableIconMixin:SetChecked(checked)
+	self:SetAtlas(checked and "ParagonReputation_Checkmark" or "communities-icon-redx")
+end
 
 TAV_InfoPanelMixin = {}
 

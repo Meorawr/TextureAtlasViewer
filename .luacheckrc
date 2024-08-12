@@ -40,6 +40,17 @@ stds.wow = {
 			},
 		},
 
+		Enum = {
+			fields = {
+				UITextureSliceMode = {
+					fields = {
+						"Stretched",
+						"Tiled"
+					}
+				}
+			}
+		},
+
 		SOUNDKIT = {
 			fields = {
 				"IG_ABILITY_PAGE_TURN",
