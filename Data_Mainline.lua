@@ -12966,15 +12966,20 @@ local AtlasInfo = {
 		["splash-10271-right"] = { 510, 584, 0.001953125, 0.998046875, 0.0009765625, 0.5712890625, false, false },
 		["splash-10271-topleft"] = { 371, 434, 0.001953125, 0.7265625, 0.5732421875, 0.9970703125, false, false },
 	},
+	["interface/splash/splash1100"] = {
+		["splash-1100-botleft"] = { 137, 371, 0.73046875, 0.998046875, 0.5732421875, 0.935546875, false, false },
+		["splash-1100-right"] = { 510, 584, 0.001953125, 0.998046875, 0.0009765625, 0.5712890625, false, false },
+		["splash-1100-topleft"] = { 371, 434, 0.001953125, 0.7265625, 0.5732421875, 0.9970703125, false, false },
+	},
 	["interface/splash/splash11001"] = {
 		["splash-11001-botleft"] = { 137, 371, 0.73046875, 0.998046875, 0.5732421875, 0.935546875, false, false },
 		["splash-11001-right"] = { 510, 584, 0.001953125, 0.998046875, 0.0009765625, 0.5712890625, false, false },
 		["splash-11001-topleft"] = { 371, 434, 0.001953125, 0.7265625, 0.5732421875, 0.9970703125, false, false },
 	},
 	["interface/splash/splash1100release"] = {
-		["splash-1100-botleft"] = { 137, 371, 0.73046875, 0.998046875, 0.5732421875, 0.935546875, false, false },
-		["splash-1100-right"] = { 510, 584, 0.001953125, 0.998046875, 0.0009765625, 0.5712890625, false, false },
-		["splash-1100-topleft"] = { 371, 434, 0.001953125, 0.7265625, 0.5732421875, 0.9970703125, false, false },
+		["splash-1100Release-botleft"] = { 137, 371, 0.73046875, 0.998046875, 0.5732421875, 0.935546875, false, false },
+		["splash-1100Release-right"] = { 510, 584, 0.001953125, 0.998046875, 0.0009765625, 0.5712890625, false, false },
+		["splash-1100Release-topleft"] = { 371, 434, 0.001953125, 0.7265625, 0.5732421875, 0.9970703125, false, false },
 	},
 	["interface/splash/splash600"] = {
 		["splash-600-botleft"] = { 137, 371, 0.73046875, 0.998046875, 0.5732421875, 0.935546875, false, false },
@@ -15183,5 +15188,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 56110
+_addon.dataBuild = 56311
 _addon.dataExpansion = 10
