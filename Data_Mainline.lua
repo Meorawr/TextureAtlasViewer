@@ -74,6 +74,14 @@ local AtlasInfo = {
 	["5633788"] = {
 		["shop-card-full-mu1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["6033710"] = {
+		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
+	},
+	["6067148"] = {
+		["shop-card-full-Annual-Essence-Gift-Pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -15188,5 +15196,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 56311
+_addon.dataBuild = 56421
 _addon.dataExpansion = 10
