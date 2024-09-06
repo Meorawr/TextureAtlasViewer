@@ -16,50 +16,6 @@ local AtlasInfo = {
 	["5193783"] = {
 		["shop-card-full-gs1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5334458"] = {
-		["dragonriding_sgvigor_background"] = { 71, 99, 0.5859375, 0.62060546875, 0.640625, 0.7373046875, false, false },
-		["dragonriding_sgvigor_background_dark"] = { 71, 99, 0.5859375, 0.62060546875, 0.7392578125, 0.8359375, false, false },
-		["dragonriding_sgvigor_burst_flipbook"] = { 800, 800, 0.00048828125, 0.39111328125, 0.0009765625, 0.7822265625, false, false },
-		["dragonriding_sgvigor_decor_bronze"] = { 117, 151, 0.13427734375, 0.19140625, 0.7841796875, 0.931640625, false, false },
-		["dragonriding_sgvigor_decor_dark"] = { 117, 151, 0.1923828125, 0.24951171875, 0.7841796875, 0.931640625, false, false },
-		["dragonriding_sgvigor_decor_flipbook_left"] = { 620, 424, 0.39208984375, 0.69482421875, 0.0009765625, 0.4150390625, false, false },
-		["dragonriding_sgvigor_decor_flipbook_right"] = { 620, 424, 0.69580078125, 0.99853515625, 0.0009765625, 0.4150390625, false, false },
-		["dragonriding_sgvigor_decor_gold"] = { 117, 151, 0.25048828125, 0.3076171875, 0.7841796875, 0.931640625, false, false },
-		["dragonriding_sgvigor_decor_silver"] = { 117, 151, 0.30859375, 0.36572265625, 0.7841796875, 0.931640625, false, false },
-		["dragonriding_sgvigor_fill_flipbook"] = { 288, 500, 0.39208984375, 0.53271484375, 0.4169921875, 0.9052734375, false, false },
-		["dragonriding_sgvigor_filled_flipbook"] = { 272, 200, 0.00048828125, 0.13330078125, 0.7841796875, 0.9794921875, false, false },
-		["dragonriding_sgvigor_fillfull"] = { 72, 100, 0.5859375, 0.62109375, 0.541015625, 0.638671875, false, false },
-		["dragonriding_sgvigor_flash"] = { 105, 140, 0.53369140625, 0.5849609375, 0.4169921875, 0.5537109375, false, false },
-		["dragonriding_sgvigor_frame_bronze"] = { 89, 125, 0.53369140625, 0.5771484375, 0.5556640625, 0.677734375, false, false },
-		["dragonriding_sgvigor_frame_dark"] = { 89, 125, 0.53369140625, 0.5771484375, 0.6796875, 0.8017578125, false, false },
-		["dragonriding_sgvigor_frame_gold"] = { 89, 125, 0.53369140625, 0.5771484375, 0.8037109375, 0.92578125, false, false },
-		["dragonriding_sgvigor_frame_silver"] = { 89, 125, 0.5859375, 0.62939453125, 0.4169921875, 0.5390625, false, false },
-		["dragonriding_sgvigor_spark"] = { 93, 20, 0.13427734375, 0.1796875, 0.93359375, 0.953125, false, false },
-	},
-	["5334461"] = {
-		["dragonriding_sgvigor_mask"] = { 128, 128, 0, 1, 0, 1, false, false },
-	},
-	["5340912"] = {
-		["dragonriding-barbershop-icon-sg"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
-	},
-	["5367713"] = {
-		["shop-bundles-1017-91"] = { 277, 224, 0.83251953125, 0.9677734375, 0.0009765625, 0.2197265625, false, false },
-		["shop-bundles-1017-92"] = { 277, 224, 0.83251953125, 0.9677734375, 0.22265625, 0.44140625, false, false },
-		["shop-bundles-1017-93"] = { 277, 224, 0.27783203125, 0.4130859375, 0.666015625, 0.884765625, false, false },
-		["shop-bundles-1017-94"] = { 277, 224, 0.4140625, 0.54931640625, 0.666015625, 0.884765625, false, false },
-		["shop-bundles-1017-95"] = { 566, 225, 0.00048828125, 0.27685546875, 0.0009765625, 0.220703125, false, false },
-		["shop-bundles-1017-96"] = { 566, 225, 0.27783203125, 0.55419921875, 0.0009765625, 0.220703125, false, false },
-		["shop-bundles-1017-97"] = { 566, 225, 0.55517578125, 0.83154296875, 0.0009765625, 0.220703125, false, false },
-		["shop-bundles-1017-98"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22265625, 0.4423828125, false, false },
-		["shop-bundles-1017-apac-epic"] = { 566, 225, 0.00048828125, 0.27685546875, 0.4443359375, 0.6640625, false, false },
-		["shop-bundles-1017-apac-heroic"] = { 566, 225, 0.00048828125, 0.27685546875, 0.666015625, 0.8857421875, false, false },
-		["shop-bundles-1017-standard-base"] = { 277, 224, 0.55517578125, 0.6904296875, 0.4443359375, 0.6630859375, false, false },
-		["shop-bundles-1017-standard-epic"] = { 566, 225, 0.27783203125, 0.55419921875, 0.22265625, 0.4423828125, false, false },
-		["shop-bundles-1017-standard-heroic"] = { 277, 224, 0.55517578125, 0.6904296875, 0.6650390625, 0.8837890625, false, false },
-		["shop-bundles-1017-upsell-base2epic"] = { 566, 225, 0.55517578125, 0.83154296875, 0.22265625, 0.4423828125, false, false },
-		["shop-bundles-1017-upsell-base2heroic"] = { 277, 224, 0.69140625, 0.82666015625, 0.4443359375, 0.6630859375, false, false },
-		["shop-bundles-1017-upsell-heroic2epic"] = { 566, 225, 0.27783203125, 0.55419921875, 0.4443359375, 0.6640625, false, false },
-	},
 	["5368857"] = {
 		["shop-card-full-hto12"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-hto365"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
@@ -979,6 +935,9 @@ local AtlasInfo = {
 		["dragonriding-barbershop-icon-pterrodax"] = { 128, 128, 0.4365234375, 0.5615234375, 0.255859375, 0.505859375, false, false },
 		["dragonriding-barbershop-icon-slitherdrake"] = { 128, 128, 0.4365234375, 0.5615234375, 0.509765625, 0.759765625, false, false },
 		["dragonriding-barbershop-icon-wyvernspirit"] = { 128, 128, 0.5634765625, 0.6884765625, 0.001953125, 0.251953125, false, false },
+	},
+	["interface/barbershop/dragonridingsgicon"] = {
+		["dragonriding-barbershop-icon-sg"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
 	},
 	["interface/battlefieldframe/battlefieldminimap"] = {
 		["battlefieldminimap-border-bottom"] = { 208, 16, 0.00390625, 0.81640625, 0.078125, 0.140625, false, false },
@@ -13556,6 +13515,24 @@ local AtlasInfo = {
 	["interface/store/shopbundles1017lb74"] = {
 		["shop-card-full-lb74"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1017rf68"] = {
+		["shop-bundles-1017-91"] = { 277, 224, 0.83251953125, 0.9677734375, 0.0009765625, 0.2197265625, false, false },
+		["shop-bundles-1017-92"] = { 277, 224, 0.83251953125, 0.9677734375, 0.22265625, 0.44140625, false, false },
+		["shop-bundles-1017-93"] = { 277, 224, 0.27783203125, 0.4130859375, 0.666015625, 0.884765625, false, false },
+		["shop-bundles-1017-94"] = { 277, 224, 0.4140625, 0.54931640625, 0.666015625, 0.884765625, false, false },
+		["shop-bundles-1017-95"] = { 566, 225, 0.00048828125, 0.27685546875, 0.0009765625, 0.220703125, false, false },
+		["shop-bundles-1017-96"] = { 566, 225, 0.27783203125, 0.55419921875, 0.0009765625, 0.220703125, false, false },
+		["shop-bundles-1017-97"] = { 566, 225, 0.55517578125, 0.83154296875, 0.0009765625, 0.220703125, false, false },
+		["shop-bundles-1017-98"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22265625, 0.4423828125, false, false },
+		["shop-bundles-1017-apac-epic"] = { 566, 225, 0.00048828125, 0.27685546875, 0.4443359375, 0.6640625, false, false },
+		["shop-bundles-1017-apac-heroic"] = { 566, 225, 0.00048828125, 0.27685546875, 0.666015625, 0.8857421875, false, false },
+		["shop-bundles-1017-standard-base"] = { 277, 224, 0.55517578125, 0.6904296875, 0.4443359375, 0.6630859375, false, false },
+		["shop-bundles-1017-standard-epic"] = { 566, 225, 0.27783203125, 0.55419921875, 0.22265625, 0.4423828125, false, false },
+		["shop-bundles-1017-standard-heroic"] = { 277, 224, 0.55517578125, 0.6904296875, 0.6650390625, 0.8837890625, false, false },
+		["shop-bundles-1017-upsell-base2epic"] = { 566, 225, 0.55517578125, 0.83154296875, 0.22265625, 0.4423828125, false, false },
+		["shop-bundles-1017-upsell-base2heroic"] = { 277, 224, 0.69140625, 0.82666015625, 0.4443359375, 0.6630859375, false, false },
+		["shop-bundles-1017-upsell-heroic2epic"] = { 566, 225, 0.27783203125, 0.55419921875, 0.4443359375, 0.6640625, false, false },
+	},
 	["interface/store/shopbundles1017ro64"] = {
 		["shop-card-full-ro64"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -14858,6 +14835,29 @@ local AtlasInfo = {
 	["interface/widgets/cosmicenergybarsparkmask"] = {
 		["cosmic-bar-spark-mask"] = { 242, 37, 0, 1, 0, 1, false, false },
 	},
+	["interface/widgets/dragonridingsgvigorwidget2x"] = {
+		["dragonriding_sgvigor_background"] = { 71, 99, 0.5859375, 0.62060546875, 0.640625, 0.7373046875, false, false },
+		["dragonriding_sgvigor_background_dark"] = { 71, 99, 0.5859375, 0.62060546875, 0.7392578125, 0.8359375, false, false },
+		["dragonriding_sgvigor_burst_flipbook"] = { 800, 800, 0.00048828125, 0.39111328125, 0.0009765625, 0.7822265625, false, false },
+		["dragonriding_sgvigor_decor_bronze"] = { 117, 151, 0.13427734375, 0.19140625, 0.7841796875, 0.931640625, false, false },
+		["dragonriding_sgvigor_decor_dark"] = { 117, 151, 0.1923828125, 0.24951171875, 0.7841796875, 0.931640625, false, false },
+		["dragonriding_sgvigor_decor_flipbook_left"] = { 620, 424, 0.39208984375, 0.69482421875, 0.0009765625, 0.4150390625, false, false },
+		["dragonriding_sgvigor_decor_flipbook_right"] = { 620, 424, 0.69580078125, 0.99853515625, 0.0009765625, 0.4150390625, false, false },
+		["dragonriding_sgvigor_decor_gold"] = { 117, 151, 0.25048828125, 0.3076171875, 0.7841796875, 0.931640625, false, false },
+		["dragonriding_sgvigor_decor_silver"] = { 117, 151, 0.30859375, 0.36572265625, 0.7841796875, 0.931640625, false, false },
+		["dragonriding_sgvigor_fill_flipbook"] = { 288, 500, 0.39208984375, 0.53271484375, 0.4169921875, 0.9052734375, false, false },
+		["dragonriding_sgvigor_filled_flipbook"] = { 272, 200, 0.00048828125, 0.13330078125, 0.7841796875, 0.9794921875, false, false },
+		["dragonriding_sgvigor_fillfull"] = { 72, 100, 0.5859375, 0.62109375, 0.541015625, 0.638671875, false, false },
+		["dragonriding_sgvigor_flash"] = { 105, 140, 0.53369140625, 0.5849609375, 0.4169921875, 0.5537109375, false, false },
+		["dragonriding_sgvigor_frame_bronze"] = { 89, 125, 0.53369140625, 0.5771484375, 0.5556640625, 0.677734375, false, false },
+		["dragonriding_sgvigor_frame_dark"] = { 89, 125, 0.53369140625, 0.5771484375, 0.6796875, 0.8017578125, false, false },
+		["dragonriding_sgvigor_frame_gold"] = { 89, 125, 0.53369140625, 0.5771484375, 0.8037109375, 0.92578125, false, false },
+		["dragonriding_sgvigor_frame_silver"] = { 89, 125, 0.5859375, 0.62939453125, 0.4169921875, 0.5390625, false, false },
+		["dragonriding_sgvigor_spark"] = { 93, 20, 0.13427734375, 0.1796875, 0.93359375, 0.953125, false, false },
+	},
+	["interface/widgets/dragonridingsgvigorwidgetmask"] = {
+		["dragonriding_sgvigor_mask"] = { 128, 128, 0, 1, 0, 1, false, false },
+	},
 	["interface/widgets/dragonridingvigorwidgetmask"] = {
 		["dragonriding_vigor_mask"] = { 128, 128, 0, 1, 0, 1, false, false },
 	},
@@ -15196,5 +15196,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 56421
+_addon.dataBuild = 56461
 _addon.dataExpansion = 10
