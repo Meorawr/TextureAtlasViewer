@@ -16,10 +16,6 @@ local AtlasInfo = {
 	["5193783"] = {
 		["shop-card-full-gs1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5368857"] = {
-		["shop-card-full-hto12"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-hto365"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
 	["5426612"] = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
@@ -27,16 +23,8 @@ local AtlasInfo = {
 	["5485983"] = {
 		["shop-card-full-ba1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5633788"] = {
-		["shop-card-full-mu1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6033710"] = {
-		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
-		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
-		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
-	},
-	["6067148"] = {
-		["shop-card-full-Annual-Essence-Gift-Pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	["6099982"] = {
+		["shop-card-full-ghastly-charger"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -13512,6 +13500,10 @@ local AtlasInfo = {
 	["interface/store/shopbundles1017h35"] = {
 		["shop-card-full-h35"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1017hto12"] = {
+		["shop-card-full-hto12"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-hto365"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
 	["interface/store/shopbundles1017lb74"] = {
 		["shop-card-full-lb74"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -13549,6 +13541,9 @@ local AtlasInfo = {
 	["interface/store/shopbundles1025dr1"] = {
 		["shop-card-full-dr1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1025mu1"] = {
+		["shop-card-full-mu1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles1025tw1"] = {
 		["shop-card-full-tw1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -13578,14 +13573,25 @@ local AtlasInfo = {
 	["interface/store/shopbundles1027murlocrompergreen"] = {
 		["shop-card-full-murloc-romper-green"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1100annualessencegiftpack"] = {
+		["shop-card-full-Annual-Essence-Gift-Pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles1100cosmicweaponscache"] = {
 		["shop-card-full-cosmic-weapons-cache"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles1100welcometoazeroth90day"] = {
 		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1102travelingrepairbear"] = {
+		["shop-card-full-traveling-repair-bear"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundlescn1100yearlydeluxe"] = {
+		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopcard15thanniversary"] = {
 		["shop-card-full-15thAnniversary"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -15196,5 +15202,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 56461
+_addon.dataBuild = 56819
 _addon.dataExpansion = 10
