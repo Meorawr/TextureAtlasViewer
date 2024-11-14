@@ -27,9 +27,6 @@ local AtlasInfo = {
 	["5871498"] = {
 		["shop-card-full-aa44"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5901508"] = {
-		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["6009242"] = {
 		["shop-card-full-july2024-180day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-july2024-6month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
@@ -37,6 +34,16 @@ local AtlasInfo = {
 	["6009247"] = {
 		["shop-card-full-july2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-july2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["6217133"] = {
+		["shop-card-full-year-of-azeroth-2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-year-of-azeroth-2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["6227160"] = {
+		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6237482"] = {
+		["shop-card-full-reven-ibelin-charity-pet"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
@@ -5192,6 +5199,9 @@ local AtlasInfo = {
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.3984375, 0.791015625, false, false },
 		["shop-card-bundle-starseekers"] = { 292, 143, 0.5673828125, 0.8525390625, 0.2890625, 0.568359375, false, false },
 	},
+	["interface/store/shopbundles440welcometoazeroth90day"] = {
+		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopgames"] = {
 		["shop-games-legion"] = { 138, 86, 0.291015625, 0.560546875, 0.5, 0.8359375, false, false },
 		["shop-games-legiondeluxe"] = { 138, 125, 0.291015625, 0.560546875, 0.00390625, 0.4921875, false, false },
@@ -5534,5 +5544,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 57294
+_addon.dataBuild = 57564
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM
