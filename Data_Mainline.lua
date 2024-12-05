@@ -13,15 +13,9 @@ local AtlasInfo = {
 	["5048257"] = {
 		["shop-card-full-b06"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5193783"] = {
-		["shop-card-full-gs1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["5426612"] = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
-	},
-	["5485983"] = {
-		["shop-card-full-ba1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["6099982"] = {
 		["shop-card-full-ghastly-charger"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -32,12 +26,6 @@ local AtlasInfo = {
 	},
 	["6227152"] = {
 		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6237485"] = {
-		["shop-card-full-reven-ibelin-charity-pet"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6237634"] = {
-		["shop-card-full-anniversary-brutosaur"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["6310501"] = {
 		["shop-card-full-anniversary-brutosaur-bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -13501,37 +13489,6 @@ local AtlasInfo = {
 		["boostpopup-wod-middle"] = { 430, 118, 0.001953125, 0.841796875, 0.00390625, 0.46484375, false, false },
 		["boostpopup-wod-top"] = { 430, 65, 0.001953125, 0.841796875, 0.734375, 0.98828125, false, false },
 	},
-	["interface/store/celestialbundle"] = {
-		["shop-card-half-915celestialbundle"] = { 286, 471, 0.001953125, 0.560546875, 0.001953125, 0.921875, false, false },
-	},
-	["interface/store/dragonflightpreorder"] = {
-		["shop-bundles-915-ate"] = { 566, 225, 0.00048828125, 0.27685546875, 0.00048828125, 0.1103515625, false, false },
-		["shop-bundles-915-ate2"] = { 566, 225, 0.55517578125, 0.83154296875, 0.3330078125, 0.44287109375, false, false },
-		["shop-bundles-915-ath"] = { 566, 225, 0.27783203125, 0.55419921875, 0.00048828125, 0.1103515625, false, false },
-		["shop-bundles-915-ath2"] = { 566, 225, 0.00048828125, 0.27685546875, 0.44384765625, 0.5537109375, false, false },
-		["shop-bundles-915-athe"] = { 566, 225, 0.55517578125, 0.83154296875, 0.00048828125, 0.1103515625, false, false },
-		["shop-bundles-915-brb"] = { 566, 225, 0.00048828125, 0.27685546875, 0.111328125, 0.22119140625, false, false },
-		["shop-bundles-915-bre"] = { 566, 225, 0.27783203125, 0.55419921875, 0.111328125, 0.22119140625, false, false },
-		["shop-bundles-915-brh"] = { 566, 225, 0.55517578125, 0.83154296875, 0.111328125, 0.22119140625, false, false },
-		["shop-bundles-915-brn"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22216796875, 0.33203125, false, false },
-		["shop-bundles-915-cba"] = { 277, 224, 0.83251953125, 0.9677734375, 0.00048828125, 0.10986328125, false, false },
-		["shop-bundles-915-cbh"] = { 277, 224, 0.83251953125, 0.9677734375, 0.111328125, 0.220703125, false, false },
-		["shop-bundles-915-cbi"] = { 277, 224, 0.83251953125, 0.9677734375, 0.22216796875, 0.33154296875, false, false },
-		["shop-bundles-915-cbo"] = { 277, 224, 0.83251953125, 0.9677734375, 0.3330078125, 0.4423828125, false, false },
-		["shop-bundles-915-nh"] = { 277, 224, 0.83251953125, 0.9677734375, 0.44384765625, 0.55322265625, false, false },
-		["shop-bundles-915-tb"] = { 277, 224, 0.00048828125, 0.1357421875, 0.5546875, 0.6640625, false, false },
-		["shop-bundles-915-tb2"] = { 277, 224, 0.13671875, 0.27197265625, 0.5546875, 0.6640625, false, false },
-		["shop-bundles-915-tbe"] = { 566, 225, 0.27783203125, 0.55419921875, 0.22216796875, 0.33203125, false, false },
-		["shop-bundles-915-tbe2"] = { 566, 225, 0.27783203125, 0.55419921875, 0.44384765625, 0.5537109375, false, false },
-		["shop-bundles-915-tbh"] = { 277, 224, 0.00048828125, 0.1357421875, 0.6650390625, 0.7744140625, false, false },
-		["shop-bundles-915-te"] = { 566, 225, 0.55517578125, 0.83154296875, 0.22216796875, 0.33203125, false, false },
-		["shop-bundles-915-te2"] = { 566, 225, 0.55517578125, 0.83154296875, 0.44384765625, 0.5537109375, false, false },
-		["shop-bundles-915-tecc"] = { 566, 225, 0.00048828125, 0.27685546875, 0.3330078125, 0.44287109375, false, false },
-		["shop-bundles-915-th"] = { 277, 224, 0.00048828125, 0.1357421875, 0.775390625, 0.884765625, false, false },
-		["shop-bundles-915-th2"] = { 277, 224, 0.13671875, 0.27197265625, 0.6650390625, 0.7744140625, false, false },
-		["shop-bundles-915-thcc"] = { 277, 224, 0.00048828125, 0.1357421875, 0.8857421875, 0.9951171875, false, false },
-		["shop-bundles-915-the"] = { 566, 225, 0.27783203125, 0.55419921875, 0.3330078125, 0.44287109375, false, false },
-	},
 	["interface/store/expansiontrialpopupbfa"] = {
 		["Bfa-expansionTrialPopup-bottom"] = { 521, 70, 0.0009765625, 0.509765625, 0.609375, 0.74609375, false, false },
 		["Bfa-expansionTrialPopup-exit-frame"] = { 32, 32, 0.51171875, 0.54296875, 0.001953125, 0.064453125, false, false },
@@ -13542,12 +13499,6 @@ local AtlasInfo = {
 		["interstitial-newplayerexperience-subscribe"] = { 800, 480, 0.00048828125, 0.78173828125, 0.00048828125, 0.46923828125, false, false },
 		["interstitial-newplayerexperience-upgrade"] = { 800, 480, 0.00048828125, 0.78173828125, 0.47021484375, 0.93896484375, false, false },
 		["interstitial-newplayerexperience-upgrade-bullet"] = { 5, 5, 0.78271484375, 0.78759765625, 0.00048828125, 0.00537109375, false, false },
-	},
-	["interface/store/midsummernightbundle"] = {
-		["shop-card-full-m68"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/murkastrasza_and_murkaroid"] = {
-		["shop-card-full-m64"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/perks"] = {
 		["_perks-dropdown-mouseover-middle"] = { 1, 40, 0, 0.0009765625, 0.06884765625, 0.08837890625, true, false },
@@ -13832,10 +13783,6 @@ local AtlasInfo = {
 		["shop-card-bundle-legion"] = { 292, 158, 0.5673828125, 0.8525390625, 0.31640625, 0.625, false, false },
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.001953125, 0.39453125, false, false },
 	},
-	["interface/store/shopbundles_murlocbackpack_4238249"] = {
-		["shop-image-bundle-mbp1"] = { 286, 434, 0.5576171875, 0.8369140625, 0.001953125, 0.849609375, false, false },
-		["shop-image-bundle-mbp2"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["interface/store/shopbundles1000a32"] = {
 		["shop-card-full-a32a"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-a32n"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
@@ -13854,6 +13801,9 @@ local AtlasInfo = {
 	},
 	["interface/store/shopbundles1007y47"] = {
 		["shop-card-full-y47"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1010gs1"] = {
+		["shop-card-full-gs1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles1015cf67"] = {
 		["shop-card-full-cf67"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -13907,6 +13857,9 @@ local AtlasInfo = {
 	},
 	["interface/store/shopbundles1020az1"] = {
 		["shop-card-full-az1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1020ba1"] = {
+		["shop-card-full-ba1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles1020mq1"] = {
 		["shop-card-full-mq1"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -13962,13 +13915,56 @@ local AtlasInfo = {
 	["interface/store/shopbundles1102travelingrepairbear"] = {
 		["shop-card-full-traveling-repair-bear"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1105anniversarybrutosaur"] = {
+		["shop-card-full-anniversary-brutosaur"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1105revenibelincharitypet"] = {
+		["shop-card-full-reven-ibelin-charity-pet"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles9152"] = {
+		["shop-card-half-915celestialbundle"] = { 286, 471, 0.001953125, 0.560546875, 0.001953125, 0.921875, false, false },
+	},
+	["interface/store/shopbundles925m64"] = {
+		["shop-card-full-m64"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles925m68"] = {
+		["shop-card-full-m68"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundlescn1100yearlydeluxe"] = {
 		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
 		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
 		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundlesnt915"] = {
+		["shop-bundles-915-ate"] = { 566, 225, 0.00048828125, 0.27685546875, 0.00048828125, 0.1103515625, false, false },
+		["shop-bundles-915-ate2"] = { 566, 225, 0.55517578125, 0.83154296875, 0.3330078125, 0.44287109375, false, false },
+		["shop-bundles-915-ath"] = { 566, 225, 0.27783203125, 0.55419921875, 0.00048828125, 0.1103515625, false, false },
+		["shop-bundles-915-ath2"] = { 566, 225, 0.00048828125, 0.27685546875, 0.44384765625, 0.5537109375, false, false },
+		["shop-bundles-915-athe"] = { 566, 225, 0.55517578125, 0.83154296875, 0.00048828125, 0.1103515625, false, false },
+		["shop-bundles-915-brb"] = { 566, 225, 0.00048828125, 0.27685546875, 0.111328125, 0.22119140625, false, false },
+		["shop-bundles-915-bre"] = { 566, 225, 0.27783203125, 0.55419921875, 0.111328125, 0.22119140625, false, false },
+		["shop-bundles-915-brh"] = { 566, 225, 0.55517578125, 0.83154296875, 0.111328125, 0.22119140625, false, false },
+		["shop-bundles-915-brn"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22216796875, 0.33203125, false, false },
+		["shop-bundles-915-cba"] = { 277, 224, 0.83251953125, 0.9677734375, 0.00048828125, 0.10986328125, false, false },
+		["shop-bundles-915-cbh"] = { 277, 224, 0.83251953125, 0.9677734375, 0.111328125, 0.220703125, false, false },
+		["shop-bundles-915-cbi"] = { 277, 224, 0.83251953125, 0.9677734375, 0.22216796875, 0.33154296875, false, false },
+		["shop-bundles-915-cbo"] = { 277, 224, 0.83251953125, 0.9677734375, 0.3330078125, 0.4423828125, false, false },
+		["shop-bundles-915-nh"] = { 277, 224, 0.83251953125, 0.9677734375, 0.44384765625, 0.55322265625, false, false },
+		["shop-bundles-915-tb"] = { 277, 224, 0.00048828125, 0.1357421875, 0.5546875, 0.6640625, false, false },
+		["shop-bundles-915-tb2"] = { 277, 224, 0.13671875, 0.27197265625, 0.5546875, 0.6640625, false, false },
+		["shop-bundles-915-tbe"] = { 566, 225, 0.27783203125, 0.55419921875, 0.22216796875, 0.33203125, false, false },
+		["shop-bundles-915-tbe2"] = { 566, 225, 0.27783203125, 0.55419921875, 0.44384765625, 0.5537109375, false, false },
+		["shop-bundles-915-tbh"] = { 277, 224, 0.00048828125, 0.1357421875, 0.6650390625, 0.7744140625, false, false },
+		["shop-bundles-915-te"] = { 566, 225, 0.55517578125, 0.83154296875, 0.22216796875, 0.33203125, false, false },
+		["shop-bundles-915-te2"] = { 566, 225, 0.55517578125, 0.83154296875, 0.44384765625, 0.5537109375, false, false },
+		["shop-bundles-915-tecc"] = { 566, 225, 0.00048828125, 0.27685546875, 0.3330078125, 0.44287109375, false, false },
+		["shop-bundles-915-th"] = { 277, 224, 0.00048828125, 0.1357421875, 0.775390625, 0.884765625, false, false },
+		["shop-bundles-915-th2"] = { 277, 224, 0.13671875, 0.27197265625, 0.6650390625, 0.7744140625, false, false },
+		["shop-bundles-915-thcc"] = { 277, 224, 0.00048828125, 0.1357421875, 0.8857421875, 0.9951171875, false, false },
+		["shop-bundles-915-the"] = { 566, 225, 0.27783203125, 0.55419921875, 0.3330078125, 0.44287109375, false, false },
 	},
 	["interface/store/shopcard15thanniversary"] = {
 		["shop-card-full-15thAnniversary"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -14002,6 +13998,20 @@ local AtlasInfo = {
 	},
 	["interface/store/shopcardgenericwater"] = {
 		["shop-card-generic-water"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopcards"] = {
+		["shop-825-1"] = { 277, 224, 0.83251953125, 0.9677734375, 0.0009765625, 0.2197265625, false, false },
+		["shop-825-10"] = { 284, 201, 0.4140625, 0.552734375, 0.22265625, 0.4189453125, false, false },
+		["shop-825-2"] = { 277, 224, 0.00048828125, 0.1357421875, 0.666015625, 0.884765625, false, false },
+		["shop-825-3"] = { 566, 225, 0.00048828125, 0.27685546875, 0.0009765625, 0.220703125, false, false },
+		["shop-825-4"] = { 277, 224, 0.13671875, 0.27197265625, 0.666015625, 0.884765625, false, false },
+		["shop-825-5"] = { 277, 224, 0.27783203125, 0.4130859375, 0.22265625, 0.44140625, false, false },
+		["shop-825-6"] = { 566, 225, 0.27783203125, 0.55419921875, 0.0009765625, 0.220703125, false, false },
+		["shop-825-7"] = { 566, 225, 0.55517578125, 0.83154296875, 0.0009765625, 0.220703125, false, false },
+		["shop-825-8"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22265625, 0.4423828125, false, false },
+		["shop-825-9"] = { 284, 201, 0.4140625, 0.552734375, 0.4208984375, 0.6171875, false, false },
+		["store-card-horizontalfull"] = { 566, 225, 0.00048828125, 0.27685546875, 0.4443359375, 0.6640625, false, false },
+		["store-card-quarter"] = { 277, 224, 0.27783203125, 0.4130859375, 0.443359375, 0.662109375, false, false },
 	},
 	["interface/store/shopfeatured"] = {
 		["store-card-splash1-nobanner"] = { 576, 471, 0.0009765625, 0.5634765625, 0.001953125, 0.921875, false, false },
@@ -14057,23 +14067,13 @@ local AtlasInfo = {
 		["accountupgradebanner-bfa"] = { 200, 134, 0.5576171875, 0.7529296875, 0.31640625, 0.578125, false, false },
 		["shop-card-full-bfadeluxe"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["interface/store/shopgameupgradesshadowlands"] = {
-		["shop-825-1"] = { 277, 224, 0.83251953125, 0.9677734375, 0.0009765625, 0.2197265625, false, false },
-		["shop-825-10"] = { 284, 201, 0.4140625, 0.552734375, 0.22265625, 0.4189453125, false, false },
-		["shop-825-2"] = { 277, 224, 0.00048828125, 0.1357421875, 0.666015625, 0.884765625, false, false },
-		["shop-825-3"] = { 566, 225, 0.00048828125, 0.27685546875, 0.0009765625, 0.220703125, false, false },
-		["shop-825-4"] = { 277, 224, 0.13671875, 0.27197265625, 0.666015625, 0.884765625, false, false },
-		["shop-825-5"] = { 277, 224, 0.27783203125, 0.4130859375, 0.22265625, 0.44140625, false, false },
-		["shop-825-6"] = { 566, 225, 0.27783203125, 0.55419921875, 0.0009765625, 0.220703125, false, false },
-		["shop-825-7"] = { 566, 225, 0.55517578125, 0.83154296875, 0.0009765625, 0.220703125, false, false },
-		["shop-825-8"] = { 566, 225, 0.00048828125, 0.27685546875, 0.22265625, 0.4423828125, false, false },
-		["shop-825-9"] = { 284, 201, 0.4140625, 0.552734375, 0.4208984375, 0.6171875, false, false },
-		["store-card-horizontalfull"] = { 566, 225, 0.00048828125, 0.27685546875, 0.4443359375, 0.6640625, false, false },
-		["store-card-quarter"] = { 277, 224, 0.27783203125, 0.4130859375, 0.443359375, 0.662109375, false, false },
-	},
 	["interface/store/shopgameupgradessubscription"] = {
 		["shop-card-half-completecollection"] = { 286, 471, 0.2822265625, 0.5615234375, 0.001953125, 0.921875, false, false },
 		["shop-card-half-subscription"] = { 286, 471, 0.0009765625, 0.2802734375, 0.001953125, 0.921875, false, false },
+	},
+	["interface/store/shopmbpbundle"] = {
+		["shop-image-bundle-mbp1"] = { 286, 434, 0.5576171875, 0.8369140625, 0.001953125, 0.849609375, false, false },
+		["shop-image-bundle-mbp2"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopnewplayerexperience"] = {
 		["shop-card-full-npe-gametime"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
@@ -15586,5 +15586,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 57534
+_addon.dataBuild = 57689
 _addon.dataExpansion = 10
