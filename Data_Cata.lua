@@ -5544,5 +5544,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 57564
+_addon.dataBuild = 58158
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM
