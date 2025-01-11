@@ -33,6 +33,9 @@ local AtlasInfo = {
 	["6310501"] = {
 		["shop-card-full-anniversary-brutosaur-bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["6405990"] = {
+		["shop-card-full-panda-teleport"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -15672,5 +15675,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 58238
+_addon.dataBuild = 58533
 _addon.dataExpansion = 10
