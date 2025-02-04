@@ -17,15 +17,9 @@ local AtlasInfo = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
 	},
-	["6099982"] = {
-		["shop-card-full-ghastly-charger"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["6215850"] = {
 		["shop-card-full-year-of-azeroth-2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 		["shop-card-full-year-of-azeroth-2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["6215859"] = {
-		["shop-card-full-winter-witch"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["6227152"] = {
 		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -35,6 +29,24 @@ local AtlasInfo = {
 	},
 	["6405990"] = {
 		["shop-card-full-panda-teleport"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6427438"] = {
+		["shop-bundle-365sub-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6428712"] = {
+		["shop-bundle-12mosub"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6438376"] = {
+		["shop-card-full-1107-365daysub-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6439172"] = {
+		["shop-card-full-1107-180daysbundle_apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6439267"] = {
+		["shop-card-full-1107-6monthsbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6447509"] = {
+		["shop-card-full-180daysbundle-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -14001,6 +14013,9 @@ local AtlasInfo = {
 	["interface/store/shopbundles1100welcometoazeroth90day"] = {
 		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1102ghastlycharger"] = {
+		["shop-card-full-ghastly-charger"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles1102travelingrepairbear"] = {
 		["shop-card-full-traveling-repair-bear"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -14009,6 +14024,9 @@ local AtlasInfo = {
 	},
 	["interface/store/shopbundles1105revenibelincharitypet"] = {
 		["shop-card-full-reven-ibelin-charity-pet"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1105winterwitch"] = {
+		["shop-card-full-winter-witch"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -15675,5 +15693,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 58533
+_addon.dataBuild = 58911
 _addon.dataExpansion = 10
