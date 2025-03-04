@@ -17,8 +17,14 @@ local AtlasInfo = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
 	},
+	["6670792"] = {
+		["shop-card-full-111-redpandabundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["6710206"] = {
 		["shop-bundles-1107-moppreorder-heroic"] = { 566, 225, 0.0009765625, 0.5537109375, 0.00390625, 0.8828125, false, false },
+	},
+	["6718260"] = {
+		["shop-card-full-1110-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["6718269"] = {
 		["shop-card-full-1107-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -15853,5 +15859,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 59347
+_addon.dataBuild = 59490
 _addon.dataExpansion = 10
