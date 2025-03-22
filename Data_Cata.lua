@@ -24,14 +24,31 @@ local AtlasInfo = {
 	["5509095"] = {
 		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["6707797"] = {
-		["shop-bundle-442-moppreorder-heroic"] = { 286, 471, 0.001953125, 0.560546875, 0.001953125, 0.921875, false, false },
+	["5902000"] = {
+		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["6707803"] = {
-		["shop-bundle-442-moppreorder-epic"] = { 286, 471, 0.001953125, 0.560546875, 0.001953125, 0.921875, false, false },
+	["6025349"] = {
+		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
 	},
-	["6713148"] = {
-		["shop-card-full-442-moppreorder-epicupgrade"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	["6254505"] = {
+		["shop-card-full-year-of-azeroth-2024-365day-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6263319"] = {
+		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6310360"] = {
+		["shop-card-full-flying-spectral-tiger-bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6310488"] = {
+		["shop-card-full-july2024-6month-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6438414"] = {
+		["shop-card-full-1107-365daysub-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["6447515"] = {
+		["shop-card-full-180daysbundle-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
@@ -421,7 +438,7 @@ local AtlasInfo = {
 		["Relicforge-Slot-frame-Active"] = { 67, 67, 0.810546875, 0.94140625, 0.001953125, 0.1328125, false, false },
 	},
 	["interface/auctionframe/auctionhouse"] = {
-		["auctionhouse-icon-checkmark"] = { 9, 11, 0.978515625, 0.99609375, 0.505859375, 0.548828125, false, false },
+		["auctionhouse-icon-checkmark"] = { 18, 22, 0.978515625, 0.99609375, 0.505859375, 0.548828125, false, false },
 		["auctionhouse-icon-clock"] = { 24, 24, 0.9306640625, 0.9541015625, 0.677734375, 0.724609375, false, false },
 		["auctionhouse-icon-coin-copper"] = { 24, 28, 0.9755859375, 0.9990234375, 0.095703125, 0.150390625, false, false },
 		["auctionhouse-icon-coin-gold"] = { 24, 28, 0.9755859375, 0.9990234375, 0.154296875, 0.208984375, false, false },
@@ -429,7 +446,7 @@ local AtlasInfo = {
 		["auctionhouse-icon-favorite"] = { 26, 26, 0.9580078125, 0.9833984375, 0.591796875, 0.642578125, false, false },
 		["auctionhouse-icon-favorite-off"] = { 26, 26, 0.9306640625, 0.9560546875, 0.591796875, 0.642578125, false, false },
 		["auctionhouse-icon-socket"] = { 14, 14, 0.4013671875, 0.4150390625, 0.958984375, 0.986328125, false, false },
-		["auctionhouse-itemheaderframe"] = { 342, 72, 0.0009765625, 0.6689453125, 0.001953125, 0.283203125, false, false },
+		["auctionhouse-itemheaderframe"] = { 684, 144, 0.0009765625, 0.6689453125, 0.001953125, 0.283203125, false, false },
 		["auctionhouse-itemicon-border-account"] = { 136, 136, 0.6708984375, 0.8037109375, 0.001953125, 0.267578125, false, false },
 		["auctionhouse-itemicon-border-artifact"] = { 136, 136, 0.8056640625, 0.9384765625, 0.001953125, 0.267578125, false, false },
 		["auctionhouse-itemicon-border-blue"] = { 136, 136, 0.2861328125, 0.4189453125, 0.419921875, 0.685546875, false, false },
@@ -460,9 +477,9 @@ local AtlasInfo = {
 		["auctionhouse-ui-dropdown-middle"] = { 83, 34, 0.7900390625, 0.87109375, 0.763671875, 0.830078125, false, false },
 		["auctionhouse-ui-dropdown-right"] = { 14, 34, 0.978515625, 0.9921875, 0.419921875, 0.486328125, false, false },
 		["auctionhouse-ui-filter-redx"] = { 46, 46, 0.9404296875, 0.9853515625, 0.001953125, 0.091796875, false, false },
-		["auctionhouse-ui-inputfield-left"] = { 8, 33, 0.9404296875, 0.9560546875, 0.095703125, 0.224609375, false, false },
-		["auctionhouse-ui-inputfield-middle"] = { 178, 33, 0.2861328125, 0.6337890625, 0.287109375, 0.416015625, false, false },
-		["auctionhouse-ui-inputfield-right"] = { 8, 33, 0.9580078125, 0.9736328125, 0.095703125, 0.224609375, false, false },
+		["auctionhouse-ui-inputfield-left"] = { 16, 66, 0.9404296875, 0.9560546875, 0.095703125, 0.224609375, false, false },
+		["auctionhouse-ui-inputfield-middle"] = { 356, 66, 0.2861328125, 0.6337890625, 0.287109375, 0.416015625, false, false },
+		["auctionhouse-ui-inputfield-right"] = { 16, 66, 0.9580078125, 0.9736328125, 0.095703125, 0.224609375, false, false },
 		["auctionhouse-ui-loadingspinner"] = { 290, 290, 0.0009765625, 0.2841796875, 0.287109375, 0.853515625, false, false },
 		["auctionhouse-ui-row-highlight"] = { 116, 18, 0.2861328125, 0.3994140625, 0.958984375, 0.994140625, false, false },
 		["auctionhouse-ui-row-select"] = { 116, 18, 0.4208984375, 0.5341796875, 0.958984375, 0.994140625, false, false },
@@ -3946,21 +3963,6 @@ local AtlasInfo = {
 		["LootBanner-ItemBg"] = { 269, 41, 0.244140625, 0.76953125, 0.724609375, 0.8046875, false, false },
 		["LootBanner-LootBagCircle"] = { 44, 44, 0.865234375, 0.951171875, 0.224609375, 0.310546875, false, false },
 	},
-	["interface/levelup/levelupui"] = {
-		["levelup-bar-gold"] = { 418, 7, 0.5009765625, 0.9091796875, 0.20703125, 0.220703125, false, false },
-		["levelup-bar-green"] = { 418, 7, 0.5009765625, 0.9091796875, 0.224609375, 0.23828125, false, false },
-		["levelup-bar-white"] = { 418, 7, 0.5009765625, 0.9091796875, 0.2421875, 0.255859375, false, false },
-		["levelup-dot-gold"] = { 21, 22, 0.2529296875, 0.2734375, 0.662109375, 0.705078125, false, false },
-		["levelup-dot-green"] = { 21, 22, 0.2529296875, 0.2734375, 0.734375, 0.77734375, false, false },
-		["levelup-glow-gold"] = { 224, 115, 0.0009765625, 0.2197265625, 0.583984375, 0.80859375, false, false },
-		["levelup-glow-green"] = { 224, 115, 0.2802734375, 0.4990234375, 0.20703125, 0.431640625, false, false },
-		["levelup-icon-arrow"] = { 30, 34, 0.2216796875, 0.2509765625, 0.734375, 0.80078125, false, false },
-		["levelup-icon-bag"] = { 29, 34, 0.0009765625, 0.029296875, 0.8125, 0.87890625, false, false },
-		["levelup-icon-book"] = { 40, 38, 0.2216796875, 0.2607421875, 0.583984375, 0.658203125, false, false },
-		["levelup-icon-lock"] = { 30, 35, 0.2216796875, 0.2509765625, 0.662109375, 0.73046875, false, false },
-		["levelup-shadow-lower"] = { 284, 296, 0.0009765625, 0.2783203125, 0.001953125, 0.580078125, false, false },
-		["levelup-shadow-upper"] = { 326, 103, 0.2802734375, 0.5986328125, 0.001953125, 0.203125, false, false },
-	},
 	["interface/levelup/minortalents"] = {
 		["_minortalents-iconspinner"] = { 512, 45, 0, 1, 0.001953125, 0.08984375, true, false },
 		["minortalents-backplate"] = { 418, 169, 0.001953125, 0.818359375, 0.46484375, 0.794921875, false, false },
@@ -4057,49 +4059,43 @@ local AtlasInfo = {
 	["interface/lfgframe/uilfgprompts"] = {
 		["UI-LFG-DeclineMark"] = { 40, 40, 0.87939453125, 0.97705078125, 0.00048828125, 0.09814453125, false, false },
 		["UI-LFG-DeclineMark-Raid"] = { 64, 64, 0.95068359375, 0.98193359375, 0.12646484375, 0.15771484375, false, false },
-		["UI-LFG-DividerLine"] = { 368, 4, 0.25244140625, 0.43212890625, 0.37744140625, 0.37939453125, false, false },
-		["UI-LFG-PendingMark"] = { 40, 40, 0.75341796875, 0.85107421875, 0.12646484375, 0.22412109375, false, false },
-		["UI-LFG-PendingMark-Raid"] = { 64, 64, 0.95068359375, 0.98193359375, 0.15869140625, 0.18994140625, false, false },
-		["UI-LFG-ReadyMark"] = { 40, 40, 0.85205078125, 0.94970703125, 0.12646484375, 0.22412109375, false, false },
-		["UI-LFG-ReadyMark-Raid"] = { 64, 64, 0.95068359375, 0.98193359375, 0.19091796875, 0.22216796875, false, false },
-		["UI-LFG-RoleIcon-Decline"] = { 70, 70, 0.75341796875, 0.87841796875, 0.00048828125, 0.12548828125, false, false },
-		["UI-LFG-RoleIcon-DPS"] = { 70, 70, 0.00048828125, 0.12548828125, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-DPS-Background"] = { 100, 100, 0.00048828125, 0.25048828125, 0.00048828125, 0.25048828125, false, false },
-		["UI-LFG-RoleIcon-DPS-Disabled"] = { 70, 70, 0.00048828125, 0.12548828125, 0.37744140625, 0.50244140625, false, false },
-		["UI-LFG-RoleIcon-DPS-Micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.88134765625, 0.9111328125, false, false },
-		["UI-LFG-RoleIcon-DPS-Micro-GroupFinder"] = { 21, 21, 0.97802734375, 0.98828125, 0.00048828125, 0.0107421875, false, false },
-		["UI-LFG-RoleIcon-DPS-Micro-Raid"] = { 12, 12, 0.9873046875, 0.9931640625, 0.0341796875, 0.0400390625, false, false },
-		["UI-LFG-RoleIcon-Generic"] = { 70, 70, 0.00048828125, 0.12548828125, 0.50341796875, 0.62841796875, false, false },
-		["UI-LFG-RoleIcon-Generic-Disabled"] = { 70, 70, 0.00048828125, 0.12548828125, 0.62939453125, 0.75439453125, false, false },
-		["UI-LFG-RoleIcon-Generic-Micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.912109375, 0.94189453125, false, false },
-		["UI-LFG-RoleIcon-Generic-Micro-GroupFinder"] = { 21, 21, 0.9892578125, 0.99951171875, 0.00048828125, 0.0107421875, false, false },
-		["UI-LFG-RoleIcon-Generic-Micro-Raid"] = { 12, 12, 0.97802734375, 0.98388671875, 0.04345703125, 0.04931640625, false, false },
-		["UI-LFG-RoleIcon-Healer"] = { 70, 70, 0.00048828125, 0.12548828125, 0.75537109375, 0.88037109375, false, false },
-		["UI-LFG-RoleIcon-Healer-Background"] = { 100, 100, 0.25146484375, 0.50146484375, 0.00048828125, 0.25048828125, false, false },
-		["UI-LFG-RoleIcon-Healer-Disabled"] = { 70, 70, 0.12646484375, 0.25146484375, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-Healer-Micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.94287109375, 0.97265625, false, false },
-		["UI-LFG-RoleIcon-Healer-Micro-GroupFinder"] = { 21, 21, 0.97802734375, 0.98828125, 0.01171875, 0.02197265625, false, false },
-		["UI-LFG-RoleIcon-Healer-Micro-Raid"] = { 12, 12, 0.98486328125, 0.99072265625, 0.04345703125, 0.04931640625, false, false },
-		["UI-LFG-RoleIcon-Incentive"] = { 70, 70, 0.12646484375, 0.25146484375, 0.37744140625, 0.50244140625, false, false },
-		["UI-LFG-RoleIcon-Leader"] = { 70, 70, 0.12646484375, 0.25146484375, 0.50341796875, 0.62841796875, false, false },
-		["UI-LFG-RoleIcon-Leader-Disabled"] = { 70, 70, 0.12646484375, 0.25146484375, 0.62939453125, 0.75439453125, false, false },
-		["UI-LFG-RoleIcon-Leader-Micro"] = { 61, 61, 0.03125, 0.06103515625, 0.88134765625, 0.9111328125, false, false },
-		["UI-LFG-RoleIcon-Leader-Micro-GroupFinder"] = { 21, 21, 0.9892578125, 0.99951171875, 0.01171875, 0.02197265625, false, false },
-		["UI-LFG-RoleIcon-Leader-Micro-Raid"] = { 12, 12, 0.99169921875, 0.99755859375, 0.04345703125, 0.04931640625, false, false },
-		["UI-LFG-RoleIcon-Pending"] = { 70, 70, 0.12646484375, 0.25146484375, 0.75537109375, 0.88037109375, false, false },
-		["UI-LFG-RoleIcon-RangedDPS"] = { 70, 70, 0.25244140625, 0.37744140625, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-RangedDPS-Disabled"] = { 70, 70, 0.37841796875, 0.50341796875, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-RangedDPS-Micro"] = { 61, 61, 0.06201171875, 0.091796875, 0.88134765625, 0.9111328125, false, false },
-		["UI-LFG-RoleIcon-RangedDPS-Micro-GroupFinder"] = { 21, 21, 0.97802734375, 0.98828125, 0.02294921875, 0.033203125, false, false },
-		["UI-LFG-RoleIcon-RangedDPS-Micro-Raid"] = { 12, 12, 0.97802734375, 0.98388671875, 0.05029296875, 0.05615234375, false, false },
-		["UI-LFG-RoleIcon-Ready"] = { 70, 70, 0.50439453125, 0.62939453125, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-Tank"] = { 70, 70, 0.63037109375, 0.75537109375, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-Tank-Background"] = { 100, 100, 0.50244140625, 0.75244140625, 0.00048828125, 0.25048828125, false, false },
-		["UI-LFG-RoleIcon-Tank-Disabled"] = { 70, 70, 0.75634765625, 0.88134765625, 0.25146484375, 0.37646484375, false, false },
-		["UI-LFG-RoleIcon-Tank-Micro"] = { 61, 61, 0.0927734375, 0.12255859375, 0.88134765625, 0.9111328125, false, false },
-		["UI-LFG-RoleIcon-Tank-Micro-GroupFinder"] = { 21, 21, 0.9892578125, 0.99951171875, 0.02294921875, 0.033203125, false, false },
-		["UI-LFG-RoleIcon-Tank-Micro-Raid"] = { 12, 12, 0.98486328125, 0.99072265625, 0.05029296875, 0.05615234375, false, false },
-		["UI-LFG-RoleIcon-Tank-Micro-Raid-Role"] = { 17, 17, 0.97802734375, 0.986328125, 0.0341796875, 0.04248046875, false, false },
+		["ui-lfg-dividerline"] = { 368, 4, 0.25244140625, 0.43212890625, 0.37744140625, 0.37939453125, false, false },
+		["ui-lfg-pendingmark"] = { 40, 40, 0.75341796875, 0.85107421875, 0.12646484375, 0.22412109375, false, false },
+		["ui-lfg-pendingmark-raid"] = { 64, 64, 0.95068359375, 0.98193359375, 0.15869140625, 0.18994140625, false, false },
+		["ui-lfg-readymark"] = { 40, 40, 0.85205078125, 0.94970703125, 0.12646484375, 0.22412109375, false, false },
+		["ui-lfg-readymark-raid"] = { 64, 64, 0.95068359375, 0.98193359375, 0.19091796875, 0.22216796875, false, false },
+		["ui-lfg-roleicon-decline"] = { 70, 70, 0.75341796875, 0.87841796875, 0.00048828125, 0.12548828125, false, false },
+		["ui-lfg-roleicon-dps"] = { 70, 70, 0.00048828125, 0.12548828125, 0.37744140625, 0.50244140625, false, false },
+		["ui-lfg-roleicon-dps-background"] = { 100, 100, 0.00048828125, 0.25048828125, 0.00048828125, 0.25048828125, false, false },
+		["ui-lfg-roleicon-dps-disabled"] = { 70, 70, 0.00048828125, 0.12548828125, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-dps-micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.88134765625, 0.9111328125, false, false },
+		["ui-lfg-roleicon-dps-micro-raid"] = { 12, 12, 0.9873046875, 0.9931640625, 0.00048828125, 0.00634765625, false, false },
+		["ui-lfg-roleicon-generic"] = { 70, 70, 0.00048828125, 0.12548828125, 0.62939453125, 0.75439453125, false, false },
+		["ui-lfg-roleicon-generic-disabled"] = { 70, 70, 0.00048828125, 0.12548828125, 0.50341796875, 0.62841796875, false, false },
+		["ui-lfg-roleicon-generic-micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.912109375, 0.94189453125, false, false },
+		["ui-lfg-roleicon-generic-micro-raid"] = { 12, 12, 0.97802734375, 0.98388671875, 0.009765625, 0.015625, false, false },
+		["ui-lfg-roleicon-healer"] = { 70, 70, 0.12646484375, 0.25146484375, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-healer-background"] = { 100, 100, 0.25146484375, 0.50146484375, 0.00048828125, 0.25048828125, false, false },
+		["ui-lfg-roleicon-healer-disabled"] = { 70, 70, 0.00048828125, 0.12548828125, 0.75537109375, 0.88037109375, false, false },
+		["ui-lfg-roleicon-healer-micro"] = { 61, 61, 0.00048828125, 0.0302734375, 0.94287109375, 0.97265625, false, false },
+		["ui-lfg-roleicon-healer-micro-raid"] = { 12, 12, 0.98486328125, 0.99072265625, 0.009765625, 0.015625, false, false },
+		["ui-lfg-roleicon-incentive"] = { 70, 70, 0.12646484375, 0.25146484375, 0.37744140625, 0.50244140625, false, false },
+		["ui-lfg-roleicon-leader"] = { 70, 70, 0.12646484375, 0.25146484375, 0.62939453125, 0.75439453125, false, false },
+		["ui-lfg-roleicon-leader-disabled"] = { 70, 70, 0.12646484375, 0.25146484375, 0.50341796875, 0.62841796875, false, false },
+		["ui-lfg-roleicon-leader-micro"] = { 61, 61, 0.03125, 0.06103515625, 0.88134765625, 0.9111328125, false, false },
+		["ui-lfg-roleicon-leader-micro-raid"] = { 12, 12, 0.99169921875, 0.99755859375, 0.009765625, 0.015625, false, false },
+		["ui-lfg-roleicon-pending"] = { 70, 70, 0.12646484375, 0.25146484375, 0.75537109375, 0.88037109375, false, false },
+		["ui-lfg-roleicon-rangeddps"] = { 70, 70, 0.37841796875, 0.50341796875, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-rangeddps-disabled"] = { 70, 70, 0.25244140625, 0.37744140625, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-rangeddps-micro"] = { 61, 61, 0.06201171875, 0.091796875, 0.88134765625, 0.9111328125, false, false },
+		["ui-lfg-roleicon-rangeddps-micro-raid"] = { 12, 12, 0.97802734375, 0.98388671875, 0.0166015625, 0.0224609375, false, false },
+		["ui-lfg-roleicon-ready"] = { 70, 70, 0.50439453125, 0.62939453125, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-tank"] = { 70, 70, 0.75634765625, 0.88134765625, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-tank-background"] = { 100, 100, 0.50244140625, 0.75244140625, 0.00048828125, 0.25048828125, false, false },
+		["ui-lfg-roleicon-tank-disabled"] = { 70, 70, 0.63037109375, 0.75537109375, 0.25146484375, 0.37646484375, false, false },
+		["ui-lfg-roleicon-tank-micro"] = { 61, 61, 0.0927734375, 0.12255859375, 0.88134765625, 0.9111328125, false, false },
+		["ui-lfg-roleicon-tank-micro-raid"] = { 12, 12, 0.98486328125, 0.99072265625, 0.0166015625, 0.0224609375, false, false },
+		["ui-lfg-roleicon-tank-micro-raid-role"] = { 17, 17, 0.97802734375, 0.986328125, 0.00048828125, 0.0087890625, false, false },
 	},
 	["interface/lootframe/legendarytoast"] = {
 		["LegendaryToast-background"] = { 302, 119, 0.396484375, 0.986328125, 0.001953125, 0.234375, false, false },
@@ -5210,48 +5206,6 @@ local AtlasInfo = {
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.3984375, 0.791015625, false, false },
 		["shop-card-bundle-starseekers"] = { 292, 143, 0.5673828125, 0.8525390625, 0.2890625, 0.568359375, false, false },
 	},
-	["interface/store/shopbundles365dayssubbundleapac"] = {
-		["shop-bundle-365sub-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440aa44"] = {
-		["shop-card-full-aa44"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440july202412monthsubbundle"] = {
-		["shop-card-full-july2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-july2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["interface/store/shopbundles440july20246monthsubbundle"] = {
-		["shop-card-full-july2024-180day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-july2024-6month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["interface/store/shopbundles440revenibelincharitypet"] = {
-		["shop-card-full-reven-ibelin-charity-pet"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440warcraft30th"] = {
-		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440welcometoazeroth14day"] = {
-		["shop-card-full-gametimebundle-14day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440welcometoazeroth60day"] = {
-		["shop-card-full-gametimebundle-60day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440welcometoazeroth90day"] = {
-		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles440yearofazeroth2024"] = {
-		["shop-card-full-year-of-azeroth-2024-12month"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-year-of-azeroth-2024-365day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["interface/store/shopbundles44112monthsub"] = {
-		["shop-bundle-12mosub"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles441180dayssubbundleapac"] = {
-		["shop-card-full-441-180daysbundle-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["interface/store/shopbundles4416monthsub"] = {
-		["shop-card-full-441-6monthbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["interface/store/shopgames"] = {
 		["shop-games-legion"] = { 138, 86, 0.291015625, 0.560546875, 0.5, 0.8359375, false, false },
 		["shop-games-legiondeluxe"] = { 138, 125, 0.291015625, 0.560546875, 0.00390625, 0.4921875, false, false },
@@ -5594,5 +5548,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 59346
+_addon.dataBuild = 59887
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM

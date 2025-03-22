@@ -17,18 +17,6 @@ local AtlasInfo = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
 	},
-	["6670792"] = {
-		["shop-card-full-111-redpandabundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6710206"] = {
-		["shop-bundles-1107-moppreorder-heroic"] = { 566, 225, 0.0009765625, 0.5537109375, 0.00390625, 0.8828125, false, false },
-	},
-	["6718260"] = {
-		["shop-card-full-1110-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6718269"] = {
-		["shop-card-full-1107-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -10459,7 +10447,7 @@ local AtlasInfo = {
 		["poi-graveyard-neutral"] = { 12, 16, 0.591796875, 0.603515625, 0.1044921875, 0.1201171875, false, false },
 		["poi-horde"] = { 32, 32, 0.8662109375, 0.8974609375, 0.435546875, 0.466796875, false, false },
 		["poi-hub"] = { 32, 32, 0.3916015625, 0.4541015625, 0.1279296875, 0.1904296875, false, false },
-		["poi-islands-table"] = { 38, 38, 0.1982421875, 0.2353515625, 0.896484375, 0.93359375, false, false },
+		["poi-islands-table"] = { 24, 24, 0.1982421875, 0.2353515625, 0.896484375, 0.93359375, false, false },
 		["poi-lighthouse-neutral"] = { 10, 16, 0.9853515625, 0.9951171875, 0.0576171875, 0.0732421875, false, false },
 		["poi-majorcity"] = { 32, 32, 0.8994140625, 0.9306640625, 0.435546875, 0.466796875, false, false },
 		["poi-nzothpylon"] = { 31, 44, 0.849609375, 0.8798828125, 0.0810546875, 0.1240234375, false, false },
@@ -14149,8 +14137,20 @@ local AtlasInfo = {
 	["interface/store/shopbundles1107cnpandateleportpet"] = {
 		["shop-card-full-panda-teleport"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1107moppreorder"] = {
+		["shop-bundles-1107-moppreorder-heroic"] = { 566, 225, 0.0009765625, 0.5537109375, 0.00390625, 0.8828125, false, false },
+	},
+	["interface/store/shopbundles1107moppreordershaheroic"] = {
+		["shop-card-full-1107-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles1107witchbroombundle"] = {
 		["shop-card-full-1107-witchbroombundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1110moppreorderbundleshaheroic"] = {
+		["shop-card-full-1110-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles1110redpandamountmegabundle"] = {
+		["shop-card-full-111-redpandabundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/store/shopbundles915"] = {
 		["shop-card-full-915dragonbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
@@ -15859,5 +15859,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 59490
+_addon.dataBuild = 59679
 _addon.dataExpansion = 10
