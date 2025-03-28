@@ -24,14 +24,6 @@ local AtlasInfo = {
 	["5509095"] = {
 		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5902000"] = {
-		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6025349"] = {
-		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
-		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
-		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
-	},
 	["6254505"] = {
 		["shop-card-full-year-of-azeroth-2024-365day-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -5206,6 +5198,14 @@ local AtlasInfo = {
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.3984375, 0.791015625, false, false },
 		["shop-card-bundle-starseekers"] = { 292, 143, 0.5673828125, 0.8525390625, 0.2890625, 0.568359375, false, false },
 	},
+	["interface/store/shopbundles343yearlydeluxe"] = {
+		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
+		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles344welcometoazeroth90day"] = {
+		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopgames"] = {
 		["shop-games-legion"] = { 138, 86, 0.291015625, 0.560546875, 0.5, 0.8359375, false, false },
 		["shop-games-legiondeluxe"] = { 138, 125, 0.291015625, 0.560546875, 0.00390625, 0.4921875, false, false },
@@ -5548,5 +5548,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 59887
+_addon.dataBuild = 60003
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM

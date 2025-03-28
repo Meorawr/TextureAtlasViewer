@@ -14149,6 +14149,9 @@ local AtlasInfo = {
 	["interface/store/shopbundles1110moppreorderbundleshaheroic"] = {
 		["shop-card-full-1110-moppreorder-heroic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles1110opulenttransmogbundle"] = {
+		["shop-card-full-111-opulenttransmogbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles1110redpandamountmegabundle"] = {
 		["shop-card-full-111-redpandabundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -15859,5 +15862,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 59679
+_addon.dataBuild = 59888
 _addon.dataExpansion = 10
