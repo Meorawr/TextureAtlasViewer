@@ -7,40 +7,11 @@ end
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
-	["4685926"] = {
-		["shop-card-full-classicwotlk-goodies-heroictoepic2"] = { 564, 459, 0.0009765625, 0.5517578125, 0.451171875, 0.8994140625, false, false },
-		["shop-card-full-classicwotlk-goodies2"] = { 564, 459, 0.0009765625, 0.5517578125, 0.0009765625, 0.44921875, false, false },
-		["shop-card-half-classicwotlk-goodiesepic2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.0009765625, 0.44921875, false, false },
-		["shop-card-half-classicwotlk-goodieshero2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.451171875, 0.8994140625, false, false },
+	["7013799"] = {
+		["shop-card-full-icc-limitedtimebundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["5501347"] = {
-		["shop-card-full-tf1h"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-full-tf2e"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
-	},
-	["5503797"] = {
-		["shop-card-half-tf3e"] = { 286, 471, 0.0009765625, 0.2802734375, 0.001953125, 0.921875, false, false },
-		["shop-card-half-tf4h"] = { 286, 471, 0.2822265625, 0.5615234375, 0.001953125, 0.921875, false, false },
-	},
-	["5509095"] = {
-		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6254505"] = {
-		["shop-card-full-year-of-azeroth-2024-365day-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6263319"] = {
-		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6310360"] = {
-		["shop-card-full-flying-spectral-tiger-bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6310488"] = {
-		["shop-card-full-july2024-6month-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6438414"] = {
-		["shop-card-full-1107-365daysub-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["6447515"] = {
-		["shop-card-full-180daysbundle-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	["7015577"] = {
+		["shop-card-full-344-warpathpack-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
@@ -5198,13 +5169,46 @@ local AtlasInfo = {
 		["shop-card-bundle-selected"] = { 284, 201, 0.2880859375, 0.5654296875, 0.3984375, 0.791015625, false, false },
 		["shop-card-bundle-starseekers"] = { 292, 143, 0.5673828125, 0.8525390625, 0.2890625, 0.568359375, false, false },
 	},
+	["interface/store/shopbundles343180dayssubscriptionbundlecn"] = {
+		["shop-card-full-180daysbundle-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles343365dayssubscriptionbundle"] = {
+		["shop-card-full-1107-365daysub-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles343flyingspectraltigerbundle"] = {
+		["shop-card-full-flying-spectral-tiger-bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles343july20246monthsubbundlewotlk"] = {
+		["shop-card-full-july2024-6month-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles343tf1"] = {
+		["shop-card-full-tf1h"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-tf2e"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
+	["interface/store/shopbundles343tf3"] = {
+		["shop-card-half-tf3e"] = { 286, 471, 0.0009765625, 0.2802734375, 0.001953125, 0.921875, false, false },
+		["shop-card-half-tf4h"] = { 286, 471, 0.2822265625, 0.5615234375, 0.001953125, 0.921875, false, false },
+	},
+	["interface/store/shopbundles343tf5"] = {
+		["shop-card-full-tf5u"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles343warcraft30thanniversarymountbundle"] = {
+		["shop-card-full-warcraft30th"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles343yearlydeluxe"] = {
 		["shop-card-full-CN-Reborn-Bundle-Heroic"] = { 568, 463, 0.00048828125, 0.27783203125, 0.001953125, 0.90625, false, false },
 		["shop-card-full-CN-Warpath-Pack"] = { 568, 463, 0.27880859375, 0.55615234375, 0.001953125, 0.90625, false, false },
 		["shop-card-full-CN-Yearly-Deluxe"] = { 568, 463, 0.55712890625, 0.83447265625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles343yearofazeroth2024"] = {
+		["shop-card-full-year-of-azeroth-2024-365day-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles344welcometoazeroth90day"] = {
 		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopfeatured"] = {
+		["store-card-splash1-nobanner"] = { 576, 471, 0.0009765625, 0.5634765625, 0.001953125, 0.921875, false, false },
+		["store-card-transmog"] = { 286, 433, 0.5654296875, 0.8447265625, 0.001953125, 0.84765625, false, false },
 	},
 	["interface/store/shopgames"] = {
 		["shop-games-legion"] = { 138, 86, 0.291015625, 0.560546875, 0.5, 0.8359375, false, false },
@@ -5239,6 +5243,12 @@ local AtlasInfo = {
 	["interface/store/shopgameupgradeslegiondeluxe2"] = {
 		["accountupgradebanner-bfa"] = { 200, 134, 0.5576171875, 0.7529296875, 0.31640625, 0.578125, false, false },
 		["shop-card-full-bfadeluxe"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopgameupgradeswrathofthelichkingclassic"] = {
+		["shop-card-full-classicwotlk-goodies-heroictoepic2"] = { 564, 459, 0.0009765625, 0.5517578125, 0.451171875, 0.8994140625, false, false },
+		["shop-card-full-classicwotlk-goodies2"] = { 564, 459, 0.0009765625, 0.5517578125, 0.0009765625, 0.44921875, false, false },
+		["shop-card-half-classicwotlk-goodiesepic2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.0009765625, 0.44921875, false, false },
+		["shop-card-half-classicwotlk-goodieshero2"] = { 274, 459, 0.5537109375, 0.8212890625, 0.451171875, 0.8994140625, false, false },
 	},
 	["interface/store/simplecheckout"] = {
 		["simplecheckout-close-hover-1x"] = { 20, 20, 0.0078125, 0.1640625, 0.671875, 0.984375, false, false },
@@ -5548,5 +5558,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 60320
+_addon.dataBuild = 61187
 _addon.dataExpansion = LE_EXPANSION_CATACLYSM
