@@ -21,13 +21,13 @@ libs:
 	@cp -a .release/TextureAtlasViewer/Libs/* Libs/
 
 wow_classic:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_MISTS_OF_PANDARIA >Data_Mists.lua
 
 wow_classic_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_MISTS_OF_PANDARIA >Data_Mists.lua
 
 wow_classic_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CATACLYSM >Data_Cata.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_MISTS_OF_PANDARIA >Data_Mists.lua
 
 wow_classic_era:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel LE_EXPANSION_CLASSIC >Data_Vanilla.lua
