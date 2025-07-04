@@ -6046,5 +6046,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 61767
+_addon.dataBuild = 61820
 _addon.dataExpansion = LE_EXPANSION_MISTS_OF_PANDARIA
