@@ -7,49 +7,6 @@ end
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
-	["6725697"] = {
-		["common-search-border-left"] = { 16, 40, 0.0712890625, 0.0791015625, 0.4423828125, 0.4814453125, false, false },
-		["common-search-border-middle"] = { 224, 40, 0.884765625, 0.994140625, 0.0009765625, 0.0400390625, false, false },
-		["common-search-border-right"] = { 16, 40, 0.08154296875, 0.08935546875, 0.263671875, 0.302734375, false, false },
-		["common-search-clearbutton"] = { 20, 20, 0.083984375, 0.09375, 0.4169921875, 0.4365234375, false, false },
-		["common-search-magnifyingglass"] = { 24, 24, 0.0712890625, 0.0830078125, 0.4169921875, 0.4404296875, false, false },
-		["generic-frame-chamfered-12d-2o"] = { 66, 66, 0.0380859375, 0.0703125, 0.4169921875, 0.4814453125, false, false },
-		["icon-clock"] = { 25, 25, 0.080078125, 0.09228515625, 0.4423828125, 0.466796875, false, false },
-		["menu-disabled"] = { 186, 40, 0.00048828125, 0.09130859375, 0.5517578125, 0.5908203125, false, false },
-		["menu-disabled-right"] = { 186, 40, 0.00048828125, 0.09130859375, 0.9033203125, 0.9423828125, false, false },
-		["shop-bg-shadow-below-header"] = { 74, 43, 0.05859375, 0.0947265625, 0.4833984375, 0.525390625, false, false },
-		["shop-bg-shadow-left"] = { 1612, 74, 0.0966796875, 0.8837890625, 0.3232421875, 0.3955078125, false, false },
-		["shop-bg-shadow-top"] = { 75, 136, 0.00048828125, 0.037109375, 0.4169921875, 0.5498046875, false, false },
-		["shop-card-bg"] = { 170, 244, 0.70263671875, 0.78564453125, 0.0419921875, 0.2802734375, false, false },
-		["shop-card-label-bg"] = { 530, 60, 0.3701171875, 0.62890625, 0.9287109375, 0.9873046875, false, false },
-		["shop-card-label-bg-2"] = { 530, 60, 0.0966796875, 0.35546875, 0.9287109375, 0.9873046875, false, false },
-		["shop-card-mini-bg"] = { 93, 113, 0.04638671875, 0.091796875, 0.3046875, 0.4150390625, false, false },
-		["shop-card-mini-frame"] = { 92, 113, 0.00048828125, 0.04541015625, 0.3046875, 0.4150390625, false, false },
-		["shop-card-small-frame-default"] = { 195, 267, 0.00048828125, 0.095703125, 0.0009765625, 0.26171875, false, false },
-		["shop-card-small-frame-hover"] = { 195, 267, 0.00048828125, 0.095703125, 0.640625, 0.9013671875, false, false },
-		["shop-card-small-frame-selected"] = { 195, 267, 0.6435546875, 0.73876953125, 0.4853515625, 0.74609375, false, false },
-		["shop-card-wide-bg"] = { 532, 244, 0.0966796875, 0.3564453125, 0.0419921875, 0.2802734375, false, false },
-		["shop-card-wide-frame-default"] = { 558, 270, 0.3701171875, 0.642578125, 0.3974609375, 0.6611328125, false, false },
-		["shop-card-wide-frame-hover"] = { 558, 270, 0.0966796875, 0.369140625, 0.6630859375, 0.9267578125, false, false },
-		["shop-card-wide-frame-selected"] = { 558, 270, 0.3701171875, 0.642578125, 0.6630859375, 0.9267578125, false, false },
-		["shop-card-wide-scrim"] = { 558, 270, 0.0966796875, 0.369140625, 0.3974609375, 0.6611328125, false, false },
-		["shop-card-wide-text-shadow"] = { 426, 78, 0.357421875, 0.5654296875, 0.0419921875, 0.1181640625, false, false },
-		["shop-drop-shadow"] = { 512, 512, 0.73974609375, 0.98974609375, 0.4853515625, 0.9853515625, false, false },
-		["shop-header-menu"] = { 1612, 40, 0.0966796875, 0.8837890625, 0.0009765625, 0.0400390625, false, false },
-		["shop-header-menu-default"] = { 40, 40, 0.0380859375, 0.0576171875, 0.4833984375, 0.5224609375, false, false },
-		["shop-header-menu-default-left"] = { 40, 40, 0.43994140625, 0.45947265625, 0.1201171875, 0.1591796875, false, false },
-		["shop-header-menu-disabled"] = { 1612, 40, 0.0966796875, 0.8837890625, 0.2822265625, 0.3212890625, false, false },
-		["shop-header-menu-divider"] = { 1, 40, 0.091796875, 0.09228515625, 0.263671875, 0.302734375, false, false },
-		["shop-header-menu-divider-disabled"] = { 1, 40, 0.09033203125, 0.0908203125, 0.263671875, 0.302734375, false, false },
-		["shop-header-menu-glow-selected"] = { 186, 40, 0.00048828125, 0.09130859375, 0.5927734375, 0.6318359375, false, false },
-		["shop-header-menu-glow-selected-left"] = { 164, 40, 0.00048828125, 0.08056640625, 0.263671875, 0.302734375, false, false },
-		["shop-header-menu-glow-selected-right"] = { 164, 40, 0.00048828125, 0.08056640625, 0.9443359375, 0.9833984375, false, false },
-		["shop-list-bg"] = { 712, 70, 0.6435546875, 0.9912109375, 0.3974609375, 0.4658203125, false, false },
-		["shop-list-rule"] = { 582, 16, 0.6435546875, 0.927734375, 0.4677734375, 0.4833984375, false, false },
-		["shop-saletag"] = { 167, 124, 0.357421875, 0.43896484375, 0.1201171875, 0.2412109375, false, false },
-		["shop-toast"] = { 277, 98, 0.56640625, 0.70166015625, 0.0419921875, 0.1376953125, false, false },
-		["shop-toast-line"] = { 168, 5, 0.00048828125, 0.08251953125, 0.6337890625, 0.638671875, false, false },
-	},
 	["7013799"] = {
 		["shop-card-full-icc-limitedtimebundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -62,9 +19,6 @@ local AtlasInfo = {
 	["7232204"] = {
 		["shop-card-full-345-365daysubAPAC"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["7232210"] = {
-		["shop-card-full-345-888bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
 	["7232212"] = {
 		["shop-card-full-345-crowneternalCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -73,6 +27,11 @@ local AtlasInfo = {
 	},
 	["7232217"] = {
 		["shop-card-full-345-flamedruidcatCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["7449472"] = {
+		["shop-card-full-345-mopbundle-heroic-epic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-half-345-mopbundle-epic"] = { 286, 471, 0.0009765625, 0.2802734375, 0.455078125, 0.9150390625, false, false },
+		["shop-card-half-345-mopbundle-heroic"] = { 286, 471, 0.2822265625, 0.5615234375, 0.455078125, 0.9150390625, false, false },
 	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
@@ -1032,6 +991,13 @@ local AtlasInfo = {
 		["common-icon-zoomin-disable"] = { 25, 25, 0.25244140625, 0.37744140625, 0.5048828125, 0.7548828125, false, false },
 		["common-icon-zoomout"] = { 25, 25, 0.37841796875, 0.50341796875, 0.5048828125, 0.7548828125, false, false },
 		["common-icon-zoomout-disable"] = { 25, 25, 0.37841796875, 0.50341796875, 0.2529296875, 0.5029296875, false, false },
+	},
+	["interface/common/commonsearch"] = {
+		["common-search-border-left"] = { 16, 40, 0.88671875, 0.94921875, 0.0078125, 0.3203125, false, false },
+		["common-search-border-middle"] = { 224, 40, 0.00390625, 0.87890625, 0.0078125, 0.3203125, false, false },
+		["common-search-border-right"] = { 16, 40, 0.00390625, 0.06640625, 0.3359375, 0.6484375, false, false },
+		["common-search-clearbutton"] = { 20, 20, 0.07421875, 0.15234375, 0.5390625, 0.6953125, false, false },
+		["common-search-magnifyingglass"] = { 24, 24, 0.07421875, 0.16796875, 0.3359375, 0.5234375, false, false },
 	},
 	["interface/common/favoritesicon"] = {
 		["PetJournal-FavoritesIcon"] = { 25, 25, 0.03125, 0.8125, 0.03125, 0.8125, false, false },
@@ -5579,6 +5545,9 @@ local AtlasInfo = {
 	["interface/store/shopbundles344welcometoazeroth90day"] = {
 		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles345888bundle"] = {
+		["shop-card-full-345-888bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopfeatured"] = {
 		["store-card-splash1-nobanner"] = { 576, 471, 0.0009765625, 0.5634765625, 0.001953125, 0.921875, false, false },
 		["store-card-transmog"] = { 286, 433, 0.5654296875, 0.8447265625, 0.001953125, 0.84765625, false, false },
@@ -5931,5 +5900,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 62386
+_addon.dataBuild = 63697
 _addon.dataExpansion = LE_EXPANSION_MISTS_OF_PANDARIA
