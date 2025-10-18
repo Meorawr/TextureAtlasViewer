@@ -7,32 +7,6 @@ end
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
-	["7013799"] = {
-		["shop-card-full-icc-limitedtimebundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7015577"] = {
-		["shop-card-full-344-warpathpack-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7232202"] = {
-		["shop-card-full-345-180daysubAPAC"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7232204"] = {
-		["shop-card-full-345-365daysubAPAC"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7232212"] = {
-		["shop-card-full-345-crowneternalCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7232214"] = {
-		["shop-card-full-345-hoodhungeringdarkCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7232217"] = {
-		["shop-card-full-345-flamedruidcatCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
-	},
-	["7449472"] = {
-		["shop-card-full-345-mopbundle-heroic-epic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
-		["shop-card-half-345-mopbundle-epic"] = { 286, 471, 0.0009765625, 0.2802734375, 0.455078125, 0.9150390625, false, false },
-		["shop-card-half-345-mopbundle-heroic"] = { 286, 471, 0.2822265625, 0.5615234375, 0.455078125, 0.9150390625, false, false },
-	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
 		["AdventureMap-combatally-empty"] = { 46, 46, 0.28125, 0.326171875, 0.9013671875, 0.9462890625, false, false },
@@ -5536,6 +5510,12 @@ local AtlasInfo = {
 	["interface/store/shopbundles343yearofazeroth2024"] = {
 		["shop-card-full-year-of-azeroth-2024-365day-wotlk"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles344icclimitedtimebundle"] = {
+		["shop-card-full-icc-limitedtimebundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles344warpathbundlecn"] = {
+		["shop-card-full-344-warpathpack-cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles344welcometoazeroth14day"] = {
 		["shop-card-full-gametimebundle-14day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -5545,8 +5525,28 @@ local AtlasInfo = {
 	["interface/store/shopbundles344welcometoazeroth90day"] = {
 		["shop-card-full-gametimebundle-90day"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["interface/store/shopbundles345180daysubapac"] = {
+		["shop-card-full-345-180daysubAPAC"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles345365subapac"] = {
+		["shop-card-full-345-365daysubAPAC"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["interface/store/shopbundles345888bundle"] = {
 		["shop-card-full-345-888bundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles345crowneternalwintercn"] = {
+		["shop-card-full-345-crowneternalCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles345flamedruidcatformtoycn"] = {
+		["shop-card-full-345-flamedruidcatCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles345hoodhungeringdarkcn"] = {
+		["shop-card-full-345-hoodhungeringdarkCN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles345moppreorderbundle"] = {
+		["shop-card-full-345-mopbundle-heroic-epic"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-half-345-mopbundle-epic"] = { 286, 471, 0.0009765625, 0.2802734375, 0.455078125, 0.9150390625, false, false },
+		["shop-card-half-345-mopbundle-heroic"] = { 286, 471, 0.2822265625, 0.5615234375, 0.455078125, 0.9150390625, false, false },
 	},
 	["interface/store/shopfeatured"] = {
 		["store-card-splash1-nobanner"] = { 576, 471, 0.0009765625, 0.5634765625, 0.001953125, 0.921875, false, false },

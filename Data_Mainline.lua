@@ -140,14 +140,9 @@ local AtlasInfo = {
 	["7455660"] = {
 		["shop-card-full-1125-bloodqueenbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["7499602"] = {
-		["shop-fg-12mo-eha"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
-	},
-	["7499604"] = {
-		["shop-fg-6mo-eha"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
-	},
-	["7499606"] = {
-		["shop-fg-sub-bundle-365"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	["7461352"] = {
+		["shop-card-full-1125-yearofazeroth2025"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+		["shop-card-full-1125-yearofazeroth2025-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -13800,6 +13795,15 @@ local AtlasInfo = {
 		["shop-frame-carousel-small-scrim"] = { 138, 78, 0.0009765625, 0.1357421875, 0.876953125, 0.953125, false, false },
 		["shop-frame-carousel-small-selected"] = { 150, 90, 0.7763671875, 0.9228515625, 0.0009765625, 0.0888671875, false, false },
 	},
+	["interface/shop/catalogshopfg12monthearlyhousingaccess"] = {
+		["shop-fg-12mo-eha"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfg365daysub"] = {
+		["shop-fg-sub-bundle-365"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfg6monthearlyhousingaccess"] = {
+		["shop-fg-6mo-eha"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
 	["interface/shop/catalogshopfgmidnightexpansionbase"] = {
 		["shop-fg-midnight-expansion-base"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
 	},
@@ -16960,5 +16964,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 63796
+_addon.dataBuild = 63834
 _addon.dataExpansion = 10
