@@ -1,4 +1,4 @@
-## Interface: 110200, 50500, 11507
+## Interface: 120000, 110205, 50501, 11508
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
@@ -14,6 +14,7 @@ Libs\AceAddon-3.0\AceAddon-3.0.xml
 Libs\AceDB-3.0\AceDB-3.0.xml
 
 Data_Mainline.lua
+Data_Midnight.lua
 Data_Mists.lua
 Data_Vanilla.lua
 TextureAtlasViewer.xml
