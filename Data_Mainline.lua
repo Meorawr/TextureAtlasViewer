@@ -140,9 +140,17 @@ local AtlasInfo = {
 	["7455660"] = {
 		["shop-card-full-1125-bloodqueenbundle"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
+	["7455830"] = {
+		["shop-card-full-1125-amethyst-felfire-pack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
 	["7461352"] = {
 		["shop-card-full-1125-yearofazeroth2025"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
 		["shop-card-full-1125-yearofazeroth2025-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+	},
+	["7499492"] = {
+		["catalogshop-widecard-bundle-yoa2025-apac"] = { 532, 299, 0.0009765625, 0.5205078125, 0.0009765625, 0.29296875, false, false },
+		["catalogshop-widecard-bundle-yoa2025-krtw-eha"] = { 532, 299, 0.0009765625, 0.5205078125, 0.294921875, 0.5869140625, false, false },
+		["catalogshop-widecard-bundle-yoa2025-row"] = { 532, 299, 0.0009765625, 0.5205078125, 0.5888671875, 0.880859375, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -16964,5 +16972,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 63834
+_addon.dataBuild = 63906
 _addon.dataExpansion = 10
