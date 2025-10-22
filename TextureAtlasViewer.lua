@@ -997,7 +997,7 @@ function TAV_CoreFrameMixin:OnLoad()
 	self:RegisterEvent("PLAYER_REGEN_DISABLED")
 	self:RegisterForDrag("LeftButton")
 	self.ResizeButton:Init(self, 800, 400)
-	self.ResizeButton:SetOnResizeStoppedCallback(TAV_DisplayContainer.UpdateAutoScaleSizes)
+	self.ResizeButton:SetOnResizeStoppedCallback(function() TAV_DisplayContainer:UpdateAutoScaleSizes() end)
 
 	ButtonFrameTemplate_HidePortrait(self)
 
