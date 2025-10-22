@@ -131,6 +131,7 @@ function TAV:OnEnable()
 
 	-- Show first in the list
 	if #self.filteredList > 0 then
+		TAV_DisplayContainer:UpdateAutoScaleSizes()
 		TAV_DisplayContainer:DisplayTexture(self.filteredList[1].texture)
 		TAV_ScrollFrameScrollChild.selected = self.filteredList[1].texture
 	end
@@ -334,9 +335,8 @@ function TAV_DisplayContainerMixin:OnLoad()
 	self.scaleStep = 0.1
 	self.width = 100
 	self.height = 100
-	local width, height = self:GetSize()
-	self.autoScaleWidth = width - 40
-	self.autoScaleHeight = height - 40
+	
+	self:UpdateAutoScaleSizes()
 
 	TAV_ControlsPanel.ScaleSlider:SetMinMaxValues(self.scaleMin, self.scaleMax)
 	TAV_ControlsPanel.ScaleSlider:SetValue(self.currentScale)
@@ -772,6 +772,12 @@ function TAV_DisplayContainerMixin:AlertIndicatorOnEnter()
 	GameTooltip:Show()
 end
 
+function TAV_DisplayContainerMixin:UpdateAutoScaleSizes()
+	local width, height = self:GetSize()
+	self.autoScaleWidth = width - 40
+	self.autoScaleHeight = height - 40
+end
+
 -------------------------------------------------
 -- TAV_ListButtonMixin
 -------------------------------------------------
@@ -991,6 +997,7 @@ function TAV_CoreFrameMixin:OnLoad()
 	self:RegisterEvent("PLAYER_REGEN_DISABLED")
 	self:RegisterForDrag("LeftButton")
 	self.ResizeButton:Init(self, 800, 400)
+	self.ResizeButton:SetOnResizeStoppedCallback(TAV_DisplayContainer.UpdateAutoScaleSizes)
 
 	ButtonFrameTemplate_HidePortrait(self)
 
