@@ -147,11 +147,6 @@ local AtlasInfo = {
 		["shop-card-full-1125-yearofazeroth2025"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
 		["shop-card-full-1125-yearofazeroth2025-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
 	},
-	["7499492"] = {
-		["catalogshop-widecard-bundle-yoa2025-apac"] = { 532, 299, 0.0009765625, 0.5205078125, 0.0009765625, 0.29296875, false, false },
-		["catalogshop-widecard-bundle-yoa2025-krtw-eha"] = { 532, 299, 0.0009765625, 0.5205078125, 0.294921875, 0.5869140625, false, false },
-		["catalogshop-widecard-bundle-yoa2025-row"] = { 532, 299, 0.0009765625, 0.5205078125, 0.5888671875, 0.880859375, false, false },
-	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -14088,6 +14083,11 @@ local AtlasInfo = {
 		["catalogshop-widecard-180-bundle"] = { 532, 299, 0.00048828125, 0.26025390625, 0.294921875, 0.5869140625, false, false },
 		["catalogshop-widecard-365-bundle"] = { 532, 299, 0.00048828125, 0.26025390625, 0.5888671875, 0.880859375, false, false },
 		["catalogshop-widecard-6mo-bundle"] = { 532, 299, 0.26123046875, 0.52099609375, 0.0009765625, 0.29296875, false, false },
+	},
+	["interface/shop/catalogshopwidecardyoa2025bundles"] = {
+		["catalogshop-widecard-bundle-yoa2025-apac"] = { 532, 299, 0.0009765625, 0.5205078125, 0.0009765625, 0.29296875, false, false },
+		["catalogshop-widecard-bundle-yoa2025-krtw-eha"] = { 532, 299, 0.0009765625, 0.5205078125, 0.294921875, 0.5869140625, false, false },
+		["catalogshop-widecard-bundle-yoa2025-row"] = { 532, 299, 0.0009765625, 0.5205078125, 0.5888671875, 0.880859375, false, false },
 	},
 	["interface/shop/catalogshopwowgametimeicons2x"] = {
 		["game-time-180day"] = { 640, 640, 0.00048828125, 0.31298828125, 0.00048828125, 0.31298828125, false, false },
