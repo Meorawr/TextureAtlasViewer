@@ -88,3 +88,4 @@ jobs:
           git add -A
           git commit -m 'Automated regeneration of atlas databases'
           git push
+        shell: pwsh
