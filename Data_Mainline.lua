@@ -1,9 +1,5 @@
 local _, _addon = ...
 
-if LE_EXPANSION_LEVEL_CURRENT ~= 10 then
-    return;
-end
-
 -- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 local AtlasInfo = {
@@ -34,6 +30,9 @@ local AtlasInfo = {
 	},
 	["7232465"] = {
 		["shop-card-full-1117-365daysub-CN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["7259256"] = {
+		["dragonriding-barbershop-icon-Panthera"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
 	},
 	["7259716"] = {
 		["dragonriding-barbershop-icon-PantheraIronHorde"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
@@ -146,6 +145,9 @@ local AtlasInfo = {
 	["7461352"] = {
 		["shop-card-full-1125-yearofazeroth2025"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
 		["shop-card-full-1125-yearofazeroth2025-apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+	},
+	["7542722"] = {
+		["catalogshop-widecard-brutosaur-comeback-cn"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
 	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
@@ -13801,6 +13803,15 @@ local AtlasInfo = {
 	["interface/shop/catalogshopfg12monthearlyhousingaccess"] = {
 		["shop-fg-12mo-eha"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
 	},
+	["interface/shop/catalogshopfg2000tender"] = {
+		["shop-fg-bundle-2000tender"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfg30daygametime"] = {
+		["shop-fg-30d-gametime"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfg30daygametimepreview"] = {
+		["shop-fg-30d-gametime-preview"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
 	["interface/shop/catalogshopfg365daysub"] = {
 		["shop-fg-sub-bundle-365"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
 	},
@@ -14042,6 +14053,17 @@ local AtlasInfo = {
 		["shop-card-wide-bg-purple"] = { 532, 299, 0.26123046875, 0.52099609375, 0.0009765625, 0.29296875, false, false },
 		["shop-card-wide-bg-red"] = { 532, 299, 0.52197265625, 0.78173828125, 0.0009765625, 0.29296875, false, false },
 		["shop-card-wide-bg-teal"] = { 532, 299, 0.26123046875, 0.52099609375, 0.294921875, 0.5869140625, false, false },
+	},
+	["interface/shop/catalogshopwidecardbrutosaurcomebackrow"] = {
+		["catalogshop-widecard-brutosaur-comeback-row"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
+	},
+	["interface/shop/catalogshopwidecardburningcrusadeclassicanniversaryedition"] = {
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-epic"] = { 532, 299, 0.0009765625, 0.5205078125, 0.0009765625, 0.29296875, false, false },
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-heroic"] = { 532, 299, 0.0009765625, 0.5205078125, 0.294921875, 0.5869140625, false, false },
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-upgrade"] = { 532, 299, 0.0009765625, 0.5205078125, 0.5888671875, 0.880859375, false, false },
+	},
+	["interface/shop/catalogshopwidecardkrtwrecurringsubs"] = {
+		["catalogshop-widecard-yoa2025-6mo-hea"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
 	},
 	["interface/shop/catalogshopwidecardmask"] = {
 		["shop-card-wide-mask"] = { 532, 299, 0, 1, 0, 1, false, false },
@@ -16972,5 +16994,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 64154
+_addon.dataBuild = 63834
 _addon.dataExpansion = 10
