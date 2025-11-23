@@ -35,12 +35,6 @@ wow_classic_era:
 wow_classic_era_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_TBC.lua
 
-wow_classic_titan:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
-
-wow_classic_titan_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
-
 wow_classic_tbc:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_TBC.lua
 
@@ -51,6 +45,12 @@ wow_classic_wrath:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
 
 wow_classic_wrath_ptr:
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
+
+wow_classic_titan:
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
+
+wow_classic_titan_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
 
 wow:
