@@ -5790,6 +5790,11 @@ local AtlasInfo = {
 		["shop-card-wide-bg-red"] = { 532, 299, 0.52197265625, 0.78173828125, 0.0009765625, 0.29296875, false, false },
 		["shop-card-wide-bg-teal"] = { 532, 299, 0.26123046875, 0.52099609375, 0.294921875, 0.5869140625, false, false },
 	},
+	["interface/shop/catalogshopwidecardburningcrusadeclassicanniversaryedition"] = {
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-epic"] = { 532, 299, 0.0009765625, 0.5205078125, 0.0009765625, 0.29296875, false, false },
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-heroic"] = { 532, 299, 0.0009765625, 0.5205078125, 0.294921875, 0.5869140625, false, false },
+		["catalogshop-widecard-1125-burningcrusadeclassicanniversaryprepurchase-upgrade"] = { 532, 299, 0.0009765625, 0.5205078125, 0.5888671875, 0.880859375, false, false },
+	},
 	["interface/shop/catalogshopwidecardmask"] = {
 		["shop-card-wide-mask"] = { 532, 299, 0, 1, 0, 1, false, false },
 	},
@@ -6446,5 +6451,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 64508
+_addon.dataBuild = 64616
 _addon.dataExpansion = nil
