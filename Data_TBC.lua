@@ -3814,6 +3814,17 @@ local AtlasInfo = {
 		["NPE_RightClick"] = { 32, 32, 0.98095703125, 0.99658203125, 0.0673828125, 0.0986328125, false, false },
 		["NPE_TurnIn"] = { 20, 20, 0.98095703125, 0.99072265625, 0.1005859375, 0.1201171875, false, false },
 	},
+	["interface/hud/combatassistantsinglebutton"] = {
+		["OneButton_ProcLoop_Flipbook"] = { 347, 416, 0.0009765625, 0.33984375, 0.54296875, 0.74609375, false, false },
+		["OneButton_ProcStart_Flipbook"] = { 924, 1109, 0.0009765625, 0.9033203125, 0.00048828125, 0.5419921875, false, false },
+		["UI-HUD-RotationHelper-Active"] = { 64, 64, 0.9052734375, 0.9677734375, 0.04443359375, 0.07568359375, false, false },
+		["UI-HUD-RotationHelper-Active-FX"] = { 140, 140, 0.0009765625, 0.1376953125, 0.7470703125, 0.8154296875, false, false },
+		["UI-HUD-RotationHelper-Inactive"] = { 64, 64, 0.9052734375, 0.9677734375, 0.07666015625, 0.10791015625, false, false },
+		["UI-HUD-RotationHelper-Overlay"] = { 43, 43, 0.955078125, 0.9970703125, 0.10888671875, 0.1298828125, false, false },
+		["UI-HUD-RotationHelper-ProcAltGlow"] = { 49, 49, 0.9052734375, 0.953125, 0.10888671875, 0.1328125, false, false },
+		["UI-HUD-RotationHelper-SpellbookDivider"] = { 4, 35, 0.9931640625, 0.9970703125, 0.00048828125, 0.017578125, false, false },
+		["UI-HUD-RotationHelper-SpellbookGlow"] = { 88, 88, 0.9052734375, 0.9912109375, 0.00048828125, 0.04345703125, false, false },
+	},
 	["interface/hud/uiactionbar"] = {
 		["_UI-HUD-ActionBar-Frame-Background-NineSlice-EdgeBottom"] = { 16, 12, 0, 0.0625, 0.1064453125, 0.1181640625, true, false },
 		["_UI-HUD-ActionBar-Frame-Background-NineSlice-EdgeTop"] = { 16, 11, 0, 0.0625, 0.1201171875, 0.130859375, true, false },
@@ -4278,6 +4289,26 @@ local AtlasInfo = {
 		["wowlabs-rarity-pip-bg"] = { 48, 16, 0.95263671875, 0.97607421875, 0.26318359375, 0.27099609375, false, false },
 		["wowlabs-spell-icon-frame-highlight"] = { 80, 80, 0.50732421875, 0.54638671875, 0.76171875, 0.80078125, false, false },
 		["wowlabs-switch-slots-key"] = { 64, 32, 0.15771484375, 0.18896484375, 0.8330078125, 0.8486328125, false, false },
+	},
+	["interface/interface/framegeneral/uiframe"] = {
+		["UI-Frame-BotCornerLeft"] = { 14, 14, 0.4453125, 0.5546875, 0.6328125, 0.7421875, false, false },
+		["UI-Frame-BotCornerRight"] = { 11, 11, 0.90625, 0.9921875, 0.4921875, 0.578125, false, false },
+		["UI-Frame-BtnCornerLeft"] = { 12, 32, 0.0078125, 0.1015625, 0.6328125, 0.8828125, false, false },
+		["UI-Frame-BtnCornerRight"] = { 12, 32, 0.1171875, 0.2109375, 0.6328125, 0.8828125, false, false },
+		["UI-Frame-BtnDivLeft"] = { 11, 25, 0.90625, 0.9921875, 0.28125, 0.4765625, false, false },
+		["UI-Frame-BtnDivMiddle"] = { 13, 25, 0.2265625, 0.328125, 0.6328125, 0.828125, false, false },
+		["UI-Frame-BtnDivRight"] = { 11, 25, 0.34375, 0.4296875, 0.6328125, 0.828125, false, false },
+		["UI-Frame-InnerBotLeftCorner"] = { 6, 6, 0.6328125, 0.6796875, 0.5546875, 0.6015625, false, false },
+		["UI-Frame-InnerBotRight"] = { 6, 6, 0.6953125, 0.7421875, 0.5546875, 0.6015625, false, false },
+		["UI-Frame-InnerSplitLeft"] = { 9, 14, 0.9140625, 0.984375, 0.0078125, 0.1171875, false, false },
+		["UI-Frame-InnerSplitRight"] = { 9, 14, 0.9140625, 0.984375, 0.1328125, 0.2421875, false, false },
+		["UI-Frame-InnerTopLeft"] = { 6, 6, 0.7578125, 0.8046875, 0.5546875, 0.6015625, false, false },
+		["UI-Frame-InnerTopRight"] = { 6, 6, 0.8203125, 0.8671875, 0.5546875, 0.6015625, false, false },
+		["UI-Frame-Portrait"] = { 78, 78, 0.0078125, 0.6171875, 0.0078125, 0.6171875, false, false },
+		["UI-Frame-TopCornerRight"] = { 33, 33, 0.6328125, 0.890625, 0.28125, 0.5390625, false, false },
+		["UI-Frame-TopCornerRightSimple"] = { 11, 11, 0.0078125, 0.09375, 0.8984375, 0.984375, false, false },
+		["UI-Frame-TopLeftCorner"] = { 14, 14, 0.4453125, 0.5546875, 0.7578125, 0.8671875, false, false },
+		["UI-Frame-TopLeftCornerNoPortrait"] = { 34, 33, 0.6328125, 0.8984375, 0.0078125, 0.265625, false, false },
 	},
 	["interface/itemsocketingframe/sockets"] = {
 		["socket-blue-background"] = { 43, 43, 0.90234375, 0.986328125, 0.00390625, 0.171875, false, false },
@@ -6451,5 +6482,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 64616
+_addon.dataBuild = 64796
 _addon.dataExpansion = nil
