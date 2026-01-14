@@ -6,7 +6,7 @@ SCHEMA_URL := https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xs
 .PHONY: check data dist libs
 .FORCE:
 
-all: wow wow_classic wow_classic_era wow_classic_era_ptr wow_classic_titan
+all: wow wow_anniversary wow_classic wow_classic_era wow_classic_titan
 
 check:
 	@luacheck -q $(shell git ls-files '*.lua')
@@ -33,19 +33,13 @@ wow_classic_era:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
 
 wow_classic_era_ptr:
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Vanilla.lua
+
+wow_anniversary:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_TBC.lua
 
-wow_classic_tbc:
+wow_anniversary_ptr:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_TBC.lua
-
-wow_classic_tbc_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_TBC.lua
-
-wow_classic_wrath:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
-
-wow_classic_wrath_ptr:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
 
 wow_classic_titan:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Wrath.lua
