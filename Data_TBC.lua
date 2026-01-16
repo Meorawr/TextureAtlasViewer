@@ -540,9 +540,13 @@ local AtlasInfo = {
 		["UI-DialogBox-goldbutton-up-right-blue"] = { 32, 32, 0.65234375, 0.77734375, 0.0078125, 0.2578125, false, false },
 	},
 	["interface/buttons/listbuttons"] = {
-		["PetList-ButtonBackground"] = { 209, 46, 0.00390625, 0.8203125, 0.00390625, 0.18359375, false, false },
-		["PetList-ButtonHighlight"] = { 209, 46, 0.00390625, 0.8203125, 0.19140625, 0.37109375, false, false },
-		["PetList-ButtonSelect"] = { 209, 46, 0.00390625, 0.8203125, 0.37890625, 0.55859375, false, false },
+		["ClickCastList-ButtonBackground"] = { 393, 46, 0.001953125, 0.76953125, 0.001953125, 0.091796875, false, false },
+		["ClickCastList-ButtonHighlight"] = { 393, 46, 0.001953125, 0.76953125, 0.095703125, 0.185546875, false, false },
+		["ClickCastList-ButtonNew"] = { 393, 46, 0.001953125, 0.76953125, 0.189453125, 0.279296875, false, false },
+		["PetList-ButtonBackground"] = { 209, 46, 0.001953125, 0.41015625, 0.376953125, 0.466796875, false, false },
+		["PetList-ButtonHighlight"] = { 209, 46, 0.4140625, 0.822265625, 0.376953125, 0.466796875, false, false },
+		["PetList-ButtonSelect"] = { 209, 46, 0.001953125, 0.41015625, 0.470703125, 0.560546875, false, false },
+		["ReportList-ButtonSelect"] = { 393, 46, 0.001953125, 0.76953125, 0.283203125, 0.373046875, false, false },
 	},
 	["interface/buttons/minimalscrollbarproportional"] = {
 		["minimal-scrollbar-arrow-bottom"] = { 17, 11, 0.2421875, 0.375, 0.8125, 0.984375, false, false },
@@ -6487,5 +6491,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 65340
+_addon.dataBuild = 65417
 _addon.dataExpansion = nil
