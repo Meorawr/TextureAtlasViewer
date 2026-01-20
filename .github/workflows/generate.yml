@@ -17,14 +17,6 @@ on:
           - wowxptr
           - wow_beta
 
-      mainline_beta_product:
-        description: 'Mainline beta product branch'
-        required: false
-        default: wow_beta
-        type: choice
-        options:
-          - wow_beta
-
       classic_product:
         description: 'Classic product branch'
         required: true

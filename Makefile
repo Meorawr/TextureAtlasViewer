@@ -51,7 +51,7 @@ wow:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
 
 wow_beta:
-	pwsh Scripts/Generate-Atlases.ps1 -Product $@ -ExpansionLevel 11 >Data_Midnight.lua
+	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
 
 wowt:
 	pwsh Scripts/Generate-Atlases.ps1 -Product $@ >Data_Mainline.lua
