@@ -12,6 +12,10 @@ local AtlasInfo = {
 		["shop-card-half-3800-TRR_TimeStarterPack_Refeature"] = { 286, 471, 0.2822265625, 0.5615234375, 0.455078125, 0.9150390625, false, false },
 		["shop-card-half-3800-TRR_TimeStarterPack_Refeature_CN"] = { 286, 471, 0.5634765625, 0.8427734375, 0.455078125, 0.9150390625, false, false },
 	},
+	["7636573"] = {
+		["shop-card-full-January2026LNY_apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.0009765625, 0.453125, false, false },
+		["shop-card-full-January2026LNY_cn"] = { 568, 463, 0.0009765625, 0.5556640625, 0.455078125, 0.9072265625, false, false },
+	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
 		["AdventureMap-combatally-empty"] = { 46, 46, 0.28125, 0.326171875, 0.9013671875, 0.9462890625, false, false },
@@ -6407,5 +6411,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 65586
+_addon.dataBuild = 65749
 _addon.dataExpansion = nil
