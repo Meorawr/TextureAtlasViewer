@@ -31,12 +31,6 @@ local AtlasInfo = {
 	["7232465"] = {
 		["shop-card-full-1117-365daysub-CN"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["7259256"] = {
-		["dragonriding-barbershop-icon-Panthera"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
-	},
-	["7259716"] = {
-		["dragonriding-barbershop-icon-PantheraIronHorde"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
-	},
 	["7341277"] = {
 		["shop-card-full-1120-midnight-nonexpansion-base"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
@@ -1057,6 +1051,12 @@ local AtlasInfo = {
 		["dragonriding-barbershop-icon-pterrodax"] = { 128, 128, 0.6904296875, 0.8154296875, 0.001953125, 0.251953125, false, false },
 		["dragonriding-barbershop-icon-slitherdrake"] = { 128, 128, 0.8173828125, 0.9423828125, 0.001953125, 0.251953125, false, false },
 		["dragonriding-barbershop-icon-wyvernspirit"] = { 128, 128, 0.5634765625, 0.6884765625, 0.255859375, 0.505859375, false, false },
+	},
+	["interface/barbershop/dragonridingcustomizationpanthera"] = {
+		["dragonriding-barbershop-icon-Panthera"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
+	},
+	["interface/barbershop/dragonridingcustomizationpantheraironhorde"] = {
+		["dragonriding-barbershop-icon-PantheraIronHorde"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
 	},
 	["interface/barbershop/dragonridingsgicon"] = {
 		["dragonriding-barbershop-icon-sg"] = { 128, 128, 0.00390625, 0.50390625, 0.00390625, 0.50390625, false, false },
