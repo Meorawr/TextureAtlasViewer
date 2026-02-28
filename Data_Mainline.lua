@@ -143,6 +143,16 @@ local AtlasInfo = {
 	["7542722"] = {
 		["catalogshop-widecard-brutosaur-comeback-cn"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
 	},
+	["7746249"] = {
+		["hearthsteel-100"] = { 640, 640, 0.00048828125, 0.31298828125, 0.00048828125, 0.31298828125, false, false },
+		["hearthsteel-1000"] = { 640, 640, 0.31396484375, 0.62646484375, 0.00048828125, 0.31298828125, false, false },
+		["hearthsteel-10000"] = { 640, 640, 0.62744140625, 0.93994140625, 0.00048828125, 0.31298828125, false, false },
+		["hearthsteel-1500"] = { 640, 640, 0.00048828125, 0.31298828125, 0.31396484375, 0.62646484375, false, false },
+		["hearthsteel-2000"] = { 640, 640, 0.00048828125, 0.31298828125, 0.62744140625, 0.93994140625, false, false },
+		["hearthsteel-2500"] = { 640, 640, 0.31396484375, 0.62646484375, 0.31396484375, 0.62646484375, false, false },
+		["hearthsteel-500"] = { 640, 640, 0.62744140625, 0.93994140625, 0.31396484375, 0.62646484375, false, false },
+		["hearthsteel-5000"] = { 640, 640, 0.31396484375, 0.62646484375, 0.62744140625, 0.93994140625, false, false },
+	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -15134,6 +15144,30 @@ local AtlasInfo = {
 	["interface/shop/catalogshopfg700tender"] = {
 		["shop-fg-bundle-700tender"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
 	},
+	["interface/shop/catalogshopfghearthsteel100"] = {
+		["shop-fg-bundle-hearthsteel-100"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel1000"] = {
+		["shop-fg-bundle-hearthsteel-1000"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel10000"] = {
+		["shop-fg-bundle-hearthsteel-10000"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel1500"] = {
+		["shop-fg-bundle-hearthsteel-1500"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel2000"] = {
+		["shop-fg-bundle-hearthsteel-2000"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel2500"] = {
+		["shop-fg-bundle-hearthsteel-2500"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel500"] = {
+		["shop-fg-bundle-hearthsteel-500"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
+	["interface/shop/catalogshopfghearthsteel5000"] = {
+		["shop-fg-bundle-hearthsteel-5000"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
+	},
 	["interface/shop/catalogshopfgmidnightexpansionbase"] = {
 		["shop-fg-midnight-expansion-base"] = { 1612, 914, 0.00048828125, 0.78759765625, 0.0009765625, 0.8935546875, false, false },
 	},
@@ -18639,5 +18673,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 66102
+_addon.dataBuild = 66192
 _addon.dataExpansion = nil
