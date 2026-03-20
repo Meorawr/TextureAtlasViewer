@@ -12194,9 +12194,9 @@ local AtlasInfo = {
 		["Vehicle-TempleofKotmogu-GreenBall"] = { 32, 32, 0.7744140625, 0.8056640625, 0.6396484375, 0.6708984375, false, false },
 		["Vehicle-TempleofKotmogu-OrangeBall"] = { 32, 32, 0.8076171875, 0.8388671875, 0.6396484375, 0.6708984375, false, false },
 		["Vehicle-TempleofKotmogu-PurpleBall"] = { 32, 32, 0.8408203125, 0.8720703125, 0.6396484375, 0.6708984375, false, false },
-		["Vehicle-Trap-Gold"] = { 32, 32, 0.8740234375, 0.9052734375, 0.6396484375, 0.6708984375, false, false },
-		["Vehicle-Trap-Grey"] = { 32, 32, 0.9072265625, 0.9384765625, 0.6396484375, 0.6708984375, false, false },
-		["Vehicle-Trap-Red"] = { 32, 32, 0.9404296875, 0.9716796875, 0.6396484375, 0.6708984375, false, false },
+		["Vehicle-Trap-Gold"] = { 24, 24, 0.8740234375, 0.9052734375, 0.6396484375, 0.6708984375, false, false },
+		["Vehicle-Trap-Grey"] = { 24, 24, 0.9072265625, 0.9384765625, 0.6396484375, 0.6708984375, false, false },
+		["Vehicle-Trap-Red"] = { 24, 24, 0.9404296875, 0.9716796875, 0.6396484375, 0.6708984375, false, false },
 		["VenthyrAssaults-64x64"] = { 50, 50, 0.1337890625, 0.1962890625, 0.7080078125, 0.7705078125, false, false },
 		["VenthyrAssaultsQuest-32x32"] = { 12, 12, 0.6416015625, 0.6728515625, 0.6728515625, 0.7041015625, false, false },
 		["VignetteEvent"] = { 32, 32, 0.1337890625, 0.1962890625, 0.7724609375, 0.8349609375, false, false },
@@ -18673,5 +18673,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 66431
+_addon.dataBuild = 66527
 _addon.dataExpansion = nil
