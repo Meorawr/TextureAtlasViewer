@@ -37,12 +37,6 @@ local AtlasInfo = {
 	["7535085"] = {
 		["shop-card-full-yoa25apac"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
 	},
-	["7539999"] = {
-		["shop-card-full-552burningcrusadeclassicanniversaryprepurchase-fullingamenonexpansioncardheroic"] = { 568, 463, 0.283203125, 0.837890625, 0.455078125, 0.9072265625, false, false },
-		["shop-card-full-552burningcrusadeclassicanniversaryprepurchase-fullingamenonexpansioncardupgrade"] = { 568, 463, 0.283203125, 0.837890625, 0.0009765625, 0.453125, false, false },
-		["shop-card-half-552burningcrusadeclassicanniversaryprepurchase-epic"] = { 287, 471, 0.0009765625, 0.28125, 0.0009765625, 0.4609375, false, false },
-		["shop-card-half-552burningcrusadeclassicanniversaryprepurchase-heroic"] = { 287, 471, 0.0009765625, 0.28125, 0.462890625, 0.9228515625, false, false },
-	},
 	["interface/adventuremap/adventuremap"] = {
 		["AdventureMap-combatally-clouds"] = { 117, 95, 0.783203125, 0.8974609375, 0.072265625, 0.1650390625, false, false },
 		["AdventureMap-combatally-empty"] = { 46, 46, 0.28125, 0.326171875, 0.9013671875, 0.9462890625, false, false },
@@ -6374,6 +6368,12 @@ local AtlasInfo = {
 	},
 	["interface/store/shopbundles551wingsoftheguardianpack"] = {
 		["shop-card-full-551-wingsoftheguardianpack"] = { 568, 463, 0.0009765625, 0.5556640625, 0.001953125, 0.90625, false, false },
+	},
+	["interface/store/shopbundles552burningcrusadeclassicanniversaryedition"] = {
+		["shop-card-full-552burningcrusadeclassicanniversaryprepurchase-fullingamenonexpansioncardheroic"] = { 568, 463, 0.283203125, 0.837890625, 0.455078125, 0.9072265625, false, false },
+		["shop-card-full-552burningcrusadeclassicanniversaryprepurchase-fullingamenonexpansioncardupgrade"] = { 568, 463, 0.283203125, 0.837890625, 0.0009765625, 0.453125, false, false },
+		["shop-card-half-552burningcrusadeclassicanniversaryprepurchase-epic"] = { 287, 471, 0.0009765625, 0.28125, 0.0009765625, 0.4609375, false, false },
+		["shop-card-half-552burningcrusadeclassicanniversaryprepurchase-heroic"] = { 287, 471, 0.0009765625, 0.28125, 0.462890625, 0.9228515625, false, false },
 	},
 	["interface/store/shopfeatured"] = {
 		["store-card-splash1-nobanner"] = { 576, 471, 0.0009765625, 0.5634765625, 0.001953125, 0.921875, false, false },
