@@ -11931,7 +11931,7 @@ local AtlasInfo = {
 		["ElementalStorm-Lesser-Fire"] = { 38, 38, 0.0009765625, 0.0634765625, 0.8408203125, 0.9033203125, false, false },
 		["ElementalStorm-Lesser-Water"] = { 38, 38, 0.0009765625, 0.0634765625, 0.9052734375, 0.9677734375, false, false },
 		["EmberCourt-32x32"] = { 32, 32, 0.8740234375, 0.9052734375, 0.4072265625, 0.4384765625, false, false },
-		["embercourt-32x32-zhcn"] = { 24, 24, 0.9072265625, 0.9384765625, 0.4072265625, 0.4384765625, false, false },
+		["embercourt-32x32-zhcn"] = { 18, 18, 0.9072265625, 0.9384765625, 0.4072265625, 0.4384765625, false, false },
 		["Embercourt-Guest-AlexandrosMograine"] = { 36, 36, 0.4228515625, 0.4580078125, 0.2568359375, 0.2919921875, false, false },
 		["Embercourt-Guest-BaronessVashj"] = { 36, 36, 0.4599609375, 0.4951171875, 0.2568359375, 0.2919921875, false, false },
 		["Embercourt-Guest-Choofa"] = { 36, 36, 0.4970703125, 0.5322265625, 0.2568359375, 0.2919921875, false, false },
@@ -18790,5 +18790,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 67235
+_addon.dataBuild = 67314
 _addon.dataExpansion = nil
