@@ -6837,5 +6837,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 68575
+_addon.dataBuild = 68749
 _addon.dataExpansion = nil
