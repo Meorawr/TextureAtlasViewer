@@ -7,9 +7,6 @@ local AtlasInfo = {
 		["kiosk-BG"] = { 1920, 1080, 0.00048828125, 0.93798828125, 0.00048828125, 0.52783203125, false, false },
 		["kiosk-button"] = { 468, 128, 0.00048828125, 0.22900390625, 0.52880859375, 0.59130859375, false, false },
 	},
-	["7542722"] = {
-		["catalogshop-widecard-brutosaur-comeback-cn"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
-	},
 	["interface/ garrison/dragonflightlandingpage"] = {
 		["dragonflight-landingpage-radial-centaur"] = { 86, 86, 0.94384765625, 0.99072265625, 0.0009765625, 0.0947265625, false, false },
 		["dragonflight-landingpage-radial-dream"] = { 86, 86, 0.24462890625, 0.29150390625, 0.7919921875, 0.8857421875, false, false },
@@ -15502,6 +15499,9 @@ local AtlasInfo = {
 		["shop-card-wide-bg-purple"] = { 532, 299, 0.26123046875, 0.52099609375, 0.0009765625, 0.29296875, false, false },
 		["shop-card-wide-bg-red"] = { 532, 299, 0.52197265625, 0.78173828125, 0.0009765625, 0.29296875, false, false },
 		["shop-card-wide-bg-teal"] = { 532, 299, 0.26123046875, 0.52099609375, 0.294921875, 0.5869140625, false, false },
+	},
+	["interface/shop/catalogshopwidecardbrutosaurcomebackcn"] = {
+		["catalogshop-widecard-brutosaur-comeback-cn"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
 	},
 	["interface/shop/catalogshopwidecardbrutosaurcomebackrow"] = {
 		["catalogshop-widecard-brutosaur-comeback-row"] = { 532, 299, 0.0009765625, 0.5205078125, 0.001953125, 0.5859375, false, false },
