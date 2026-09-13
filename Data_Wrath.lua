@@ -6271,8 +6271,12 @@ local AtlasInfo = {
 	["interface/shop/catalogshoploadingscreensparkleflipbook"] = {
 		["shop-loading-sparkle-flipbook"] = { 816, 670, 0.0009765625, 0.7978515625, 0.0009765625, 0.6552734375, false, false },
 	},
+	["interface/shop/catalogshopproductlogos"] = {
+		["logo-wow-forever"] = { 320, 320, 0.6298828125, 0.9423828125, 0.001953125, 0.626953125, false, false },
+	},
 	["interface/shop/catalogshopproductlogos2x"] = {
 		["logo-wow-classic"] = { 640, 640, 0.00048828125, 0.31298828125, 0.0009765625, 0.6259765625, false, false },
+		["logo-wow-forever-2x"] = { 640, 640, 0.62744140625, 0.93994140625, 0.0009765625, 0.6259765625, false, false },
 		["logo-wow-retail"] = { 640, 640, 0.31396484375, 0.62646484375, 0.0009765625, 0.6259765625, false, false },
 	},
 	["interface/shop/catalogshoptempbgloading"] = {
@@ -7350,5 +7354,5 @@ local AtlasInfo = {
 
 -- Don't remove this!
 _addon.data = AtlasInfo
-_addon.dataBuild = 69496
+_addon.dataBuild = 69815
 _addon.dataExpansion = nil
