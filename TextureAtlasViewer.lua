@@ -335,7 +335,7 @@ function TAV_DisplayContainerMixin:OnLoad()
 	self.scaleStep = 0.1
 	self.width = 100
 	self.height = 100
-	
+
 	self:UpdateAutoScaleSizes()
 
 	TAV_ControlsPanel.ScaleSlider:SetMinMaxValues(self.scaleMin, self.scaleMax)

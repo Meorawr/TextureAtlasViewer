@@ -110,5 +110,6 @@ stds.wow = {
 		"UISpecialFrames",
 		"wipe",
 		"YELLOW_FONT_COLOR",
+		"UNKNOWN",
 	},
 }
