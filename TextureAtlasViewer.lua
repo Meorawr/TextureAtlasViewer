@@ -109,7 +109,7 @@ function TAV:OnEnable()
 	if #self.filteredList > 0 then
 		TAV_DisplayContainer:UpdateAutoScaleSizes()
 		TAV_DisplayContainer:DisplayTexture(self.filteredList[1].texture)
-		TAV_ScrollFrameScrollChild.selected = self.filteredList[1].texture
+		TAV_ScrollFrame.selectedTexture = self.filteredList[1].texture
 	end
 end
 
@@ -180,38 +180,16 @@ function TAV_ScrollFrameMixin:Init()
 		return
 	end
 
-	self.update = self.RefreshButtons
-
-	HybridScrollFrame_CreateButtons(self, "TAV_ListButtonTemplate", 0, 0)
-	HybridScrollFrame_SetDoNotHideScrollBar(self, true)
-
 	self.initialized = true
+	self.ScrollView = CreateScrollBoxListLinearView()
+	self.ScrollView:SetElementInitializer("TAV_ListButtonTemplate", TAV_ListButtonMixin.Update)
+	ScrollUtil.InitScrollBoxListWithScrollBar(self.ScrollBox, self.ScrollBar, self.ScrollView)
+	ScrollUtil.RegisterAlternateRowBehavior(self.ScrollBox, TAV_ListButtonMixin.SetAlternate)
 end
 
 function TAV_ScrollFrameMixin:RefreshButtons()
-	local buttons = HybridScrollFrame_GetButtons(self)
-	local offset = HybridScrollFrame_GetOffset(self)
-
-	local toDisplay = TAV.filteredList or {}
-
-	for i = 1, #buttons do
-		local listIndex = offset + i
-		local button = buttons[i]
-
-		if toDisplay and listIndex <= #toDisplay then
-			local info = toDisplay[listIndex]
-			button:Update(info)
-		else
-			button.texture = nil
-			button:Hide()
-		end
-	end
-
-	local numDisplayed = math.min(#buttons, #toDisplay)
-	local buttonHeight = buttons[1]:GetHeight()
-	local displayedHeight = numDisplayed * buttonHeight
-	local totalHeight = #toDisplay * buttonHeight
-	HybridScrollFrame_Update(self, totalHeight, displayedHeight)
+	self:Init()
+	self.ScrollView:SetDataProvider(CreateDataProvider(TAV.filteredList or {}))
 end
 
 function TAV_ScrollFrameMixin:OnShow()
@@ -219,9 +197,8 @@ function TAV_ScrollFrameMixin:OnShow()
 	self:RefreshButtons()
 end
 
-function TAV_ScrollFrameMixin:OnSizeChanged()
-	HybridScrollFrame_CreateButtons(self, "TAV_ListButtonTemplate", 0, 0)
-	self:RefreshButtons()
+function TAV_ScrollFrameMixin:RefreshSelection()
+	self.ScrollBox:ForEachFrame(TAV_ListButtonMixin.UpdateSelection)
 end
 
 local function FindEntryByTexture(textureName, entryInfo)
@@ -229,14 +206,8 @@ local function FindEntryByTexture(textureName, entryInfo)
 end
 
 function TAV_ScrollFrameMixin:GetSelectedButtonIndex()
-	local selectedTexture = self:GetScrollChild().selected
-	local selectedIndex = FindInTableIf(TAV.filteredList, GenerateClosure(FindEntryByTexture, selectedTexture))
-
+	local selectedIndex = FindInTableIf(TAV.filteredList, GenerateClosure(FindEntryByTexture, self.selectedTexture))
 	return selectedIndex
-end
-
-local function GetScrollFrameButtonHeight()
-	return 40
 end
 
 function TAV_ScrollFrameMixin:SetSelectedButtonIndex(index)
@@ -249,9 +220,9 @@ function TAV_ScrollFrameMixin:SetSelectedButtonIndex(index)
 
 	local desiredTexture = TAV.filteredList[desiredIndex].texture
 
-	self:GetScrollChild().selected = desiredTexture
-	HybridScrollFrame_ScrollToIndex(self, desiredIndex, GetScrollFrameButtonHeight)
-	self:RefreshButtons()
+	self.selectedTexture = desiredTexture
+	self.ScrollBox:ScrollToElementDataIndex(desiredIndex, ScrollBoxConstants.AlignNearest)
+	self:RefreshSelection()
 	TAV_DisplayContainer:DisplayTexture(desiredTexture)
 end
 
@@ -705,21 +676,37 @@ function TAV_ListButtonMixin:Update(info)
 	end
 	self.Text:SetVertexColor(color:GetRGB())
 
-	self.SelectedOverlay:SetShown(self.texture == self:GetParent().selected)
+	self:UpdateSelection()
 	self:UpdateTooltip()
+end
+
+function TAV_ListButtonMixin:SetAlternate(alternate)
+	if alternate then
+		self.Background:SetColorTexture(0.15, 0.15, 0.15, 1)
+	else
+		self.Background:SetColorTexture(0.075, 0.075, 0.075, 1)
+	end
+end
+
+function TAV_ListButtonMixin:UpdateSelection()
+	local selected = self.texture == TAV_ScrollFrame.selectedTexture
+	self.SelectedOverlay:SetShown(selected)
+	self.SelectedLine:SetShown(selected)
 end
 
 function TAV_ListButtonMixin:OnClick()
 	TAV_DisplayContainer:DisplayTexture(self.texture)
-	self:GetParent().selected = self.texture
-	self:GetParent():GetParent():RefreshButtons()
+	TAV_ScrollFrame.selectedTexture = self.texture
+	TAV_ScrollFrame:RefreshSelection()
 end
 
 function TAV_ListButtonMixin:OnEnter()
+	self.HighlightOverlay:SetShown(self.texture ~= TAV_ScrollFrame.selectedTexture);
 	self:UpdateTooltip()
 end
 
 function TAV_ListButtonMixin:OnLeave()
+	self.HighlightOverlay:Hide();
 	self:UpdateTooltip()
 end
 

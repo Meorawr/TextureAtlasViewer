@@ -58,13 +58,40 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 	</EditBox>
 
 	<Button name="TAV_ListButtonTemplate" mixin="TAV_ListButtonMixin" virtual="true">
-		<Size x="0" y="40"/>
+		<Size x="0" y="32"/>
 		<Anchors>
 			<Anchor point="LEFT"/>
 			<Anchor point="RIGHT"/>
 		</Anchors>
 		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="Background" setAllPoints="true"/>
+			</Layer>
 			<Layer level="ARTWORK">
+				<Texture parentKey="SelectedOverlay" hidden="true" file="Interface\Buttons\White8x8" setAllPoints="true">
+					<Gradient orientation="VERTICAL">
+						<MinColor r="0.24" g="0.17" b="0.04" a="1"/>
+						<MaxColor r="0.12" g="0.09" b="0.02" a="0.5"/>
+					</Gradient>
+				</Texture>
+				<Texture parentKey="HighlightOverlay" hidden="true" file="Interface\Buttons\White8x8" setAllPoints="true">
+					<Gradient orientation="VERTICAL">
+						<MinColor r="0.1" g="0.35" b="0.8" a="0.6"/>
+						<MaxColor r="0.08" g="0.24" b="0.55" a="0.3"/>
+					</Gradient>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK" textureSubLevel="1">
+				<Texture parentKey="SelectedLine" hidden="true">
+					<Size y="2"/>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color r="1" g="0.9" b="0.25" a="1"/>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
 				<FontString parentKey="Text" inherits="GameFontNormal" maxLines="2" justifyH="LEFT">
 					<Anchors>
 						<Anchor point="TOPLEFT" x="15"/>
@@ -72,12 +99,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 					</Anchors>
 				</FontString>
 			</Layer>
-			<Layer level="OVERLAY">
-				<Texture parentKey="SelectedOverlay" atlas="GarrMission_FollowerListButton-Select" hidden="true"/>
-			</Layer>
 		</Layers>
-		<NormalTexture atlas="GarrMission_FollowerListButton"/>
-		<HighlightTexture atlas="GarrMission_FollowerListButton-Highlight"/>
 		<Scripts>
 			<OnClick method="OnClick"/>
 			<OnEnter method="OnEnter"/>
@@ -144,7 +166,7 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 		</Anchors>
 		<Frames>
 			<Frame parentKey="LeftInset" useParentLevel="false" inherits="InsetFrameTemplate4">
-				<Size x="200"/>
+				<Size x="225"/>
 				<Anchors>
 					<Anchor point="TOPLEFT" x="1" y="-22"/>
 					<Anchor point="BOTTOMLEFT" x="1" y="2"/>
@@ -161,10 +183,10 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 					</Layer>
 				</Layers>
 				<Frames>
-					<CheckButton parentKey="PatternCheckBox" inherits="UICheckButtonTemplate">
+					<CheckButton parentKey="PatternCheckBox" inherits="MinimalCheckboxArtTemplate">
 						<Size x="25" y="25"/>
 						<Anchors>
-							<Anchor point="TOPLEFT" x="5" y="-5"/>
+							<Anchor point="TOPLEFT" x="8" y="-5"/>
 						</Anchors>
 						<Scripts>
 							<OnLoad>
@@ -187,9 +209,9 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 					<EditBox parentKey="SearchBox" inherits="SearchBoxTemplate">
 						<Size y="20"/>
 						<Anchors>
-							<Anchor point="LEFT" relativeKey="$parent.PatternCheckBox" relativePoint="RIGHT" x="5"/>
-							<Anchor point="RIGHT" x="-5"/>
-							<Anchor point="TOP" y="-6"/>
+							<Anchor point="LEFT" relativeKey="$parent.PatternCheckBox" relativePoint="RIGHT" x="8"/>
+							<Anchor point="RIGHT" x="-8"/>
+							<Anchor point="TOP" y="-7"/>
 						</Anchors>
 						<Scripts>
 							<OnTextChanged inherit="prepend">
@@ -198,25 +220,30 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 						</Scripts>
 					</EditBox>
 
-					<ScrollFrame name="TAV_ScrollFrame" parentKey="ScrollFrame" mixin="TAV_ScrollFrameMixin" inherits="HybridScrollFrameTemplate">
+					<Frame name="TAV_ScrollFrame" parentKey="ScrollFrame" mixin="TAV_ScrollFrameMixin">
 						<Anchors>
 							<Anchor point="TOPLEFT" x="4" y="-32"/>
 							<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
 						</Anchors>
 
 						<Frames>
-							<Slider parentKey="ScrollBar" inherits="HybridScrollBarTrimTemplate">
+							<Frame parentKey="ScrollBox" inherits="WowScrollBoxList">
 								<Anchors>
-									<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="15"/>
-									<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+									<Anchor point="TOPLEFT"/>
+									<Anchor point="BOTTOMRIGHT"/>
 								</Anchors>
-							</Slider>
+							</Frame>
+							<EventFrame parentKey="ScrollBar" inherits="MinimalScrollBar">
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeKey="$parent.ScrollBox" relativePoint="TOPRIGHT" x="10" y="20"/>
+									<Anchor point="BOTTOMLEFT" relativeKey="$parent.ScrollBox" relativePoint="BOTTOMRIGHT" x="10" y="5"/>
+								</Anchors>
+							</EventFrame>
 						</Frames>
 						<Scripts>
 							<OnShow method="OnShow"/>
-							<OnSizeChanged method="OnSizeChanged"/>
 						</Scripts>
-					</ScrollFrame>
+					</Frame>
 				</Frames>
 			</Frame>
 			<Frame parentKey="RightInset" useParentLevel="false" inherits="InsetFrameTemplate4">
