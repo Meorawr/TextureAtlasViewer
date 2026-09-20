@@ -70,6 +70,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Just
+        uses: extractions/setup-just@v4
+
       - name: Generate Atlases
         run: just ${MAINLINE_PRODUCT} ${FOREVER_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
         env:
