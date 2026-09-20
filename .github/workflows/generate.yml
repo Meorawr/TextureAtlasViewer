@@ -3,64 +3,7 @@ name: Generate Atlases
 on:
   schedule:
     - cron: '0 18 * * *'
-
-  workflow_dispatch:
-    inputs:
-      mainline_product:
-        description: 'Mainline product branch'
-        required: true
-        default: 'wow'
-        type: choice
-        options:
-          - wow
-          - wowt
-          - wowxptr
-          - wow_beta
-
-      forever_product:
-        description: 'Forever product branch'
-        required: true
-        default: 'wow_classic_beta'
-        type: choice
-        options:
-          - wow_classic_beta
-
-      classic_product:
-        description: 'Classic product branch'
-        required: true
-        default: 'wow_classic'
-        type: choice
-        options:
-          - wow_classic
-          - wow_classic_ptr
-          - wow_classic_beta
-
-      classic_vanilla_product:
-        description: 'Vanilla product branch'
-        required: true
-        default: 'wow_classic_era'
-        type: choice
-        options:
-          - wow_classic_era
-          - wow_classic_era_ptr
-
-      classic_tbc_product:
-        description: 'TBC product branch'
-        required: true
-        default: 'wow_anniversary'
-        type: choice
-        options:
-          - wow_anniversary
-          - wow_anniversary_ptr
-
-      classic_wrath_product:
-        description: 'Wrath product branch'
-        required: true
-        default: 'wow_classic_titan'
-        type: choice
-        options:
-          - wow_classic_titan
-          - wow_classic_titan_ptr
+  workflow_dispatch: {}
 
 jobs:
   build:
@@ -74,21 +17,14 @@ jobs:
         uses: extractions/setup-just@v4
 
       - name: Generate Atlases
-        run: just ${MAINLINE_PRODUCT} ${FOREVER_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
-        env:
-          MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
-          FOREVER_PRODUCT: ${{ inputs.forever_product }}
-          CLASSIC_PRODUCT: ${{ inputs.classic_product }}
-          CLASSIC_VANILLA_PRODUCT: ${{ inputs.classic_vanilla_product }}
-          CLASSIC_TBC_PRODUCT: ${{ inputs.classic_tbc_product }}
-          CLASSIC_WRATH_PRODUCT: ${{ inputs.classic_wrath_product }}
+        run: just data
 
       - name: Commit Atlases
         id: commit
         run: |
           git config --local user.name 'github-actions'
           git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
+          git add FilePaths.lua
 
           git diff --cached --quiet
           if ($LASTEXITCODE -eq 0) {

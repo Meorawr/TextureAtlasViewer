@@ -48,7 +48,7 @@ function TAV:OnInitialize()
 	for _, atlasName in ipairs(C_Texture.GetAtlasElements()) do
 		local info = C_Texture.GetAtlasInfo(atlasName)
 		if info and info.file then
-			local texture = _addon.data[info.file] or info.file
+			local texture = _addon.FilePaths[info.file] or info.file
 			if not self.atlasInfo[texture] then
 				self.atlasInfo[texture] = {}
 			end
