@@ -23,7 +23,7 @@ wow_classic:
     pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic >Data_Mists.lua
 
 wow_classic_beta:
-    pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic_beta >Data_Mists.lua
+    pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic_beta >Data_Forever.lua
 
 wow_classic_ptr:
     pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic_ptr >Data_Mists.lua
@@ -47,13 +47,12 @@ wow_classic_titan_ptr:
     pwsh Scripts/Generate-Atlases.ps1 -Product wow_classic_titan_ptr >Data_Wrath.lua
 
 wow:
-    pwsh Scripts/Generate-Atlases.ps1 -Product wow >Data_Mainline.lua
-
+    pwsh Scripts/Generate-Atlases.ps1 -Product wow >Data_Standard.lua
 wow_beta:
-    pwsh Scripts/Generate-Atlases.ps1 -Product wow_beta >Data_Mainline.lua
+    pwsh Scripts/Generate-Atlases.ps1 -Product wow_beta >Data_Standard.lua
 
 wowt:
-    pwsh Scripts/Generate-Atlases.ps1 -Product wowt >Data_Mainline.lua
+    pwsh Scripts/Generate-Atlases.ps1 -Product wowt >Data_Standard.lua
 
 wowxptr:
-    pwsh Scripts/Generate-Atlases.ps1 -Product wowxptr >Data_Mainline.lua
+    pwsh Scripts/Generate-Atlases.ps1 -Product wowxptr >Data_Standard.lua

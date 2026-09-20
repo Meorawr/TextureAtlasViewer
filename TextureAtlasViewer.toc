@@ -1,4 +1,4 @@
-## Interface: 120105, 120100, 50504, 38002, 20506, 11509
+## Interface: 120105, 120100, 50504, 38002, 20506, 16001, 11509
 ## Title: TextureAtlasViewer
 ## Notes: An interactive viewer to help find texture atlas names.
 ## Author: LanceDH
@@ -13,9 +13,10 @@ Libs\LibStub\LibStub.lua
 Libs\AceAddon-3.0\AceAddon-3.0.xml
 Libs\AceDB-3.0\AceDB-3.0.xml
 
-Data_Mainline.lua [AllowLoadGameType: mainline]
-Data_Mists.lua [AllowLoadGameType: mists]
-Data_TBC.lua [AllowLoadGameType: tbc]
-Data_Vanilla.lua [AllowLoadGameType: vanilla]
-Data_Wrath.lua [AllowLoadGameType: wrath]
+Data_Standard.lua [AllowLoadGameType standard]
+Data_Forever.lua [AllowLoadGameType camelot] [ExcludeLoadGameType standard, classic]
+Data_Mists.lua [AllowLoadGameType mists]
+Data_TBC.lua [AllowLoadGameType tbc]
+Data_Vanilla.lua [AllowLoadGameType vanilla]
+Data_Wrath.lua [AllowLoadGameType wrath]
 TextureAtlasViewer.xml
