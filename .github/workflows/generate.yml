@@ -69,7 +69,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Generate Atlases
-        run: make ${MAINLINE_PRODUCT} ${FOREVER_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
+        run: just ${MAINLINE_PRODUCT} ${FOREVER_PRODUCT} ${CLASSIC_PRODUCT} ${CLASSIC_VANILLA_PRODUCT} ${CLASSIC_TBC_PRODUCT} ${CLASSIC_WRATH_PRODUCT}
         env:
           MAINLINE_PRODUCT: ${{ inputs.mainline_product }}
           FOREVER_PRODUCT: ${{ inputs.forever_product }}
