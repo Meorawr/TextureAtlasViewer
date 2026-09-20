@@ -2,17 +2,14 @@
 
 <#
 .SYNOPSIS
-	Generates an output document of atlases pulled from WoW client databases
-	suitable for use with the Texture Atlas Viewer addon.
+	Generates a file ID to texture path lookup table from WoW client databases.
 #>
 [CmdletBinding()]
 param (
-	# Product name to generate atlases for, using the latest CDN version.
 	[Parameter(Mandatory=$true)]
 	[ValidateNotNull()]
 	[string] $Product,
 
-	# Expansion level constant to check when loading the data.
 	[Parameter(Mandatory=$false)]
 	[string] $ExpansionLevel
 )
@@ -58,47 +55,30 @@ function Get-Listfile {
 		| ConvertFrom-Csv -Delimiter ";" -Header "ID", "Name"
 }
 
-function Get-Atlases([string] $Version) {
-	$Version = Get-ProductVersion -Product $Product
-	$Elements = Get-ClientDatabase -Name "UiTextureAtlasElement" -Version $Version
-	$Atlases = Get-ClientDatabase -Name "UiTextureAtlas" -Version $Version | New-LookupTable -Property ID
-	$Members = Get-ClientDatabase -Name "UiTextureAtlasMember" -Version $Version | New-LookupTable -Property UiTextureAtlasElementID
+function Get-FilePaths([string] $Version) {
+	$Atlases = Get-ClientDatabase -Name "UiTextureAtlas" -Version $Version
 	$Files = Get-Listfile | New-LookupTable -Property ID
 
-	$Elements | ForEach-Object {
-		$Member = $Members[$_.ID]
+	$Atlases
+		| Where-Object { $Files[$_.FileDataID] }
+		| ForEach-Object {
+				$File = $Files[$_.FileDataID]
+				$FileName = $File.Name
+				$Extension = [IO.Path]::GetExtension($FileName)
 
-		if ($Member) {
-			$Atlas = $Atlases[$Member.UiTextureAtlasID]
-			$File = $Files[$Atlas.FileDataID]
-
-			@{
-				Name = $_.Name
-				Left = $Member.CommittedLeft / $Atlas.AtlasWidth
-				Right = $Member.CommittedRight / $Atlas.AtlasWidth
-				Top = $Member.CommittedTop / $Atlas.AtlasHeight
-				Bottom = $Member.CommittedBottom / $Atlas.AtlasHeight
-				Width = ($Member.OverrideWidth -ne 0 ? $Member.OverrideWidth : $Member.CommittedRight - $Member.CommittedLeft)
-				Height = ($Member.OverrideHeight -ne 0 ? $Member.OverrideHeight : $Member.CommittedBottom - $Member.CommittedTop)
-				TileHorizontally = [bool] ($Member.CommittedFlags -band 0x4)
-				TileVertically = [bool] ($Member.CommittedFlags -band 0x2)
-				AtlasID = $Atlas.ID
-				FileDataID = $Atlas.FileDataID
-				FileName = ($File ? $File.Name.Substring(0, $File.Name.LastIndexOf(".")) : $Atlas.FileDataID)
+				[PSCustomObject] @{
+					FileDataID = [int] $_.FileDataID
+					FileName = if ($Extension) { $FileName.Substring(0, $FileName.Length - $Extension.Length) } else { $FileName }
+				}
 			}
-		}
-	}
+		| Sort-Object -Property FileDataID -Unique
 }
 
-function Write-GroupedAtlases {
+function Write-FilePaths {
 	[CmdletBinding()]
 	param(
 		[Parameter(Mandatory=$true, ValueFromPipeline=$true)]
 		[Object[]] $InputObject,
-
-		[Parameter(Mandatory=$true)]
-		[ValidateNotNull()]
-		[string] $Product,
 
 		[Parameter(Mandatory=$true)]
 		[ValidateNotNull()]
@@ -122,19 +102,16 @@ end
 
 		@"
 
--- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+-- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
-local AtlasInfo = {
+local FilePaths = {
 "@
 	}
 
 	process {
-		foreach ($GroupInfo in $InputObject) {
-			"`t[`"$($GroupInfo.Name)`"] = {"
-			foreach ($_ in $GroupInfo.Group) {
-				"`t`t[`"$($_.Name)`"] = { $($_.Width), $($_.Height), $($_.Left), $($_.Right), $($_.Top), $($_.Bottom), $($_.TileHorizontally ? "true" : "false"), $($_.TileVertically ? "true" : "false") },"
-			}
-			"`t},"
+		foreach ($File in $InputObject) {
+			$EscapedFileName = $File.FileName.Replace("\", "\\").Replace('"', '\"')
+			"`t[$($File.FileDataID)] = `"$EscapedFileName`","
 		}
 	}
 
@@ -142,23 +119,14 @@ local AtlasInfo = {
 		@"
 }
 
--- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
--- Replace content in this area
--- Make sure the 'return AtlasInfo' at the end is not included
---------------------------------------------
+-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 -- Don't remove this!
-_addon.data = AtlasInfo
-_addon.dataBuild = $($Version.Split(".")[3])
-_addon.dataExpansion = $(if ($ExpansionLevel) { $ExpansionLevel } else { "nil" })
+_addon.data = FilePaths
 "@
 	}
 }
 
 $Version = Get-ProductVersion -Product $Product
 
-Get-Atlases -Version $Version `
-	| Sort-Object -Property Name `
-	| Group-Object -Property FileName `
-	| Sort-Object -Property Name `  # Sorts by the grouped-by filename.
-	| Write-GroupedAtlases -Product $Product -Version $Version -ExpansionLevel $ExpansionLevel
+Get-FilePaths -Version $Version | Write-FilePaths -Version $Version -ExpansionLevel $ExpansionLevel

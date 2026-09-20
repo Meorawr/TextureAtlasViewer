@@ -35,14 +35,27 @@ stds.wow = {
 	},
 
 	read_globals = {
+		C_Intl = {
+			fields = {
+				"GetSortKey",
+			},
+		},
+
 		C_Texture = {
 			fields = {
+				"GetAtlasElements",
 				"GetAtlasInfo",
 			},
 		},
 
 		Enum = {
 			fields = {
+				CollationStrength = {
+					fields = {
+						"Primary",
+					},
+				},
+
 				UITextureSliceMode = {
 					fields = {
 						"Stretched",

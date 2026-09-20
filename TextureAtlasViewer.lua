@@ -17,17 +17,20 @@ local TAV_Defaults = {
 			["showIssues"] = false,
 			["enableBindings"] = true,
 		},
-		["AtlasInfo"] = nil,
 	},
 }
 
 local MAX_NUM_ISSUES = 30
 local FORMAT_ISSUE_OVERFLOW = "+%s more issues."
 local FORMAT_INVALID_TEXTURE = "No valid atlas info for %s\nNo texture size could be calculated."
-local DATA_URL = "https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua"
-local SAVE_VARIABLE_COPY_INFO = "Copy paste the list from "
-	.. DATA_URL
-	.. " here instead of this message. Make sure to include the opening and closing brackets."
+
+local function GenerateSortKey(text)
+	if C_Intl then
+		return C_Intl.GetSortKey(text, Enum.CollationStrength.Primary) or ""
+	end
+
+	return text:lower()
+end
 
 local RESULT_PRIORITY = {
 	["none"] = 0,
@@ -38,35 +41,20 @@ local RESULT_PRIORITY = {
 
 function TAV:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("ATVDB", TAV_Defaults, true)
-	self.atlasInfo = _addon.data
 
-	-- Check every atlas if the API knows it exists
-	-- If not we store it ourselves if the user wants to see it anyway
-	self.backupInfo = {}
+	self.atlasInfo = {}
+	self.atlasMetadata = {}
 
-	for file, list in pairs(self.atlasInfo) do
-		for atlas, info in pairs(list) do
-			if not TAV:GetAtlasInfo(atlas) then
-				local reformat = {
-					["missing"] = true,
-					["fileName"] = file,
-					["width"] = info[1],
-					["height"] = info[2],
-					["leftTexCoord"] = info[3],
-					["rightTexCoord"] = info[4],
-					["topTexCoord"] = info[5],
-					["bottomTexCoord"] = info[6],
-					["tilesHorizontally"] = info[7],
-					["tilesVertically"] = info[8],
-				}
-				self.backupInfo[atlas] = reformat
+	for _, atlasName in ipairs(C_Texture.GetAtlasElements()) do
+		local info = C_Texture.GetAtlasInfo(atlasName)
+		if info and info.file then
+			local texture = _addon.data[info.file] or info.file
+			if not self.atlasInfo[texture] then
+				self.atlasInfo[texture] = {}
 			end
+			table.insert(self.atlasInfo[texture], atlasName)
+			self.atlasMetadata[atlasName] = info
 		end
-	end
-
-	-- Remove old data
-	if self.db.global.AtlasInfo then
-		self.db.global.AtlasInfo = nil
 	end
 
 	self.settings = self.db.global.settings
@@ -75,12 +63,6 @@ end
 function TAV:OnEnable()
 	TAV_DisplayContainer:ApplySettings(self.settings)
 
-	-- No data imported yet
-	if type(self.atlasInfo) == "string" then
-		TAV_DisplayContainer:SetImportOverlayShown(true, true)
-		return
-	end
-
 	-- Unfiltered list with easy access to names
 	self.displayList = {}
 	-- Buffer list for searching to allow pcall to error with no visual results
@@ -88,32 +70,26 @@ function TAV:OnEnable()
 	-- Filteres list that will be displayed
 	self.filteredList = {}
 
-	local toReplace = {}
 	for texture, atlasInfo in pairs(self.atlasInfo) do
-		-- Delete all imported atlas info and turn keys into an itterative list
-		wipe(toReplace)
-		for key in pairs(atlasInfo) do
-			if type(key) == "string" then
-				tinsert(toReplace, key)
-			end
-		end
-		for _, key in ipairs(toReplace) do
-			atlasInfo[key] = nil
-			tinsert(atlasInfo, key)
-		end
-
-		-- Only show ones that actually have atlases to them
-		if #atlasInfo then
-			local path, name = texture:match("(.+)/(.+)")
-			local displayName = name
+		local path, name, displayName
+		if type(texture) == "string" then
+			path, name = texture:match("(.+)/(.+)")
+			displayName = name
 			if displayName then
 				displayName = displayName:gsub("(%l)(%u)", "%1 %2")
 			end
+		else
+			displayName = "File ID " .. texture
+			name = displayName
+		end
+
+		if #atlasInfo > 0 then
 			local entryInfo = {
 				["display"] = displayName or texture,
 				["name"] = name or texture,
 				["path"] = path,
 				["texture"] = texture,
+				["sortKey"] = GenerateSortKey(name or tostring(texture)),
 				["priority"] = RESULT_PRIORITY.none,
 			}
 			tinsert(self.displayList, entryInfo)
@@ -122,11 +98,11 @@ function TAV:OnEnable()
 	end
 
 	table.sort(self.filteredList, function(a, b)
-		if a.name == b.name then
-			return a.texture < b.texture
+		if a.sortKey == b.sortKey then
+			return tostring(a.texture) < tostring(b.texture)
 		end
 
-		return a.name < b.name
+		return a.sortKey < b.sortKey
 	end)
 
 	-- Show first in the list
@@ -135,24 +111,6 @@ function TAV:OnEnable()
 		TAV_DisplayContainer:DisplayTexture(self.filteredList[1].texture)
 		TAV_ScrollFrameScrollChild.selected = self.filteredList[1].texture
 	end
-end
-
-function TAV:ClearData()
-	if not self.displayList then
-		return false
-	end
-
-	self.db.global.AtlasInfo = SAVE_VARIABLE_COPY_INFO
-
-	wipe(self.displayList)
-	wipe(self.bufferList)
-	wipe(self.filteredList)
-
-	self.atlasInfo = ""
-
-	TAV_ScrollFrame:RefreshButtons()
-
-	return true
 end
 
 function TAV:GetSearchPriority(info, searchString, usePatterns)
@@ -195,22 +153,17 @@ function TAV:UpdateDisplayList(searchString, usePatterns)
 		if a.priority ~= b.priority then
 			return a.priority < b.priority
 		end
-		if a.name ~= b.name then
-			return a.name < b.name
+		if a.sortKey ~= b.sortKey then
+			return a.sortKey < b.sortKey
 		end
-		return a.texture < b.texture
+		return tostring(a.texture) < tostring(b.texture)
 	end)
 
 	wipe(self.bufferList)
 end
 
 function TAV:GetAtlasInfo(atlasName)
-	-- Check if we know it's missing and made backup data;
-	if self.backupInfo[atlasName] then
-		return self.backupInfo[atlasName]
-	end
-
-	return C_Texture.GetAtlasInfo(atlasName)
+	return self.atlasMetadata[atlasName]
 end
 
 -------------------------------------------------
@@ -324,7 +277,6 @@ end
 -- OnDragStop()
 -- HideAtlasInfo()
 -- ShowAtlasInfo(name, atlasInfo)
--- SetImportOverlayShown(show, hideButtons)
 
 TAV_DisplayContainerMixin = {}
 
@@ -368,41 +320,6 @@ function TAV_DisplayContainerMixin:OnLoad()
 	end
 	TAV_ControlsPanel.BGColorButton.info = info
 
-	-- Overlay setup
-	self.Overlay.Link:SetText(DATA_URL)
-	local before =
-		[[Since there is no official way to get the info of all available textures and their atlases, data must be manually provided.
-As of version 9.0.01, a default set of data is provided with the add-on.
-
-If you wish to manually update your data to a different version, follow these steps:
-  1. Go into your add-on folder.
-       (WoW/_retail_/Interface/AddOns/TextureAtlasViewer)
-	2. Open the file Data_Standard.lua in a text editor.
-  3. Some commented text will provide addition information
-  4. Visit the following URL:]]
-	self.Overlay.InfoBefore:SetText(before)
-	local after =
-		[[  5. Copy the entire text block starting with 'local AtlasInfo =' and ending at the last closing brackets
-  6. Do not include the last line which says 'return AtlasInfo'
-  7. Replace the block of text in the file in between the two comment blocks.
-  8. SAVE the file and close it.
-  9. /reload your ui in game
-  ]]
-
-	local buildNr = select(2, GetBuildInfo())
-	local colorCode = (tonumber(_addon.dataBuild) < tonumber(buildNr)) and "ffff5555" or "ff55ff55"
-
-	after = after
-		.. "\n\nClient build nr: |cffffffff"
-		.. buildNr
-		.. "|r\nData build nr: |c"
-		.. colorCode
-		.. _addon.dataBuild
-		.. "|r|nData expansion level: |cffffffff"
-		.. (_addon.dataExpansion and _G["EXPANSION_NAME" .. _addon.dataExpansion] or _G["EXPANSION_NAME" .. LE_EXPANSION_LEVEL_CURRENT] or UNKNOWN)
-		.. "|r"
-
-	self.Overlay.InfoAfter:SetText(after)
 end
 
 function TAV_DisplayContainerMixin:ApplySettings(settings)
@@ -530,7 +447,7 @@ function TAV_DisplayContainerMixin:CreateOverlays()
 	for _, name in ipairs(atlasNames) do
 		if type(name) == "string" then
 			local info = TAV:GetAtlasInfo(name)
-			if info and (not info.missing or TAV.settings.showIssues) then
+			if info then
 				local overlay = self.overlayPool:Acquire()
 				overlay:Init(name, info)
 			end
@@ -563,7 +480,7 @@ function TAV_DisplayContainerMixin:TrySetTextureSize()
 	-- Loop over all atlases and check for any issues
 	for i = 1, #atlasNames do
 		local info = TAV:GetAtlasInfo(atlasNames[i])
-		if not info or info.missing or not HasValidSize(info) then
+		if not info or not HasValidSize(info) then
 			-- Mark it as an issue
 			issuesFound = true
 			if #self.dataIssues < MAX_NUM_ISSUES then
@@ -610,10 +527,9 @@ function TAV_DisplayContainerMixin:DisplayTexture(texture)
 	self:HideAtlasInfo()
 	self.Child.Texture:SetTexture(texture)
 	self.Child:Show()
-	TAV_ControlsPanel.FilePathBox:SetText(texture)
+	TAV_ControlsPanel.FilePathBox:SetText(tostring(texture))
 	PlaySound(SOUNDKIT.IG_ABILITY_PAGE_TURN)
 
-	self:SetImportOverlayShown(false)
 end
 
 function TAV_DisplayContainerMixin:UpdateChildSize()
@@ -716,18 +632,9 @@ function TAV_DisplayContainerMixin:ShowAtlasInfo(name, atlasInfo)
 		region:SetShown(atlasInfo.sliceData == nil)
 	end
 
-	TAV_InfoPanel.AlertIndicator:SetShown(atlasInfo.missing)
+	TAV_InfoPanel.AlertIndicator:SetShown(false)
 	TAV_InfoPanel:Show()
 	TAV_InfoPanel:Layout()
-end
-
-function TAV_DisplayContainerMixin:SetImportOverlayShown(show, hideButtons)
-	if not show and (not TAV.displayList or #TAV.displayList == 0) then
-		return
-	end
-	self.Overlay:SetShown(show)
-
-	TAV_CoreFrame.LeftInset.InfoButton:SetShown(not hideButtons)
 end
 
 function TAV_DisplayContainerMixin:OnUpdate()
@@ -759,11 +666,11 @@ end
 function TAV_DisplayContainerMixin:AlertIndicatorOnEnter()
 	GameTooltip:Hide()
 	GameTooltip:SetOwner(self.AlertIndicator, "ANCHOR_RIGHT")
-	GameTooltip:SetText("No API info for following atlases", 1, 1, 1, nil, true)
+	GameTooltip:SetText("Invalid info for following atlases", 1, 1, 1, nil, true)
 	for _, issue in ipairs(self.dataIssues) do
 		GameTooltip:AddLine(issue)
 	end
-	GameTooltip:AddLine("Your data might be outdated or incorrect.", 1, 0.3, 0.3)
+	GameTooltip:AddLine("The client returned invalid atlas dimensions.", 1, 0.3, 0.3)
 	if self.AlertIndicator.enabled then
 		GameTooltip:AddLine("Click to prevent potentially outdated data.", GREEN_FONT_COLOR:GetRGB())
 	else
@@ -881,7 +788,7 @@ function TAV_AtlasFrameMixin:OnEnter()
 	local offsetY = max(0, self:GetTop() - TAV_DisplayContainer:GetTop())
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -offsetX, -offsetY)
 	local display = self.name or "Unknown"
-	if not self.info or self.info.missing then
+	if not self.info then
 		display = "|A:services-icon-warning:14:14|a " .. display
 	end
 	GameTooltip_SetTitle(GameTooltip, display, nil, true)
@@ -889,13 +796,6 @@ function TAV_AtlasFrameMixin:OnEnter()
 	self:GetParent():GetParent().mousedOverFrame = self
 	self:SetBorderHighlighted(true)
 
-	if self.info.missing then
-		self.Top:SetVertexColor(RED_FONT_COLOR:GetRGB())
-		self.Bottom:SetVertexColor(RED_FONT_COLOR:GetRGB())
-		self.Left:SetVertexColor(RED_FONT_COLOR:GetRGB())
-		self.Right:SetVertexColor(RED_FONT_COLOR:GetRGB())
-		self.Highlight:SetVertexColor(RED_FONT_COLOR:GetRGB())
-	end
 end
 
 function TAV_AtlasFrameMixin:OnLeave()
@@ -915,33 +815,15 @@ end
 
 function TAV_AtlasFrameMixin:UpdateColor()
 	local color = HIGHLIGHT_FONT_COLOR
-	-- issue gets red border
-	if self.info.missing then
-		color = RED_FONT_COLOR
-	end
 
 	self.shouldHighlight = false
 	if self.name == TAV_DisplayContainer.selectedAtlas then
 		color = YELLOW_FONT_COLOR
 		self.shouldHighlight = true
-
-		if self.info.missing then
-			color = RED_FONT_COLOR
-		end
 	elseif TAV_DisplayContainer:NameMatchesCurrentSearch(self.name) then
 		color = GREEN_FONT_COLOR
 		self.shouldHighlight = true
 	end
-
-	---- issue always shows red overlay
-	--if (self.info.missing) then
-	--	colorOverlay = RED_FONT_COLOR;
-	--
-	--	-- issue border overtakes selected color
-	--	if (self.name == TAV_DisplayContainer.selectedAtlas) then
-	--		color = RED_FONT_COLOR;
-	--	end
-	--end
 
 	self:SetBorderHighlighted(self.shouldHighlight)
 	self.Top:SetVertexColor(color:GetRGB())

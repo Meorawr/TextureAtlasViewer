@@ -184,53 +184,11 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 							</OnLeave>
 						</Scripts>
 					</CheckButton>
-					<Button parentKey="InfoButton">
-						<Size x="20" y="20"/>
-						<Anchors>
-							<Anchor point="TOPRIGHT" x="-5" y="-7"/>
-						</Anchors>
-						<Layers>
-							<Layer level="BACKGROUND">
-								<Texture parentKey="I" file="Interface\common\help-i">
-									<Size x="30" y="30"/>
-									<Anchors>
-										<Anchor point="CENTER"/>
-									</Anchors>
-								</Texture>
-							</Layer>
-						</Layers>
-						<HighlightTexture file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight" alphaMode="ADD">
-							<Size x="30" y="30"/>
-							<Anchors>
-								<Anchor point="CENTER"/>
-							</Anchors>
-						</HighlightTexture>
-						<Scripts>
-							<OnMouseDown>
-								self.I:SetPoint("CENTER", -1, -1);
-							</OnMouseDown>
-							<OnMouseUp>
-								self.I:SetPoint("CENTER", 0, 0);
-							</OnMouseUp>
-							<OnEnter>
-								GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-								GameTooltip:SetText("Data update info", 1, 1, 1, nil, true);
-								GameTooltip:Show();
-							</OnEnter>
-							<OnLeave>
-								GameTooltip:Hide();
-							</OnLeave>
-							<OnClick>
-								PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
-								TAV_DisplayContainer:SetImportOverlayShown(not TAV_DisplayContainer.Overlay:IsShown());
-							</OnClick>
-						</Scripts>
-					</Button>
 					<EditBox parentKey="SearchBox" inherits="SearchBoxTemplate">
 						<Size y="20"/>
 						<Anchors>
 							<Anchor point="LEFT" relativeKey="$parent.PatternCheckBox" relativePoint="RIGHT" x="5"/>
-							<Anchor point="RIGHT" relativeKey="$parent.InfoButton" relativePoint="LEFT" x="-3"/>
+							<Anchor point="RIGHT" x="-5"/>
 							<Anchor point="TOP" y="-6"/>
 						</Anchors>
 						<Scripts>
@@ -284,45 +242,6 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI.xsd">
 							<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
 						</Anchors>
 						<Frames>
-							<Frame parentKey="Overlay" frameLevel="20" enableMouse="true" hidden="true">
-								<Anchors>
-									<Anchor point="TOPLEFT" x="-1" y="1"/>
-									<Anchor point="BOTTOMRIGHT" x="1" y="-1"/>
-								</Anchors>
-								<Frames>
-									<EditBox parentKey="Link" inherits="TAV_CopyBoxTemplate">
-										<Size x="375" y="20"/>
-										<Anchors>
-											<Anchor point="CENTER"/>
-										</Anchors>
-									</EditBox>
-								</Frames>
-								<Layers>
-									<Layer level="BACKGROUND">
-										<Texture parentKey="Background" file="Interface\FrameGeneral\UI-Background-Marble" horizTile="true" vertTile="true" setAllPoints="true">
-											<Anchors>
-												<Anchor point="TOPLEFT" x="1" y="-1"/>
-												<Anchor point="BOTTOMRIGHT" x="20" y="1"/>
-											</Anchors>
-											<Color r="0.35" g="0.35" b="0.35" a="1"/>
-										</Texture>
-									</Layer>
-									<Layer level="ARTWORK">
-										<FontString parentKey="InfoBefore" inherits="GameFontNormalMed1" justifyH="LEFT" spacing="3">
-											<Anchors>
-												<Anchor point="BOTTOMLEFT" relativeKey="$parent.Link" relativePoint="TOPLEFT" x="-25" y="5"/>
-												<Anchor point="BOTTOMRIGHT" relativeKey="$parent.Link" relativePoint="TOPRIGHT" x="25" y="5"/>
-											</Anchors>
-										</FontString>
-										<FontString parentKey="InfoAfter" inherits="GameFontNormalMed1" justifyH="LEFT" spacing="3">
-											<Anchors>
-												<Anchor point="TOPLEFT" relativeKey="$parent.Link" relativePoint="BOTTOMLEFT" x="-25" y="-5"/>
-												<Anchor point="TOPRIGHT" relativeKey="$parent.Link" relativePoint="BOTTOMRIGHT" x="25" y="-5"/>
-											</Anchors>
-										</FontString>
-									</Layer>
-								</Layers>
-							</Frame>
 							<Frame parentKey="Child" movable="true" hidden="true">
 								<Anchors>
 									<Anchor point="CENTER"/>
