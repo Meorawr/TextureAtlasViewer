@@ -2860,4 +2860,7 @@ _addon.FilePaths = {
 	[8490356] = "interface/common/commonstatbarheavymaskc60",
 	[8490375] = "interface/common/commonstatbarheavymask2xc60",
 	[8493895] = "interface/splash/splash1215",
+	[8503321] = "interface/petstableframe/hunterpetstable2xc60",
+	[8503326] = "interface/petstableframe/hunterpetstablec60",
+	[8508140] = "interface/gamepad/gamepadpressandholdc60",
 }
