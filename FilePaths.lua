@@ -2928,4 +2928,5 @@ _addon.FilePaths = {
 	[8539918] = "interface/gamepad/uiunitframeplayeronpartymanamask2xc60",
 	[8547016] = "interface/store/interstitialnewplayerexperiencec60",
 	[8547022] = "interface/store/interstitialnewplayerexperiencepart2c60",
+	[8578853] = "interface/splash/splash1217",
 }
